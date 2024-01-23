@@ -38,20 +38,20 @@ function checkConnectionAndRedirect() {
 
   // Nếu là máy tính Windows
   if (device.includes("Windows")) {
-    // Chuyển hướng đến Google
-    window.location = "https://www.google.com";
+    // Chuyển hướng
+    window.location = "home.html";
   }
 
   // Nếu là điện thoại Android
   else if (device.includes("Android")) {
-    // Chuyển hướng đến Facebook
-    window.location = "https://www.facebook.com";
+    // Chuyển hướng
+    window.location = "";
   }
 
   // Nếu không phải là hai trường hợp trên
   else {
-    // Chuyển hướng đến GitHub
-    window.location = "https://github.com";
+    // Chuyển hướng 
+    window.location = "";
   }
 }
 checkConnectionAndRedirect();
