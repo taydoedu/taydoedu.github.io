@@ -24,34 +24,40 @@ img {position: absolute; top: 50%; left: 0%; transform: translate(0%, -50%); wid
 <img src="https://thanhvanlongcode.files.wordpress.com/2023/08/lv_0_20230813120442.gif"> </div>
       <script>
 function checkConnectionAndRedirect() {
-  // Kiểm tra kết nối mạng
-  if (navigator.onLine) {
-  } else {
-    // Không có kết nối mạng
-    alert("Thiết bị không có kết nối mạng, vui lòng truy cập lại sau.");
-    return;
-  }
+ // Kiểm tra kết nối mạng
+ if (navigator.onLine) {
+ } else {
+  // Không có kết nối mạng
+  alert("Thiết bị không có kết nối mạng, vui lòng truy cập lại sau.");
+  return;
+ }
 
-  // Lấy thông tin về thiết bị
-  let device = navigator.userAgent;
+ // Lấy thông tin về thiết bị
+ let device = navigator.userAgent;
 
-  // Nếu là máy tính Windows
-  if (device.includes("Windows")) {
-    // Chuyển hướng
-    window.location = "home.html";
-  }
+ // Nếu là máy tính Windows
+ if (device.includes("Windows")) {
+  // Chuyển hướng sau 5 giây
+  setTimeout(() => {
+    window.location = "";
+  }, 5000);
+ }
 
-  // Nếu là điện thoại Android
-  else if (device.includes("Android")) {
-    // Chuyển hướng 
-    window.location = "";
-  }
+ // Nếu là điện thoại Android
+ else if (device.includes("Android")) {
+  // Chuyển hướng sau 5 giây
+  setTimeout(() => {
+    window.location = "";
+  }, 5000);
+ }
 
-  // Nếu không phải là hai trường hợp trên
-  else {
-    // Chuyển hướng 
-    window.location = "";
-  }
+ // Nếu không phải là hai trường hợp trên
+ else {
+  // Chuyển hướng sau 5 giây
+  setTimeout(() => {
+    window.location = "";
+  }, 5000);
+ }
 }
 checkConnectionAndRedirect();
   </script>
