@@ -1,0 +1,31 @@
+* {
+		box-sizing: border-box;
+	}
+	
+	body {
+		font-family: "Times New Roman", Times, serif;
+	}
+	
+	@media (min-width: 576px) {
+		#noidung {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(50%, 50%);
+			width: 340px;
+			height: 680px;
+		}
+	}
+	
+	.accordion {
+		background-color: #f48319;
+		color: #fff;
+		cursor: pointer;
+		padding: 18px;
+		width: 90%;
+		border: none;
+		text-align: center;
+		outline: none;
+		font-size: 18px;
+		transition: 0.4s;
+	}
