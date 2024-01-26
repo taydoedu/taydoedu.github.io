@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="UTF-8">
 	<title>CHINH PHỤC THPT</title>
@@ -19,20 +18,8 @@
 		box-sizing: border-box;
 	}
 	
-	body {
-		font-family: "Times New Roman", Times, serif;
-	}
-	
-	@media (min-width: 576px) {
-		#noidung {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(50, 50%);
-			width: 340px;
-			height: 680px;
-		}
-	}
+	body{font-family: "Times New Roman", Times, serif; position: absolute; top: calc(50% - 300px); left: 0%; transform: translate(0%, -50%); width: 100%}
+@media (min-width: 576px) { body { position: absolute; top: calc(50% - 300px); left: 50%; transform: translate(-50%, -50%); width: 330px} }
 	
 	.accordion {
 		background-color: #f48319;
@@ -54,7 +41,7 @@
 	<div id="noidung" style='position:fixed;bottom:0;right:0;top:0;left:0;z-index:1;'>
 		<br>
 		<center> <img src="Assets/icon.png" style="width: 300px">
-			<div class="accordion"> <a href="" style="text-decoration: none; color: #fff">Tải App Window</a>
+			<div class="accordion"> <a href="" style="text-decoration: none; color: #fff">Tải App Windows</a>
 			</div>
 			<br>
 			<div class="accordion"> <a href="trangchu.html" style="text-decoration: none; color: #fff">Tiếp tục với Websites</a>
