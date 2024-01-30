@@ -65,7 +65,7 @@ color: #f48319"><center><h1>Trình duyệt của bạn hiện đang bị chặn 
 </style>
 <center>
   <div id="ndtt">
-    <h3 style="color:#f48319; font-size: 25px; padding: 0px">Tính diện tích hình tròn</h3>
+    <h3 style="color:#f48319; font-size: 25px; padding: 0px">Tính diện tích hình vuông</h3>
   </div>
   <hr style="border: 0.5px solid #f48319">
 </center>
@@ -73,54 +73,40 @@ color: #f48319"><center><h1>Trình duyệt của bạn hiện đang bị chặn 
 <div id="content">
    <table border="0" width="100%">
    <tr>
-   <th colspan="2">Hãy đưa ra 1 giá trị*</th>
+   <th colspan="2">Hãy đưa ra 1 giá trị</th>
     </tr>
    <tr>
-    <td style="width:10%">r</td>     
-    <td><input style="width: 100%" id="rchuvihinhtron"></td>       
-     
+    <td style="width:10%">a</td>     
+    <td><input style="width: 100%" id="adientichhinhvuong"></td>       
       </tr>
+       
    </table>
  
   <br>
-  <span style="color: #f48319; font-size: 15px"><i>* Nếu có d(đường kính) hãy chia 2 để có r(bán kính) </i></span><br>
-  <span style="color: #f48319; font-size: 15px"><i>Làm tròn đến chữ số thập phân thứ <input style="width: 10%" id="ltchuvihinhtron"> trong kết quả</i></span>
+  <span style="color: #f48319; font-size: 15px"><i>Làm tròn đến chữ số thập phân thứ <input style="width: 10%" id="ltdientichhinhvuong"> trong kết quả</i></span>
   <br><br>
   <center>
-    <button style="background-color: #fff; color: #f48319; border: 1px solid #000; padding: 10px; font-size: 15px; font-weight: bold" id="ttchuvihinhtron">Tính toán</button>
-    <button style="background-color: #fff; color: #f48319; border: 1px solid #000; padding: 10px; font-size: 15px; font-weight: bold" id="xndchuvihinhtron">Xóa nội dung</button>
+    <button style="background-color: #fff; color: #f48319; border: 1px solid #000; padding: 10px; font-size: 15px; font-weight: bold" id="ttdientichhinhvuong">Tính toán</button>
+    <button style="background-color: #fff; color: #f48319; border: 1px solid #000; padding: 10px; font-size: 15px; font-weight: bold" id="xnddientichhinhvuong">Xóa nội dung</button>
   </center>
   <hr style="border: 0.5px solid #f48319">
   <span style="color:#f48319; font-size: 20px; padding: 0px; font-weight: bold;">Kết quả: </span>
-  <span style="color:#f48319; font-size: 20px; padding: 0px;" id="kqchuvihinhtron">0.00 </span>
+  <span style="color:#f48319; font-size: 20px; padding: 0px;" id="kqdientichhinhvuong">0.00 </span>
 </div>
-
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const ttchuvihinhtronBtn = document.getElementById("ttchuvihinhtron");
-    const xndchuvihinhtronBtn = document.getElementById("xndchuvihinhtron");
-    const rInput = document.getElementById("rchuvihinhtron");
-    const kqOutput = document.getElementById("kqchuvihinhtron");
+document.getElementById("ttdientichhinhvuong").addEventListener("click", function() {
+    var a = parseFloat(document.getElementById("adientichhinhvuong").value);
+    var lt = parseInt(document.getElementById("ltdientichhinhvuong").value);
+    var dientich = a ** 2;
+    var roundedDientich = dientich.toFixed(lt);
+    document.getElementById("kqdientichhinhvuong").textContent = roundedDientich;
+});
 
-    ttchuvihinhtronBtn.addEventListener("click", function() {
-      const ltchuvihinhtronValue = parseInt(document.getElementById("ltchuvihinhtron").value);
-      let result;
-
-      if (rInput.value) {
-        const r = parseFloat(rInput.value);
-        result = (r * r * 3.14).toFixed(ltchuvihinhtronValue);
-      } else {
-        result = "Không thể tính";
-      }
-
-      kqOutput.textContent = "~ " + result;
-    });
-
-    xndchuvihinhtronBtn.addEventListener("click", function() {
-      rInput.value = "";
-      kqOutput.textContent = "0.00";
-    });
-  });
+document.getElementById("xnddientichhinhvuong").addEventListener("click", function() {
+    document.getElementById("adientichhinhvuong").value = "";
+    document.getElementById("ltdientichhinhvuong").value = "";
+    document.getElementById("kqdientichhinhvuong").textContent = "0.00";
+});
 </script>
 
 </th>  
