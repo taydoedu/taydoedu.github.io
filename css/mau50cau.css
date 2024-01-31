@@ -1,0 +1,282 @@
+<style>
+	body {
+		font-family: "Times New Roman", Times, serif;
+		background-color: #fff;
+		margin-left: -0px;
+		margin-right: -0px;
+	}
+	
+	* {
+		box-sizing: border-box;
+	}
+	
+	.the_trai_phai {
+		width: 100%;
+	}
+	
+	.the_div_trai {
+		width: 48%;
+		float: left;
+		text-align: left;
+		margin-top: 10px;
+		margin-left: 1%;
+		margin-right: 1%;
+	}
+	
+	.the_div_phai {
+		width: 48%;
+		float: right;
+		text-align: left;
+		margin-top: 10px;
+		margin-left: 1%;
+		margin-right: 1%;
+	}
+	
+	.dap-an {
+		background-color: #EEE;
+		border: 3px solid #ddd;
+		padding: 15px;
+		text-align: left;
+	}
+	
+	@media screen and (max-width: 800px) {
+		.the_div_trai,
+		.the_div_phai {
+			width: 100%;
+			float: none;
+			text-align: left;
+			margin-top: 0px;
+			margin-left: 0%;
+			margin-right: 0%;
+		}
+		.dap-an {
+			background-color: #EEE;
+			border-left: 0px solid #000;
+			border-right: 0px solid #000;
+		}
+	}
+	
+	table {
+		border-collapse: collapse;
+		width: 100%;
+	}
+	
+	th,
+	td {
+		text-align: left;
+		padding: 0px;
+		border: 0px solid #ddd;
+	}
+	
+	.menu-ql {
+		position: fixed;
+		top: 0%;
+		left: 0%;
+		z-index: 3;
+		padding: 5px 5px 5px 7px;
+		width: 100%;
+		height: 40px;
+		background-color: #f48319;
+	}	
+	
+	.thongtin input:disabled,
+	{
+		background-color: #EEEEEE;
+		cursor: not-allowed;
+	}
+	
+	.thongtin select:disabled {
+		background-color: #EEEEEE;
+		cursor: not-allowed;
+	}
+	
+	#timer-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	#form-container {
+		display: flex;
+		flex-direction: column;
+		margin-top: 3px;
+	}
+	
+	.form-row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 5px;
+	}
+	
+	.form-row label,
+	.form-row input,
+	.form-row select {
+		flex-grow: 1;
+		width: 100%;
+	}
+	
+	.thongtin label {
+		display: inline-block;
+		width: 100px;
+		text-align: left;
+		margin-left: 10px;
+	}
+	
+	.thongtin input[type="text"],
+	.thongtin select {
+		display: inline-block;
+		width: 50%;
+		margin-right: 5px;
+	}
+	
+	#mkh1 {
+		color: #f48319;
+		font-size: 20px;
+		font-weight: bold;
+		margin-left: 10px;
+	}
+	
+	#mkh1:hover {
+		margin-left: 15px;
+	}
+	
+	#mkh2 {
+		color: #000;
+		font-size: 17px;
+		margin-left: -60px;
+	}
+	
+	#mkh3 {
+		color: #f48319;
+		font-size: 17px;
+		font-weight: bold;
+		margin-left: 5px;
+	}
+	
+	#mkh4 {
+		color: #000;
+		font-size: 15px;
+	}
+	
+	#mkh5 {
+		color: #f48319;
+		font-size: 15px;
+		font-weight: bold;
+	}
+	
+	#mkh6 {
+		color: #f48319;
+		font-size: 15px;
+	}
+	
+	#mkh7 {
+		color: #000;
+		font-size: 15px;
+	}
+	
+	#mkh8 {
+		color: #f48319;
+		font-size: 15px;
+		margin-left: 10px;
+	}
+	
+	#mkh9 {
+		color: #000;
+		font-size: 15px;
+		margin-left: 5px;
+	}
+	
+	.thongtin {
+		display: block;
+	}
+	
+	#timer {
+		font-size: 16px;
+		text-align: left;
+		color: #f48319;
+		margin-left: 5px;
+	}
+	
+	.message {
+		font-size: 10px;
+		text-align: center;
+		display: none;
+	}
+	
+	.thongtin label {
+		margin-right: 25px;
+		color: #f48319;
+	}
+	
+	.thongtin input {
+		margin-top: 0px
+	}
+	
+	#form-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: #CCC;
+		padding: 5px 0px 5px 0px;
+		border: 0.5px solid #000;
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	
+	#form-header label {
+		flex: 1;
+		text-align: left;
+	}
+	
+	#form-header button {
+		text-align: right;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 30%;
+		margin-right: 5px;
+	}
+	
+	#form-header button span {
+		text-align: center;
+	}
+	/* Hiện kết quả */	
+	.modal {
+		display: none;
+		position: fixed;		
+		z-index: 1;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: rgba(255, 255, 255, 0.9);
+		padding-top: 80px;
+		padding-bottom: 0px;
+		padding-left: 20px;
+		padding-right: 20px;
+		color: #f48319;
+	}	
+	#vlndtt,
+	#dntt,
+	#dndda,
+	#vlndda {
+		color: #f48319;
+		background-color: #fff;
+		padding: 10px;
+		text-align: center;
+		position: fixed;
+		top: 40px;
+		left: 0px;
+		right: 0px;
+		display: none;
+		border-bottom: 1px solid #f48319;
+		z-index: 2;
+	}
+	
+	hr {
+		border: 0.5px solid #888;
+	}
+	
+	</style>
