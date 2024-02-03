@@ -1239,7 +1239,7 @@ document.getElementById("toggle-button-2").style.display = 'block';
                                 .getTime();
                             const timeLeft = endTime - now;
                             // Tính toán phút và giây
-                            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60))
+                            const minutes = Math.floor((timeLeft % (1000 * 90 * 60)) / (1000 * 60))
                                 .toString()
                                 .padStart(2, "0");
                             const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000)
