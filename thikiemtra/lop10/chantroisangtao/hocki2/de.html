@@ -876,7 +876,7 @@ document.getElementById("toggle-button-2").style.display = 'block';
 						// Hiển thị nội dung
 						// THÔNG TIN ĐỀ
 					var tbkt = " Bài kiểm tra: Cuối kì II";
-					var tgkt = "Thời gian: 45 phút";
+					var tgkt = "Thời gian: 90 phút";
 					var mkt = "Môn: Toán - Lớp 10 Chân trời sáng tạo";
 					// ĐIỀN
 					const tbktElement = document.getElementById("tbkt");
@@ -951,7 +951,7 @@ document.getElementById("toggle-button-2").style.display = 'block';
                                             }, 5000); // 5000 ms = 5 seconds
                                             // Hiển thị phần tử có class="noidungan"
                                             const endTime = new Date()
-                                                .getTime() + 45 * 60 * 1000;
+                                                .getTime() + 90 * 60 * 1000;
                                             const timerElement = document.getElementById("timer");
                                             const messageElement = document.querySelector(".message");
                                             timerElement.style.display = "block";
@@ -1239,11 +1239,11 @@ document.getElementById("toggle-button-2").style.display = 'block';
                                     .style.display = 'none';
                             }
                             // Tự động xuất kết quả nếu người dùng không nhấn nút "Xuất kết quả" trong vòng 45 phút
-                        setTimeout(showResult, 45 * 60 * 1000 + 3000);
+                        setTimeout(showResult, 90 * 60 * 1000 + 3000);
                         //TÍNH THỜI GIAN        
                         // Tính thời gian kết thúc
                         const endTime = new Date()
-                            .getTime() + 45 * 60 * 1000;
+                            .getTime() + 90 * 60 * 1000;
                         // Lấy thẻ div timer
                         const timerElement = document.getElementById("timer");
                         // Cập nhật thời gian sau mỗi giây
