@@ -1219,11 +1219,11 @@ document.getElementById("toggle-button-2").style.display = 'block';
                                     .style.display = 'none';
                             }
                             // Tự động xuất kết quả nếu người dùng không nhấn nút "Xuất kết quả" trong vòng 45 phút
-                        setTimeout(showResult, 45 * 60 * 1000 + 3000);
+                        setTimeout(showResult, 90 * 60 * 1000 + 3000);
                         //TÍNH THỜI GIAN        
                         // Tính thời gian kết thúc
                         const endTime = new Date()
-                            .getTime() + 45 * 60 * 1000;
+                            .getTime() + 90 * 60 * 1000;
                         // Lấy thẻ div timer
                         const timerElement = document.getElementById("timer");
                         // Cập nhật thời gian sau mỗi giây
@@ -1233,7 +1233,7 @@ document.getElementById("toggle-button-2").style.display = 'block';
                                 .getTime();
                             const timeLeft = endTime - now;
                             // Tính toán phút và giây
-                            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60))
+                            const minutes = Math.floor((timeLeft % (1000 * 990 * 60)) / (1000 * 60))
                                 .toString()
                                 .padStart(2, "0");
                             const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000)
