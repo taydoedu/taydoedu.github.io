@@ -15,7 +15,7 @@
 <meta name="description" content="Website học tập hoàn toàn miễn phí">
 <!-- Tải lại nội dung sau 5 phút
 <meta http-equiv="refresh" content="300">-->
- <link rel="stylesheet" href="../css/main.css">
+ <link rel="stylesheet" href="../../css/main.css">
 </head>
 <body>
     <div class="menu-ql">
@@ -37,7 +37,7 @@
 <noscript>    <div style="top: 0px; left: 0px; right: 0px; bottom: 0px; position: fixed; z-index: 9999 !important; background-color: #fff;
 color: #f48319"><center><h1>Trình duyệt của bạn hiện đang bị chặn Javascript, vui lòng bật lại và  tải lại trình duyệt!</div></center></h1></noscript>
 <!--Nội dung trang web -->
-<br><br>
+<br>
 <style>
 .accordion {
   background-color: #CCC;
@@ -94,6 +94,9 @@ color: #f48319"><center><h1>Trình duyệt của bạn hiện đang bị chặn 
 }
 
 </style>
+<div class="noi_dung_chinh">
+<div class="the_trai_phai">
+<div class="the_div_trai" style="margin-left: 0px; margin-top: 0px">
 <div class="accordion">Công thức toán học</div>
 <div class="panel">
   <div class="dropdown-menu">
@@ -116,10 +119,10 @@ color: #f48319"><center><h1>Trình duyệt của bạn hiện đang bị chặn 
        </span>
 <br><br><a style='text-decoration: none; color: #000' href='kienthuc/doidonvi.html'>* Đổi đơn vị</a>
        </span>
-    </div></div>
+    </div>
+</div>
 </div></div>
-</div></div>
-
+<div class="the_div_phai" style="margin-left: 0px; margin-top: 0px">
 <div class="accordion">Công cụ toán học</div>
 <div class="panel">
  <div class="dropdown-menu">
@@ -193,7 +196,7 @@ color: #f48319"><center><h1>Trình duyệt của bạn hiện đang bị chặn 
 <a style='text-decoration: none; color: #000' href='congcu/thetichlapphuong.html'>* Hình lập phương</a>
         
         </div></div>
-
+        </div></div>
         </div></div>
 
 
@@ -214,6 +217,7 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 document.addEventListener('DOMContentLoaded', function() {
+    
   // Lấy tất cả các phần tử có lớp "icon-menu"
   const iconMenus = document.querySelectorAll('.dropdown-menu .icon-menu');
 
@@ -222,12 +226,19 @@ document.addEventListener('DOMContentLoaded', function() {
     iconMenu.addEventListener('click', function() {
       // Lấy phần tử "ul" con chứa danh sách phụ
       const subMenu = this.parentElement.querySelector('.sub-menu');
+      
+      // Kiểm tra trạng thái hiện tại của sub-menu
+      const isSubMenuVisible = subMenu.style.display === 'block';
 
-      // Hiển thị hoặc ẩn danh sách phụ
-      if (subMenu.style.display === 'none') {
-        subMenu.style.display = 'block';
-      } else {
+      // Ẩn tất cả các sub-menu khác
+      const allSubMenus = document.querySelectorAll('.dropdown-menu .sub-menu');
+      allSubMenus.forEach(subMenu => {
         subMenu.style.display = 'none';
+      });
+
+      // Hiển thị hoặc ẩn sub-menu được click
+      if (!isSubMenuVisible) {
+        subMenu.style.display = 'block';
       }
     });
   });
@@ -237,5 +248,6 @@ document.addEventListener('DOMContentLoaded', function() {
 </th>  
  </tr> 
    </table>
+   </div>
 </body>
 </html>
