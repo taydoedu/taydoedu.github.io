@@ -1,1 +1,1099 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CHINH PHỤC THPT</title>
+<link rel='shortcut icon' href='../../../../Assets/icon.png' />
 
+<!-- Thuộc tính phù hợp với từng thiết bị -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"
+<!-- Tên chủ sở hữu -->
+<meta name="author" content="Chinh phục THPT">
+<!-- Hagtag để tìm kiếm websites-->
+<meta name="keywords" content="học tập,chia sẻ kiến thức,học tốt thcs">
+<!-- Mô tả websites -->
+<meta name="description" content="Website học tập hoàn toàn miễn phí">
+<!-- Tải lại nội dung sau 5 phút
+<meta http-equiv="refresh" content="300">-->
+ <link rel="stylesheet" href="../../../../css/mau50cau.css">
+</head>
+<body>
+	<div class="menu-ql">
+		<a href="javascript:history.back()" style="text-decoration: none;color:#f48319">
+		<img src="../../../../Assets/quaylai.png" width="30px" 
+		</a> 
+		</a>
+	</div>
+	<!--Nội dung trang web -->
+	<br><br>
+	<table border="0" width="100%">
+		<tr>
+			<th width="100%">
+				<!-- Form nhập tên người dùng -->
+				<div class="thongtin">
+					<center>
+						<div id="mkh6">
+							<div id="tbkt" style="display: inline-block;"></div>
+						</div>
+						<div id="mkh6">
+							<div id="tgkt" style="display: inline-block;"></div>
+						</div>
+						<div id="mkh6">
+							<div id="mkt" style="display: inline-block;"></div>
+						</div>
+						<div id="timer-wrapper"> <span id="mkh8">Thời gian làm bài:</span> <span id="timer"></span> </div>
+					</center>
+					<table>
+						<th>
+							<tr>
+										<div id="form-header">
+											<label>Thông tin cá nhân</label>
+											<button id="saveButton" onclick="saveInfo()">Lưu</button>
+										</div>
+																		<div class="the_trai_phai">
+									<div class="the_div_trai">
+										<div id="form-container">
+											<div class="form-row">
+											<label for="username">Họ và tên:</label>
+												<input type="text" id="username" oninput="validateUsername()" maxlength="25" placeholder="Nhập họ và tên"> </div>
+											<div class="form-row">
+												<label for="lop">Lớp:</label>
+												<input type="text" id="lop" placeholder="Nhập lớp"> </div>
+												</div></div>
+								<div class="the_div_phai">
+												<div class="form-row">
+											<label for="truong">Trường:</label>
+												<select id="truong">
+													<option>THPT Tây Đô</option>
+													<option>THPT Châu Thành A </option>
+													<option>THPT Cây Dương </option>
+													<option>THPT Hòa An </option>
+													<option>THPT Long Mỹ </option>
+													<option>THPT Vĩnh Tường</option>
+													<option>THPT Vị Thủy</option>
+													<option>PTDTNT tỉnh Hậu Giang</option>
+													<option>THPT Lương Thế Vinh</option>
+													<option>THPT Cái Tắc</option>
+													<option>THPT Lê Quý Đôn</option>
+													<option>THPT Lương Tâm</option>
+													<option>THPT Nguyễn Minh Quang</option>
+													<option>THPT Trường Long Tây</option>
+													<option>THPT Tân Long</option>
+													<option>THPT Tân Phú</option>
+													<option>THPT Tầm Vu</option>
+													<option>THPT Vị Thanh</option>
+													<option>THPT chuyên Vị Thanh</option>
+													<option>THPT Ngã Sáu</option>
+													<option>THPT Phú Hữu</option>
+													<option>THPT Chiêm Thành Tấn</option>
+													<option>THPT Lê Hồng Phong</option>
+												</select>
+											</div>
+											<div class="form-row">
+												<label for="tinh">Tỉnh/TP:</label>
+												<select id="tinh">
+													<option>Hậu Giang</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+				</div>
+				</tr>
+				</th>
+				<table>
+					<hr id="khoang-cach">
+					<div id="dntt" onclick="document.getElementById('dntt').style.display='none'">Đã nhập thông tin!</div>
+					<div id="vlndtt" onclick="document.getElementById('vlndtt').style.display='none'">Vui lòng nhập đủ thông tin!</div>
+     <div id="dndda" onclick="document.getElementById('dndda').style.display='none'">Đã nhập đủ đáp án!</div>
+					<div id="vlndda" onclick="document.getElementById('vlndda').style.display='none'">Vui lòng nhập đủ đáp án!</div>
+					<!-- <script>
+// Lấy dữ liệu từ LocalStorage
+  //var tentaikhoan = localStorage.getItem("tentaikhoan");
+var username = localStorage.getItem("username");
+var lop = localStorage.getItem("lop");
+var truong = localStorage.getItem("truong");
+var tinh = localStorage.getItem("tinh");
+
+// Điền dữ liệu vào các id
+//document.getElementById("tentaikhoan").value = tentaikhoan;
+document.getElementById("username").value = username;
+document.getElementById("lop").value = lop;
+document.getElementById("truong").value = truong;
+document.getElementById("tinh").value = tinh;
+</script>-->
+					<div class="noidungan" style="display:none;">
+						<div class="noidungbailam">
+							<div id="form-header">
+								<label>Trắc nhiệm(10/10 câu)</label>
+								<button id="nop-bai" onclick="showResult(); ">Nộp bài</button>
+							</div>
+						</div>
+                        	<!-- Các câu hỏi trắc nghiệm -->
+                        <form name="quiz">
+						<div class="the_trai_phai">
+							<div class="the_div_trai">
+								<img src="0001.jpg" width="100%">
+							</div>
+							<div class="the_div_phai">
+                                <img src="0002.jpg" width="100%">
+                                </div></div>
+                                <div class="the_trai_phai">
+                                    <div class="the_div_trai">
+                                        <img src="0003.jpg" width="100%">
+                                    </div>
+                                    <div class="the_div_phai">
+                                        <img src="0004.jpg" width="100%">
+                                        </div></div>
+                                      
+                                               
+                                            
+     <style>
+        .toggle {
+            width: 100%;
+            height: 30px;
+        }
+        .toggle hr{
+             border: 0.5px solid #f48319; 
+            }
+
+        .hidden-content   {
+            width: 100%;
+           
+        }
+        
+        #hidden-content-1 img {
+            margin-right: 0px;
+            margin-left: 10px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        
+        #toggle-arrow-1 {
+            float: left;
+            margin-left: 0px;
+            font-size: 24px;
+            color: #f48319;
+            transform: rotate(0deg);
+            transition: transform 0.3s ease;
+        }
+        
+        #toggle-arrow-1.up {
+            transform: rotate(-180deg);
+        }
+        
+        #toggle-button-1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+      
+    .social-button{
+        display: inline-grid;
+        position: fixed;
+        background-color: rgba(255, 255, 255, 0) !important;
+        top: 25px;
+        right: 15px;
+        text-align: center;
+        z-index: 99999;
+    }
+    
+    .social-button-content {
+        display: inline-grid;
+    }   
+</style> 
+
+  <div id="id02">
+     <div class="social-button">
+    <div class="social-button-content">
+         <div class="toggle" id="toggle-button-1">
+        <img src="../../../../Assets/iconkiemtra.png" style="width:30px">
+        
+    </div>
+    </div>
+    <div class="toggle" id="toggle-button-2">
+        <img src="../../../../Assets/iconkiemtra.png" style="width:30px">
+        
+    </div>
+   
+    </div>
+</div>
+<div id="hidden-content-11">
+    <div class="hidden-content" id="hidden-content-1">
+    
+    <div class="social-button2">
+        <div class="social-button-content2">
+             <div class="container">
+             <center><span style="color: #f48319; font-size: 20px;"><br>Danh sách câu hỏi<br></span></center>
+             <hr>
+                              <style>
+                                      #contentContainer {
+      width: 100%; /* Kích thước tối đa là 97% chiều rộng của màn hình */
+      height: 100%;
+      overflow-y: scroll; /* Hiển thị thanh trượt ngang */
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    </style>
+    <div style="padding: 0px; width:99%; height: 89vh">
+    <div id="contentContainer">
+                                        <div class="dap-an">
+                                    <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 1:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question1" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question1" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question1" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question1" value="d">
+        </div>
+    </div>	</div>
+                                        <div class="dap-an">
+                                        
+                                            <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 2:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question2" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question2" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question2" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question2" value="d">
+        </div>
+    </div>
+                                        </div>
+                                                                            <div class="dap-an">
+                                        
+                                        <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 3:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question3" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question3" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question3" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question3" value="d">
+        </div>
+    </div>
+                                        </div>
+                                        <div class="dap-an">
+            <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 4:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question4" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question4" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question4" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question4" value="d">
+        </div>
+    </div>							</div>
+                                                                            <div class="dap-an">
+                                        
+        <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 5:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question5" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question5" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question5" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question5" value="d">
+        </div>
+    </div>								</div>
+                                                                            <div class="dap-an">
+                <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 6:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question6" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question6" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question6" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question6" value="d">
+        </div>
+    </div>						</div>
+                                        <div class="dap-an">
+    <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 7:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question7" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question7" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question7" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question7" value="d">
+        </div>
+    </div>									</div>
+                                                                            <div class="dap-an">
+                                        
+    <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 8:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question8" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question8" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question8" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question8" value="d">
+        </div>
+    </div>									</div>
+                                                                            <div class="dap-an">
+        <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 9:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question9" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question9" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question9" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question9" value="d">
+        </div>
+    </div>								</div>
+                                                                            <div class="dap-an">
+        <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 10:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question10" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question10" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question10" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question10" value="d">
+        </div>
+    </div>
+                                        </div>
+                                                                            <div class="dap-an">
+                                    <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 11:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question11" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question11" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question11" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question11" value="d">
+        </div>
+    </div>	</div>
+                                        <div class="dap-an">
+                                        
+                                            <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 12:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question12" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question12" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question12" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question12" value="d">
+        </div>
+    </div>
+                                        </div>
+                                                                            <div class="dap-an">
+                                        
+                                        <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 13:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question13" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question13" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question13" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question13" value="d">
+        </div>
+    </div>
+                                        </div>
+                                        <div class="dap-an">
+            <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 14:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question14" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question14" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question14" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question14" value="d">
+        </div>
+    </div>							</div>
+                                                                            <div class="dap-an">
+                                        
+        <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 15:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question15" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question15" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question15" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question15" value="d">
+        </div>
+    </div>								</div>
+                                                                            <div class="dap-an">
+                <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 16:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question16" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question16" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question16" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question16" value="d">
+        </div>
+    </div>						</div>
+                                        <div class="dap-an">
+    <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 17:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question17" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question17" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question17" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question17" value="d">
+        </div>
+    </div>									</div>
+                                                                            <div class="dap-an">
+                                        
+    <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 18:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question18" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question18" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question18" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question18" value="d">
+        </div>
+    </div>									</div>
+                                                                            <div class="dap-an">
+        <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 19:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question19" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question19" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question19" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question19" value="d">
+        </div>
+    </div>								</div>
+                                                                            <div class="dap-an">
+        <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 20:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question20" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question20" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question20" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question20" value="d">
+        </div>
+    </div>
+                                        </div>
+                                        <div class="dap-an">
+                                    <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 21:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question21" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question21" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question21" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question21" value="d">
+        </div>
+    </div>	</div>
+                                        <div class="dap-an">
+                                        
+                                            <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 22:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question22" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question22" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question22" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question22" value="d">
+        </div>
+    </div>
+                                        </div>
+                                                                            <div class="dap-an">
+                                        
+                                        <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 23:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question23" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question23" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question23" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question23" value="d">
+        </div>
+    </div>
+                                        </div>
+                                        <div class="dap-an">
+            <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 24:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question24" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question24" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question24" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question24" value="d">
+        </div>
+    </div>							</div>
+                                                                            <div class="dap-an">
+                                        
+        <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 25:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question25" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question25" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question25" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question25" value="d">
+        </div>
+    </div>								</div>
+                                                                            <div class="dap-an">
+                <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 26:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question26" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question26" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question26" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question26" value="d">
+        </div>
+    </div>						</div>
+                                        <div class="dap-an">
+    <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 27:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question27" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question27" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question27" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question27" value="d">
+        </div>
+    </div>									</div>
+                                                                            <div class="dap-an">
+                                        
+    <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 28:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question28" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question28" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question28" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question28" value="d">
+        </div>
+    </div>									</div>
+                                                                            <div class="dap-an">
+        <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 29:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question29" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question29" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question29" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question29" value="d">
+        </div>
+    </div>								</div>
+                                                                            <div class="dap-an">
+        <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 30:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question30" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question30" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question30" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question30" value="d">
+        </div>
+    </div>
+                                        </div>
+                                                                            <div class="dap-an">
+                                    <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 31:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question31" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question31" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question31" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question31" value="d">
+        </div>
+    </div>	</div>
+                                        <div class="dap-an">
+                                        
+                                            <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 32:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question32" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question32" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question32" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question32" value="d">
+        </div>
+    </div>
+                                        </div>
+                                                                            <div class="dap-an">
+                                        
+                                        <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 33:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question33" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question33" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question33" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question33" value="d">
+        </div>
+    </div>
+                                        </div>
+                                        <div class="dap-an">
+            <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 34:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question34" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question34" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question34" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question34" value="d">
+        </div>
+    </div>							</div>
+                                                                            <div class="dap-an">
+                                        
+        <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 35:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question35" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question35" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question35" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question35" value="d">
+        </div>
+    </div>								</div>
+                                                                            <div class="dap-an">
+                <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 36:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question36" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question36" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question36" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question36" value="d">
+        </div>
+    </div>						</div>
+                                        <div class="dap-an">
+    <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 37:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question37" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question37" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question37" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question37" value="d">
+        </div>
+    </div>									</div>
+                                                                            <div class="dap-an">
+                                        
+    <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 38:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question38" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question38" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question38" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question38" value="d">
+        </div>
+    </div>									</div>
+                                                                            <div class="dap-an">
+        <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 39:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question39" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question39" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question39" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question39" value="d">
+        </div>
+    </div>								</div>
+                                                                            <div class="dap-an">
+        <div style="display: flex; align-items: center;"> <label for="question1" id="mkh1" style="float: left;">Câu 40:</label> <span id="mkh2" style="display: flex; align-items: center;">  </span> 
+        <div style="width: 60%; margin-left: auto;">
+            <span id="mkh3">A.</span><input type="radio" name="question40" value="a">
+    <span id="mkh3">B.</span><input type="radio" name="question40" value="b">
+    <span id="mkh3">C.</span><input type="radio" name="question40" value="c">
+    <span id="mkh3">D.</span><input type="radio" name="question40" value="d">
+        </div>
+    </div>
+                                        </div>
+    
+    </div></div></div>
+    </div>
+     <style>
+            #hidden-content-11 {display: none}
+            #toggle-button-2 {display: none; margin-bottom: 50px}
+            </style>
+            <br/>
+            
+    <script language="javascript">   document.getElementById("toggle-button-2").onclick = function () {
+                    document.getElementById("hidden-content-11").style.display = 'none';
+                    document.getElementById("toggle-button-2").style.display = 'none';
+                    document.getElementById("toggle-button-1").style.display = 'block';
+    
+    
+                };
+    
+                document.getElementById("toggle-button-1").onclick = function () {
+                    document.getElementById("hidden-content-11").style.display = 'block';
+                    document.getElementById("toggle-button-1").style.display = 'none';
+    document.getElementById("toggle-button-2").style.display = 'block';
+    
+                };
+    
+            </script>
+    </div>
+    </div>
+    <style>
+         @media screen and (max-width: 533px) {
+        .social-button2 {
+            display: inline-grid;
+            position: fixed;
+            background-color: #ddd; !important;
+            right: 0px;
+            bottom: 0px;
+            top: 0px;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            z-index: 9999;
+            
+        }
+        
+        .social-button-content2 {
+            display: inline-grid;
+        }
+       }
+            @media screen and (min-width: 533px) {
+        .social-button2 {
+            display: inline-grid;
+            position: fixed;
+            background-color: #ddd; !important;
+            right: 0px;
+            bottom: 0px;
+            top: 0px;
+            width: 400px;
+            padding: 10px;
+            text-align: center;
+            z-index: 9999;
+        }
+        
+        .social-button-content2 {
+            display: inline-grid;
+        }
+       }
+    
+    </style>
+    
+    
+                            </div>
+                        </div>
+                        </div>
+                        <div id="ketqua" class="modal"></div>
+                        <script>
+                        //ĐÁP ÁN
+                        var q1 = "a";
+                        var q2 = "c";
+                        var q3 = "c";
+                        var q4 = "a";
+                        var q5 = "c";
+                        var q6 = "a";
+                        var q7 = "d";
+                        var q8 = "b";
+                        var q9 = "d";
+                        var q10 = "c";
+                        var q11 = "d";
+                        var q12 = "c";
+                        var q13 = "d";
+                        var q14 = "a";
+                        var q15 = "c";
+                        var q16 = "a";
+                        var q17 = "d";
+                        var q18 = "c";
+                        var q19 = "c";
+                        var q20 = "c";
+                        var q21 = "d";
+                        var q22 = "d";
+                        var q23 = "a";
+                        var q24 = "d";
+                        var q25 = "c";
+                        var q26 = "a";
+                        var q27 = "d";
+                        var q28 = "a";
+                        var q29 = "c";
+                        var q30 = "a";
+                        var q31 = "a";
+                        var q32 = "d";
+                        var q33 = "c";
+                        var q34 = "d";
+                        var q35 = "d";
+                        var q36 = "d";
+                        var q37 = "d";
+                        var q38 = "b";
+                        var q39 = "d";
+                        var q40 = "d";
+                        // HIỂN THỊ NỘI DUNG
+                        // THÔNG TIN ĐỀ
+                        var tbkt = " Bài kiểm tra: Cuối kì II";
+                        var tgkt = "Thời gian: 45 phút";
+                        var mkt = "Môn: Tin học - Lớp 12";
+                        // ĐIỀN
+                        const tbktElement = document.getElementById("tbkt");
+                        tbktElement.innerHTML = tbkt;
+                        const tgktElement = document.getElementById("tgkt");
+                        tgktElement.innerHTML = tgkt;
+                        const mktElement = document.getElementById("mkt");
+                        mktElement.innerHTML = mkt;
+                        </script>
+                        <script>
+                        // VÔ HIỆU HÓA PHẦN TỬ
+                        function disableInputs(callback) {
+                                // Lấy div có class="thongtin"
+                                const thongtinElement = document.querySelector(".thongtin");
+                                // Lấy tất cả các phần tử input và select trong div này
+                                const inputs = thongtinElement.querySelectorAll("input, select");
+                                // Lặp qua tất cả các phần tử input và select
+                                for (let i = 0; i < inputs.length; i++) {
+                                    // Kiểm tra xem phần tử có id là username, lop,truong,tinh hay không
+                                    if (inputs[i].id === "username" || inputs[i].id === "lop" || inputs[i].id === "truong" || inputs[i].id === "tinh") {
+                                        // Vô hiệu hóa phần tử này
+                                        inputs[i].disabled = true;
+                                    }
+                                }
+                                if (callback && typeof (callback) === "function") {
+                                    callback();
+                                }
+                            }
+                            //LƯU THÔNG TIN
+                        function saveInfo() {
+                                var username = document.getElementById("username")
+                                    .value;
+                                var lop = document.getElementById("lop")
+                                    .value;
+                                var truong = document.getElementById("truong")
+                                    .value;
+                                var tinh = document.getElementById("tinh")
+                                    .value;
+                                if (username === "" || lop === "" || truong === "" || tinh === "") {
+                                    document.getElementById('vlndtt')
+                                        .style.display = 'block';
+                                    document.getElementById('dntt')
+                                        .style.display = 'none';
+                                    document.getElementById('vlndda')
+                                        .style.display = 'none';
+                                    document.getElementById('dndda')
+                                        .style.display = 'none';
+                                    setTimeout(function () {
+                                        document.getElementById('vlndtt')
+                                            .style.display = 'none';
+                                    }, 5000); // 5000 ms = 5 seconds
+                                } else {
+                                    const noidunganElement = document.querySelector(".noidungan");
+                                    if (noidunganElement.style.display === "none") {
+                                        // Code để lưu thông tin và tính đồng hồ đếm ngược
+                                        disableInputs(function () {
+                                document.getElementById('dntt')
+                                                .style.display = 'block';
+                                            document.getElementById('vlndtt')
+                                                .style.display = 'none';
+                                            document.getElementById('saveButton')
+                                                .style.display = 'none';
+                                            document.getElementById('khoang-cach')
+                                                .style.display = 'none';
+                                            document.getElementById('vlndda')
+                                                .style.display = 'none';
+                                            document.getElementById('dndda')
+                                                .style.display = 'none';
+                                            setTimeout(function () {
+                                                document.getElementById('dntt')
+                                                    .style.display = 'none';
+                                            }, 5000); // 5000 ms = 5 seconds
+                                            // Hiển thị phần tử có class="noidungan"
+                                            const endTime = new Date()
+                                                .getTime() + 45 * 60 * 1000;
+                                            const timerElement = document.getElementById("timer");
+                                            const messageElement = document.querySelector(".message");
+                                            timerElement.style.display = "block";
+                                            setInterval(function () {
+                                                if (timeLeft < 0) {
+                                                    timerElement.style.display = "none";
+                                                    messageElement.style.display = "block";
+                                                } else {
+                                                    timerElement.style.display = "block";
+                                                    messageElement.style.display = "none";
+                                                }
+                                            }, 1000);
+                                            noidunganElement.style.display = "block";
+                                                                                });
+                                    }
+                                }
+                            }
+                            // TÍNH ĐIỂM
+                        function showResult() {
+                                // KIỂM TRA ĐÃ LÀM HẾT CHƯA
+                                if (document.quiz.question1.value === "" || document.quiz.question2.value === "" || document.quiz.question3.value === "" || document.quiz.question4.value === "" || document.quiz.question5.value === "" || document.quiz.question6.value === "" || document.quiz.question7.value === "" || document.quiz.question8.value === "" || document.quiz.question9.value === "" || document.quiz.question10.value === "" || document.quiz.question11.value === "" || document.quiz.question12.value === "" || document.quiz.question13.value === "" || document.quiz.question14.value === "" || document.quiz.question15.value === "" || document.quiz.question16.value === "" || document.quiz.question17.value === "" || document.quiz.question18.value === "" || document.quiz.question19.value === "" || document.quiz.question20.value === "" || document.quiz.question21.value === "" || document.quiz.question22.value === "" || document.quiz.question23.value === "" || document.quiz.question24.value === "" || document.quiz.question25.value === "" || document.quiz.question26.value === "" || document.quiz.question27.value === "" || document.quiz.question28.value === "" || document.quiz.question29.value === "" || document.quiz.question30.value === "" || document.quiz.question31.value === "" || document.quiz.question32.value === "" || document.quiz.question33.value === "" || document.quiz.question34.value === "" || document.quiz.question35.value === "" || document.quiz.question36.value === "" || document.quiz.question37.value === "" || document.quiz.question38.value === "" || document.quiz.question39.value === "" || document.quiz.question40.value === "") {
+                                    document.getElementById('vlndda')
+                                        .style.display = 'block';
+                                    document.getElementById('dndda')
+                                        .style.display = 'none';
+                                    document.getElementById('vlndtt')
+                                        .style.display = 'none';
+                                    document.getElementById('dntt')
+                                        .style.display = 'none';
+                                    setTimeout(function () {
+                                        document.getElementById('vlndda')
+                                            .style.display = 'none';
+                                    }, 5000); // 5000 ms = 5 seconds
+                                    return;
+                                } else {
+                                
+        document.getElementById('dndda')
+                                        .style.display = 'block';
+                                    document.getElementById('vlndda')
+                                        .style.display = 'none';
+                                    document.getElementById('vlndtt')
+                                        .style.display = 'none';
+                                    document.getElementById('dntt')
+                                        .style.display = 'none';
+                                                                    document.getElementById('nop-bai')
+                                        .style.display = 'none';
+                                        document.getElementById('hidden-content-1').style.display = 'none';
+    
+                                };
+                                const username = document.getElementById("username")
+                                    .value;
+                                const lop = document.getElementById("lop")
+                                    .value;
+                                const truong = document.getElementById("truong")
+                                    .value;
+                                const tinh = document.getElementById("tinh")
+                                    .value;
+                                var score = 0; // Điểm ban đầu
+                                // lấy dữ liệu từ các input radio
+                                var question1 = document.quiz.question1.value;
+                                var question2 = document.quiz.question2.value;
+                                var question3 = document.quiz.question3.value;
+                                var question4 = document.quiz.question4.value;
+                                var question5 = document.quiz.question5.value;
+                                var question6 = document.quiz.question6.value;
+                                var question7 = document.quiz.question7.value;
+                                var question8 = document.quiz.question8.value;
+                                var question9 = document.quiz.question9.value;
+                                var question10 = document.quiz.question10.value;
+                                                            var question11 = document.quiz.question11.value;
+                                var question12 = document.quiz.question12.value;
+                                var question13 = document.quiz.question13.value;
+                                var question14 = document.quiz.question14.value;
+                                var question15 = document.quiz.question15.value;
+                                var question16 = document.quiz.question16.value;
+                                var question17 = document.quiz.question17.value;
+                                var question18 = document.quiz.question18.value;
+                                var question19 = document.quiz.question19.value;
+                                var question20 = document.quiz.question20.value;
+                            var question21 = document.quiz.question21.value;
+                                var question22 = document.quiz.question22.value;
+                                var question23 = document.quiz.question23.value;
+                                var question24 = document.quiz.question24.value;
+                                var question25 = document.quiz.question25.value;
+                                var question26 = document.quiz.question26.value;
+                                var question27 = document.quiz.question27.value;
+                                var question28 = document.quiz.question28.value;
+                                var question29 = document.quiz.question29.value;
+                                var question30 = document.quiz.question30.value;
+                                var question31 = document.quiz.question31.value;
+                                var question32 = document.quiz.question32.value;
+                                var question33 = document.quiz.question33.value;
+                                var question34 = document.quiz.question4.value;
+                                var question35 = document.quiz.question35.value;
+                                var question36 = document.quiz.question36.value;
+                                var question37 = document.quiz.question37.value;
+                                var question38 = document.quiz.question38.value;
+                                var question39 = document.quiz.question39.value;
+                                var question40 = document.quiz.question40.value;
+        
+                                //So sánh đáp án
+                                if (question1 === q1) {
+                                    score++;
+                                }
+                                if (question2 === q2) {
+                                    score++;
+                                }
+                                if (question3 === q3) {
+                                    score++;
+                                }
+                                if (question4 === q4) {
+                                    score++;
+                                }
+                                if (question5 === q5) {
+                                    score++;
+                                }
+                                if (question6 === q6) {
+                                    score++;
+                                }
+                                if (question7 === q7) {
+                                    score++;
+                                }
+                                if (question8 === q8) {
+                                    score++;
+                                }
+                                if (question9 === q9) {
+                                    score++;
+                                }
+                                if (question10 === q10) {
+                                    score++;
+                                }
+                                if (question11 === q11) {
+                                    score++;
+                                }
+                                if (question12 === q12) {
+                                    score++;
+                                }
+                                if (question13 === q13) {
+                                    score++;
+                                }
+                                if (question14 === q14) {
+                                    score++;
+                                }
+                                if (question15 === q15) {
+                                    score++;
+                                }
+                                if (question16 === q16) {
+                                    score++;
+                                }
+                                if (question17 === q17) {
+                                    score++;
+                                }
+                                if (question18 === q18) {
+                                    score++;
+                                }
+                                if (question19 === q19) {
+                                    score++;
+                                }
+                                if (question20 === q20) {
+                                    score++;
+                                }
+                                if (question21 === q21) {
+                                    score++;
+                                }
+                                if (question22 === q22) {
+                                    score++;
+                                }
+                                if (question23 === q23) {
+                                    score++;
+                                }
+                                if (question24 === q24) {
+                                    score++;
+                                }
+                                if (question25 === q25) {
+                                    score++;
+                                }
+                                if (question26 === q26) {
+                                    score++;
+                                }
+                                if (question27 === q27) {
+                                    score++;
+                                }
+                                if (question28 === q28) {
+                                    score++;
+                                }
+                                if (question29 === q29) {
+                                    score++;
+                                }
+                                if (question30 === q30) {
+                                    score++;
+                                }
+                                if (question31 === q31) {
+                                    score++;
+                                }
+                                if (question32 === q32) {
+                                    score++;
+                                }
+                                if (question33 === q33) {
+                                    score++;
+                                }
+                                if (question34 === q34) {
+                                    score++;
+                                }
+                                if (question35 === q35) {
+                                    score++;
+                                }
+                                if (question36 === q36) {
+                                    score++;
+                                }
+                                if (question37 === q37) {
+                                    score++;
+                                }
+                                if (question38 === q38) {
+                                    score++;
+                                }
+                                if (question39 === q39) {
+                                    score++;
+                                }
+                                if (question40 === q40) {
+                                    score++;
+                                }
+                                // Display the results
+                                if (score === 10 * 4) {
+                                    ketqua = "Tốt!";
+                                } else if (score >= 8 * 4) {
+                                    ketqua = "Khá tốt!";
+                                } else if (score >= 5 * 4) {
+                                    ketqua = "Ổn!";
+                                } else {
+                                    ketqua = "Bạn cần cố gắng hơn!";
+                                }
+                                var message = "Chúc mừng bạn đã hoàn thành!<br>" + tbkt + "<br>" + tgkt + "<br>" + mkt + "<hr><table width='100%' border='0'><tr><th colslan='5'>Đáp án<th></tr><tr><th width='20%'>01 - " + q1.toUpperCase() + " </th><th width='20%'>02 - " + q2.toUpperCase() + " </th><th width='20%'>03 - " + q3.toUpperCase() + " </th><th width='20%'>04 - " + q4.toUpperCase() + "</th><th width='20%'>05 - " + q5.toUpperCase() + "</th></tr><tr><th width='20%'>06 - " + q6.toUpperCase() + "</th><th width='20%'>07 - " + q7.toUpperCase() + "</th><th width='20%'>08 - " + q8.toUpperCase() + "</th><th width='20%'>09 - " + q9.toUpperCase() + "</th><th width='20%'>10 - " + q10.toUpperCase() + "</th></tr><tr><th width='20%'>11 - " + q11.toUpperCase() + " </th><th width='20%'>12 - " + q12.toUpperCase() + " </th><th width='20%'>13 - " + q13.toUpperCase() + " </th><th width='20%'>14 - " + q14.toUpperCase() + "</th><th width='20%'>15 - " + q15.toUpperCase() + "</th></tr><tr><th width='20%'>16 - " + q16.toUpperCase() + "</th><th width='20%'>17 - " + q17.toUpperCase() + "</th><th width='20%'>18 - " + q18.toUpperCase() + "</th><th width='20%'>19 - " + q19.toUpperCase() + "</th><th width='20%'>20 - " + q20.toUpperCase() + "</th></tr><tr><th width='20%'>21 - " + q21.toUpperCase() + " </th><th width='20%'>22 - " + q22.toUpperCase() + " </th><th width='20%'>23 - " + q23.toUpperCase() + " </th><th width='20%'>24 - " + q24.toUpperCase() + "</th><th width='20%'>25 - " + q25.toUpperCase() + "</th></tr><tr><th width='20%'>26 - " + q26.toUpperCase() + "</th><th width='20%'>27 - " + q27.toUpperCase() + "</th><th width='20%'>28 - " + q28.toUpperCase() + "</th><th width='20%'>29 - " + q29.toUpperCase() + "</th><th width='20%'>30 - " + q30.toUpperCase() + "</th></tr><tr><th width='20%'>31 - " + q31.toUpperCase() + " </th><th width='20%'>32 - " + q32.toUpperCase() + " </th><th width='20%'>33 - " + q33.toUpperCase() + " </th><th width='20%'>34 - " + q34.toUpperCase() + "</th><th width='20%'>35 - " + q35.toUpperCase() + "</th></tr><tr><th width='20%'>36 - " + q36.toUpperCase() + "</th><th width='20%'>37 - " + q37.toUpperCase() + "</th><th width='20%'>38 - " + q38.toUpperCase() + "</th><th width='20%'>39 - " + q39.toUpperCase() + "</th><th width='20%'>40 - " + q40.toUpperCase() + "</th></tr></div></div></table>" + "<hr>" + "Người làm kiểm tra: " + (username ? username.toUpperCase() : "Không xác định") + "<br>Lớp: " + (lop ? lop.toUpperCase() : "Không xác định") + "<br>Truờng: " + (truong ? truong.toUpperCase() : "Không xác định") + "<br>Tỉnh/TP: " + (tinh ? tinh.toUpperCase() : "Không xác định") + "<br>Số câu đúng: " + score + "<br>Điểm số: " + score / 4 + "/10" + "<br>Nhận xét: " + ketqua.toUpperCase();
+                                                            setTimeout(function () {
+                                                                document.getElementById('dndda')
+                                        .style.display = 'none';
+    
+    document.getElementById("ketqua")
+                                    .innerHTML = message;
+                                    }, 3000); // 5000 ms = 5 seconds
+                    document.getElementById('ketqua')
+                                    .style.display = 'block';
+                                document.getElementById('id02')
+                                    .style.display = 'none';
+                                document.getElementById('id03')
+                                    .style.display = 'none';
+                            }
+                            // Tự động xuất kết quả nếu người dùng không nhấn nút "Xuất kết quả" trong vòng 45 phút
+                        setTimeout(showResult, 45 * 60 * 1000 + 3000);
+                        //TÍNH THỜI GIAN        
+                        // Tính thời gian kết thúc
+                        const endTime = new Date()
+                            .getTime() + 45 * 60 * 1000;
+                        // Lấy thẻ div timer
+                        const timerElement = document.getElementById("timer");
+                        // Cập nhật thời gian sau mỗi giây
+                        setInterval(function () {
+                            // Tính toán thời lượng còn lại
+                            const now = new Date()
+                                .getTime();
+                            const timeLeft = endTime - now;
+                            // Tính toán phút và giây
+                            const minutes = Math.floor((timeLeft % (1000 * 45 * 60)) / (1000 * 60))
+                                .toString()
+                                .padStart(2, "0");
+                            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000)
+                                .toString()
+                                .padStart(2, "0");
+                            // Hiển thị thời gian
+                            timerElement.innerHTML = minutes + ":" + seconds;
+                        }, 1000); // Cập nhật sau mỗi giây
+    
+                        </script>
+                </th>
+            </tr>
+            </table>
+    </body>
+    </html>
