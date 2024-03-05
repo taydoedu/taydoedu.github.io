@@ -36,7 +36,15 @@ const questions = [
 // TIN HỌC
  "<a href='tinhoc/hocki1/de.html'>Kiểm tra học kì 1 - Tin học 12</a>",
   "<a href='tinhoc/hocki2/de.html'>Kiểm tra học kì 2 - Tin học 12</a>",
-
+// THPT
+  "<a href='toan/thpt/de.html'>Thi tốt nghiệp THPT - Toán</a>",
+  "<a href='tienganh/thpt/de.html'>Thi tốt nghiệp THPT - Tiếng Anh</a>",
+  "<a href='hoahoc/thpt/de.html'>Thi tốt nghiệp THPT - Hóa học</a>",
+  "<a href='vatli/thpt/de.html'>Thi tốt nghiệp THPT - Vật lí</a>",
+  "<a href='sinhhoc/thpt/de.html'>Thi tốt nghiệp THPT - Sinh học</a>",
+  "<a href='lichsu/thpt/de.html'>Thi tốt nghiệp THPT - Lịch sử</a>",
+  "<a href='diali/thpt/de.html'>Thi tốt nghiệp THPT - Địa lí</a>",
+  "<a href='gdcd/thpt/de.html'>Thi tốt nghiệp THPT - GDCD</a>",
 ];
 
 // Lấy số lượng phần tử muốn hiển thị
