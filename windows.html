@@ -44,10 +44,7 @@ function checkConnectionAndRedirect() {
  let device = navigator.userAgent;
  // Nếu là điện thoại Android
  if (device.includes("Android")) {
-  // Chuyển hướng sau 5 giây
-  setTimeout(() => {
     window.location = "android.html";
-  }, 1000);
  }
 }
 checkConnectionAndRedirect();
