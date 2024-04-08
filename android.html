@@ -42,9 +42,9 @@
 function checkConnectionAndRedirect() {
  // Lấy thông tin về thiết bị
  let device = navigator.userAgent;
- // Nếu là điện thoại Android
- if (device.includes("Android")) {
-    window.location = "android.html";
+ // Nếu là máy tính Windows
+ if (device.includes("Windows")) {
+    window.location = "windows.html";
  }
 }
 checkConnectionAndRedirect();
