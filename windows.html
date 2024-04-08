@@ -38,6 +38,20 @@
 </head>
 
 <body>
+	 <script>
+function checkConnectionAndRedirect() {
+ // Lấy thông tin về thiết bị
+ let device = navigator.userAgent;
+ // Nếu là điện thoại Android
+ if (device.includes("Android")) {
+  // Chuyển hướng sau 5 giây
+  setTimeout(() => {
+    window.location = "android.html";
+  }, 1000);
+ }
+}
+checkConnectionAndRedirect();
+  </script>
 	<div id="noidung" style='position:fixed;bottom:0;right:0;top:0;left:0;z-index:1;'>
 		<br>
 		<center> <img src="Assets/icon.png" style="width: 300px">
