@@ -15,7 +15,7 @@
 <meta name="description" content="Website học tập hoàn toàn miễn phí">
 <!-- Tải lại nội dung sau 5 phút
 <meta http-equiv="refresh" content="300">-->
- <link rel="stylesheet" href="../../../../../css/mau50cau.css">
+ <link rel="stylesheet" href="../../../../../css/maukiemtra.css">
 </head>
 <body>
 	<div class="menu-ql">
@@ -107,21 +107,18 @@
 					<div id="vlndtt" onclick="document.getElementById('vlndtt').style.display='none'">Vui lòng nhập đủ thông tin!</div>
      <div id="dndda" onclick="document.getElementById('dndda').style.display='none'">Đã nhập đủ đáp án!</div>
 					<div id="vlndda" onclick="document.getElementById('vlndda').style.display='none'">Vui lòng nhập đủ đáp án!</div>
-					<!-- <script>
-// Lấy dữ liệu từ LocalStorage
-  //var tentaikhoan = localStorage.getItem("tentaikhoan");
-var username = localStorage.getItem("username");
-var lop = localStorage.getItem("lop");
-var truong = localStorage.getItem("truong");
-var tinh = localStorage.getItem("tinh");
-
-// Điền dữ liệu vào các id
-//document.getElementById("tentaikhoan").value = tentaikhoan;
-document.getElementById("username").value = username;
-document.getElementById("lop").value = lop;
-document.getElementById("truong").value = truong;
-document.getElementById("tinh").value = tinh;
-</script>-->
+					<div id='hienThiThoiGian'></div>
+                    <div id='hiendapan' onclick="document.getElementById('dapan')
+                    .style.display = 'block';document.getElementById('hiendapan')
+                    .style.display = 'none';document.getElementById('andapan')
+                    .style.display = 'block';">Xem đáp án</div>
+                    <div id='andapan' onclick="document.getElementById('dapan')
+                    .style.display = 'none';document.getElementById('hiendapan')
+                    .style.display = 'block';document.getElementById('andapan')
+                    .style.display = 'none';">Ẩn đáp án</div>
+                    <div id='dapan' onclick="document.getElementById('hiendapan')
+                    .style.display = 'block';document.getElementById('dapan')
+                    .style.display = 'none';"></div>
 					<div class="noidungan" style="display:none;">
 						<div class="noidungbailam">
 							<div id="form-header">
@@ -131,94 +128,31 @@ document.getElementById("tinh").value = tinh;
 						</div>
                         	<!-- Các câu hỏi trắc nghiệm -->
                         <form name="quiz">
-						<div class="the_trai_phai">
-							<div class="the_div_trai">
-								<img src="0001.jpg" width="100%">
-							</div>
-							<div class="the_div_phai">
-                                <img src="0002.jpg" width="100%">
-                                </div></div>
-                                <div class="the_trai_phai">
-                                    <div class="the_div_trai">
-                                        <img src="0003.jpg" width="100%">
-                                    </div>
-                                    <div class="the_div_phai">
-                                        <img src="0004.jpg" width="100%">
-                                        </div></div>
-                                        <div class="the_trai_phai">
-                                            <div class="the_div_trai">
-                                                <img src="0005.jpg" width="100%">
-                                            </div>
-                                            <div class="the_div_phai">
-                                               
-                                                </div></div>
-                                              
-                                            
-                                                      
-                                             
-                                   
-                                               
-                                               
-                        
-                                      
+                            <div class="the_trai_phai">
+                                <div class="the_div_trai">
+                                    <img src="0001.jpg" width="100%">
+                                </div>
+                                <div class="the_div_phai">
+                                    <img src="0002.jpg" width="100%">
+                                    </div></div>
+                                    <div class="the_trai_phai">
+                                        <div class="the_div_trai">
+                                            <img src="0003.jpg" width="100%">
+                                        </div>
+                                        <div class="the_div_phai">
+                                            <img src="0004.jpg" width="100%">
+                                            </div></div>
+                                            <div class="the_trai_phai">
+                                                <div class="the_div_trai">
+                                                    <img src="0005.jpg" width="100%">
+                                                </div>
+                                                <div class="the_div_phai">
+                                                     </div></div>
+                                           
+                                                   
                                                
                                             
-     <style>
-        .toggle {
-            width: 100%;
-            height: 30px;
-        }
-        .toggle hr{
-             border: 0.5px solid #f48319; 
-            }
-
-        .hidden-content   {
-            width: 100%;
-           
-        }
-        
-        #hidden-content-1 img {
-            margin-right: 0px;
-            margin-left: 10px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-        }
-        
-        #toggle-arrow-1 {
-            float: left;
-            margin-left: 0px;
-            font-size: 24px;
-            color: #f48319;
-            transform: rotate(0deg);
-            transition: transform 0.3s ease;
-        }
-        
-        #toggle-arrow-1.up {
-            transform: rotate(-180deg);
-        }
-        
-        #toggle-button-1 {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }
-      
-    .social-button{
-        display: inline-grid;
-        position: fixed;
-        background-color: rgba(255, 255, 255, 0) !important;
-        top: 25px;
-        right: 15px;
-        text-align: center;
-        z-index: 99999;
-    }
-    
-    .social-button-content {
-        display: inline-grid;
-    }   
-</style> 
-
+     
   <div id="id02">
      <div class="social-button">
     <div class="social-button-content">
@@ -242,15 +176,7 @@ document.getElementById("tinh").value = tinh;
              <div class="container">
              <center><span style="color: #f48319; font-size: 20px;"><br>Danh sách câu hỏi<br></span></center>
              <hr>
-                              <style>
-                                      #contentContainer {
-      width: 100%; /* Kích thước tối đa là 97% chiều rộng của màn hình */
-      height: 100%;
-      overflow-y: scroll; /* Hiển thị thanh trượt ngang */
-      margin-top: 0px;
-      margin-bottom: 0px;
-    }
-    </style>
+                              
     <div style="padding: 0px; width:99%; height: 89vh">
     <div id="contentContainer">
                                         <div class="dap-an">
@@ -644,10 +570,7 @@ document.getElementById("tinh").value = tinh;
     
     </div></div></div>
     </div>
-     <style>
-            #hidden-content-11 {display: none}
-            #toggle-button-2 {display: none; margin-bottom: 50px}
-            </style>
+     
             <br/>
             
     <script language="javascript">   document.getElementById("toggle-button-2").onclick = function () {
@@ -668,46 +591,6 @@ document.getElementById("tinh").value = tinh;
             </script>
     </div>
     </div>
-    <style>
-         @media screen and (max-width: 533px) {
-        .social-button2 {
-            display: inline-grid;
-            position: fixed;
-            background-color: #ddd; !important;
-            right: 0px;
-            bottom: 0px;
-            top: 0px;
-            width: 100%;
-            padding: 10px;
-            text-align: center;
-            z-index: 9999;
-            
-        }
-        
-        .social-button-content2 {
-            display: inline-grid;
-        }
-       }
-            @media screen and (min-width: 533px) {
-        .social-button2 {
-            display: inline-grid;
-            position: fixed;
-            background-color: #ddd; !important;
-            right: 0px;
-            bottom: 0px;
-            top: 0px;
-            width: 400px;
-            padding: 10px;
-            text-align: center;
-            z-index: 9999;
-        }
-        
-        .social-button-content2 {
-            display: inline-grid;
-        }
-       }
-    
-    </style>
     
     
                             </div>
@@ -715,8 +598,8 @@ document.getElementById("tinh").value = tinh;
                         </div>
                         <div id="ketqua" class="modal"></div>
                         <script>
-                        //ĐÁP ÁN
-                        var q1 = "a";
+                       //ĐÁP ÁN
+                       var q1 = "a";
                         var q2 = "b";
                         var q3 = "d";
                         var q4 = "a";
@@ -768,8 +651,6 @@ document.getElementById("tinh").value = tinh;
                         tgktElement.innerHTML = tgkt;
                         const mktElement = document.getElementById("mkt");
                         mktElement.innerHTML = mkt;
-                        </script>
-                        <script>
                         // VÔ HIỆU HÓA PHẦN TỬ
                         function disableInputs(callback) {
                                 // Lấy div có class="thongtin"
@@ -850,7 +731,33 @@ document.getElementById("tinh").value = tinh;
                                             noidunganElement.style.display = "block";
                                                                                 });
                                     }
-                                }
+                                    
+                                    // Tự động xuất kết quả nếu người dùng không nhấn nút "Xuất kết quả" trong vòng 45 phút
+                        setTimeout(showResult, 45 * 60 * 1000 + 3000);
+                        //TÍNH THỜI GIAN        
+                        // Tính thời gian kết thúc
+                        const endTime = new Date()
+                            .getTime() + 45 * 60 * 1000;
+                        // Lấy thẻ div timer
+                        const timerElement = document.getElementById("timer");
+                        // Cập nhật thời gian sau mỗi giây
+                        setInterval(function () {
+                            // Tính toán thời lượng còn lại
+                            const now = new Date()
+                                .getTime();
+                            const timeLeft = endTime - now;
+                            // Tính toán phút và giây
+                            const minutes = Math.floor((timeLeft % (1000 * 45 * 60)) / (1000 * 60))
+                                .toString()
+                                .padStart(2, "0");
+                            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000)
+                                .toString()
+                                .padStart(2, "0");
+                            // Hiển thị thời gian
+                            timerElement.innerHTML = minutes + ":" + seconds;
+                        }, 1000); // Cập nhật sau mỗi giây
+    
+                    }
                             }
                             // TÍNH ĐIỂM
                         function showResult() {
@@ -1066,47 +973,60 @@ document.getElementById("tinh").value = tinh;
                                 } else {
                                     ketqua = "Bạn cần cố gắng hơn!";
                                 }
-                                var message = "Chúc mừng bạn đã hoàn thành!<br>" + tbkt + "<br>" + tgkt + "<br>" + mkt + "<hr><table width='100%' border='0'><tr><th colslan='5'>Đáp án<th></tr><tr><th width='20%'>01 - " + q1.toUpperCase() + " </th><th width='20%'>02 - " + q2.toUpperCase() + " </th><th width='20%'>03 - " + q3.toUpperCase() + " </th><th width='20%'>04 - " + q4.toUpperCase() + "</th><th width='20%'>05 - " + q5.toUpperCase() + "</th></tr><tr><th width='20%'>06 - " + q6.toUpperCase() + "</th><th width='20%'>07 - " + q7.toUpperCase() + "</th><th width='20%'>08 - " + q8.toUpperCase() + "</th><th width='20%'>09 - " + q9.toUpperCase() + "</th><th width='20%'>10 - " + q10.toUpperCase() + "</th></tr><tr><th width='20%'>11 - " + q11.toUpperCase() + " </th><th width='20%'>12 - " + q12.toUpperCase() + " </th><th width='20%'>13 - " + q13.toUpperCase() + " </th><th width='20%'>14 - " + q14.toUpperCase() + "</th><th width='20%'>15 - " + q15.toUpperCase() + "</th></tr><tr><th width='20%'>16 - " + q16.toUpperCase() + "</th><th width='20%'>17 - " + q17.toUpperCase() + "</th><th width='20%'>18 - " + q18.toUpperCase() + "</th><th width='20%'>19 - " + q19.toUpperCase() + "</th><th width='20%'>20 - " + q20.toUpperCase() + "</th></tr><tr><th width='20%'>21 - " + q21.toUpperCase() + " </th><th width='20%'>22 - " + q22.toUpperCase() + " </th><th width='20%'>23 - " + q23.toUpperCase() + " </th><th width='20%'>24 - " + q24.toUpperCase() + "</th><th width='20%'>25 - " + q25.toUpperCase() + "</th></tr><tr><th width='20%'>26 - " + q26.toUpperCase() + "</th><th width='20%'>27 - " + q27.toUpperCase() + "</th><th width='20%'>28 - " + q28.toUpperCase() + "</th><th width='20%'>29 - " + q29.toUpperCase() + "</th><th width='20%'>30 - " + q30.toUpperCase() + "</th></tr><tr><th width='20%'>31 - " + q31.toUpperCase() + " </th><th width='20%'>32 - " + q32.toUpperCase() + " </th><th width='20%'>33 - " + q33.toUpperCase() + " </th><th width='20%'>34 - " + q34.toUpperCase() + "</th><th width='20%'>35 - " + q35.toUpperCase() + "</th></tr><tr><th width='20%'>36 - " + q36.toUpperCase() + "</th><th width='20%'>37 - " + q37.toUpperCase() + "</th><th width='20%'>38 - " + q38.toUpperCase() + "</th><th width='20%'>39 - " + q39.toUpperCase() + "</th><th width='20%'>40 - " + q40.toUpperCase() + "</th></tr></div></div></table>" + "<hr>" + "Người làm kiểm tra: " + (username ? username.toUpperCase() : "Không xác định") + "<br>Lớp: " + (lop ? lop.toUpperCase() : "Không xác định") + "<br>Truờng: " + (truong ? truong.toUpperCase() : "Không xác định") + "<br>Tỉnh/TP: " + (tinh ? tinh.toUpperCase() : "Không xác định") + "<br>Số câu đúng: " + score + "<br>Điểm số: " + score / 4 + "/10" + "<br>Nhận xét: " + ketqua.toUpperCase();
-                                                            setTimeout(function () {
+                               // Gọi hàm để hiển thị thời gian
+      hienThiThoiGian();
+                                var message = "Chúc mừng bạn đã hoàn thành!<br>" + tbkt + "<br>" + tgkt + "<br>" + mkt + "<br>" + "Người làm kiểm tra: " + (username ? username.toUpperCase() : "Không xác định") + "<br>Lớp: " + (lop ? lop.toUpperCase() : "Không xác định") + "<br>Truờng: " + (truong ? truong.toUpperCase() : "Không xác định") + "<br>Tỉnh/TP: " + (tinh ? tinh.toUpperCase() : "Không xác định") + "<br>Số câu đúng: " + score + "<br>Điểm số: " + score / 4 + "/10" + "<br>Nhận xét: " + ketqua.toUpperCase();
+                                  var dapan = "<table width='100%' border='0'><tr><th colslan='5'>Đáp án<th></tr><tr><th width='20%'>01 - " + q1.toUpperCase() + "|" + question1.toUpperCase() + " </th><th width='20%'>02 - " + q2.toUpperCase() + "|" + question2.toUpperCase() + " </th><th width='20%'>03 - " + q3.toUpperCase() + "|" + question3.toUpperCase() + " </th><th width='20%'>04 - " + q4.toUpperCase() + "|" + question4.toUpperCase() + "</th><th width='20%'>05 - " + q5.toUpperCase() + "|" + question5.toUpperCase() + "</th></tr><tr><th width='20%'>06 - " + q6.toUpperCase() + "|" + question6.toUpperCase() + "</th><th width='20%'>07 - " + q7.toUpperCase() + "|" + question7.toUpperCase() + "</th><th width='20%'>08 - " + q8.toUpperCase() + "|" + question8.toUpperCase() + "</th><th width='20%'>09 - " + q9.toUpperCase() + "|" + question9.toUpperCase() + "</th><th width='20%'>10 - " + q10.toUpperCase() + "|" + question10.toUpperCase() + "</th></tr><tr><th width='20%'>11 - " + q11.toUpperCase() + "|" + question11.toUpperCase() + " </th><th width='20%'>12 - " + q12.toUpperCase() + "|" + question12.toUpperCase()+ " </th><th width='20%'>13 - " + q13.toUpperCase() + "|" + question13.toUpperCase() + " </th><th width='20%'>14 - " + q14.toUpperCase() + "|" + question14.toUpperCase() + "</th><th width='20%'>15 - " + q15.toUpperCase() + "|" + question15.toUpperCase() + "</th></tr><tr><th width='20%'>16 - " + q16.toUpperCase() + "|" + question16.toUpperCase() + "</th><th width='20%'>17 - " + q17.toUpperCase() + "|" + question17.toUpperCase() + "</th><th width='20%'>18 - " + q18.toUpperCase() + "|" + question18.toUpperCase() + "</th><th width='20%'>19 - " + q19.toUpperCase() + "|" + question19.toUpperCase() + "</th><th width='20%'>20 - " + q20.toUpperCase() + "|" + question20.toUpperCase() + "</th></tr><tr><th width='20%'>21 - " + q21.toUpperCase() + "|" + question21.toUpperCase() + " </th><th width='20%'>22 - " + q22.toUpperCase() + "|" + question22.toUpperCase() + " </th><th width='20%'>23 - " + q23.toUpperCase() + "|" + question23.toUpperCase() + " </th><th width='20%'>24 - " + q24.toUpperCase() + "|" + question24.toUpperCase() + "</th><th width='20%'>25 - " + q25.toUpperCase() + "|" + question25.toUpperCase() + "</th></tr><tr><th width='20%'>26 - " + q26.toUpperCase() + "|" + question26.toUpperCase() + "</th><th width='20%'>27 - " + q27.toUpperCase() + "|" + question27.toUpperCase() + "</th><th width='20%'>28 - " + q28.toUpperCase() + "|" + question28.toUpperCase() + "</th><th width='20%'>29 - " + q29.toUpperCase() + "|" + question29.toUpperCase() + "</th><th width='20%'>30 - " + q30.toUpperCase() + "|" + question30.toUpperCase() + "</th></tr><tr><th width='20%'>31 - " + q31.toUpperCase() + "|" + question31.toUpperCase() + " </th><th width='20%'>32 - " + q32.toUpperCase() + "|" + question32.toUpperCase() + " </th><th width='20%'>33 - " + q33.toUpperCase() + "|" + question33.toUpperCase() + " </th><th width='20%'>34 - " + q34.toUpperCase() + "|" + question34.toUpperCase() + "</th><th width='20%'>35 - " + q35.toUpperCase() + "|" + question35.toUpperCase() + "</th></tr><tr><th width='20%'>36 - " + q36.toUpperCase() + "|" + question36.toUpperCase() + "</th><th width='20%'>37 - " + q37.toUpperCase() + "|" + question37.toUpperCase() + "</th><th width='20%'>38 - " + q38.toUpperCase() + "|" + question38.toUpperCase() + "</th><th width='20%'>39 - " + q39.toUpperCase() + "|" + question39.toUpperCase() + "</th><th width='20%'>40 - " + q40.toUpperCase() + "|" + question40.toUpperCase() + "</th></tr></div></div></table>";             
+                                setTimeout(function () {
                                                                 document.getElementById('dndda')
                                         .style.display = 'none';
     
     document.getElementById("ketqua")
                                     .innerHTML = message;
+                                    document.getElementById("dapan")
+                                    .innerHTML = dapan;
+                                    document.getElementById('hiendapan')
+                                    .style.display = 'block';
                                     }, 3000); // 5000 ms = 5 seconds
+                                    
                     document.getElementById('ketqua')
                                     .style.display = 'block';
+                                   
                                 document.getElementById('id02')
                                     .style.display = 'none';
                                 document.getElementById('id03')
                                     .style.display = 'none';
                             }
-                            // Tự động xuất kết quả nếu người dùng không nhấn nút "Xuất kết quả" trong vòng 45 phút
-                        setTimeout(showResult, 45 * 60 * 1000 + 3000);
-                        //TÍNH THỜI GIAN        
-                        // Tính thời gian kết thúc
-                        const endTime = new Date()
-                            .getTime() + 45 * 60 * 1000;
-                        // Lấy thẻ div timer
-                        const timerElement = document.getElementById("timer");
-                        // Cập nhật thời gian sau mỗi giây
-                        setInterval(function () {
-                            // Tính toán thời lượng còn lại
-                            const now = new Date()
-                                .getTime();
-                            const timeLeft = endTime - now;
-                            // Tính toán phút và giây
-                            const minutes = Math.floor((timeLeft % (1000 * 45 * 60)) / (1000 * 60))
-                                .toString()
-                                .padStart(2, "0");
-                            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000)
-                                .toString()
-                                .padStart(2, "0");
-                            // Hiển thị thời gian
-                            timerElement.innerHTML = minutes + ":" + seconds;
-                        }, 1000); // Cập nhật sau mỗi giây
-    
+                           
+
                         </script>
+			</th>
+		</tr>
+		</table>
+        
+        <script>
+       function hienThiThoiGian() {
+        const now = new Date(); // Lấy thời gian hiện tại
+        const timeStamp = now.toLocaleString(); // Định dạng thời gian
+        
+        // Lấy thẻ `div` với id "hienThiThoiGian"
+        const divHienThiThoiGian = document.getElementById("hienThiThoiGian");
+      
+        // Cập nhật nội dung của thẻ `div` bằng thời gian hiện tại
+        divHienThiThoiGian.textContent = "Thời gian nộp bài lúc: " + timeStamp;
+        document.getElementById('hienThiThoiGian')
+                                        .style.display = 'block';
+                                        document.getElementById('dndda')
+                                        .style.display = 'none';
+        // Lưu trữ thời gian vào biến `timeOut`
+        const timerOut = timeStamp;
+      
+        // In ra giá trị của biến `timeOut` (tùy chọn)
+        console.log("Giá trị lưu trữ trong `timeOut`:", timerOut);
+      }
+      
+     
+       </script>
                 </th>
             </tr>
             </table>
