@@ -17,14 +17,37 @@
 </head>
 <body>
 <style>
-img {position: absolute; top: 50%; left: 0%; transform: translate(0%, -50%); width: 100%}
-@media (min-width: 576px) { img { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50%} }
+#loader {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 99999;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+		transition: all 1s ease-in-out;
+	}
+	
+	.circle {
+		height: auto;
+		top: 50%;
+        left: 50%;
+		transform: translate(-50%, -50%);
+		position: relative;
+		text-align: center;
+		width: 100%;
+	}
 </style>
       <noscript>    <div style="top: 0px; left: 0px; right: 0px; bottom: 0px; position: fixed; z-index: 9999 !important; background-color: #fff;
 color: #f48319"><center><h1>Trình duyệt của bạn hiện đang bị chặn Javascript, vui lòng bật lại và  tải lại trình duyệt!</div></center></h1></noscript>
 
 <div id="noidungan">
-<img src="/Assets/icondong.gif"> </div>
+<div id="loader">
+		<div class="circle">
+		<img src="Assets/icondong.gif" style="width: 100px">
+		</div>
+	</div>
+</div>
       <script>
 function checkConnectionAndRedirect() {
  // Kiểm tra kết nối mạng
