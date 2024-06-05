@@ -16,7 +16,1535 @@
 <!-- Tải lại nội dung sau 5 phút
 <meta http-equiv="refresh" content="300">-->
  <link rel="stylesheet" href="../css/main.css">
+    <style>
+        :root {
+            --ffsd: 0px;
+            --1vw: calc((100vw - var(--sbw, 0px)) / 100);
+            --1vh: var(--inner1Vh, 1vh);
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            .animated {
+                animation: none !important;
+            }
+        }
+        
+        html {
+            zoom: var(--rzf, 1);
+            font-size: max(calc(min(var(--1vw, 1vw), 13.66px) * var(--rfso, 1)), var(--minfs, 0px));
+            -webkit-text-size-adjust: 100%;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-size: calc(1rem * var(--bfso, 1));
+        }
+        
+        body,
+        html,
+        p,
+        ul,
+        ol,
+        li {
+            margin: 0;
+            padding: 0;
+            font-synthesis: none;
+            font-kerning: none;
+            font-variant-ligatures: none;
+            font-feature-settings: "kern" 0, "calt" 0, "liga" 0, "clig" 0, "dlig" 0, "hlig" 0;
+            font-family: unset;
+            -webkit-font-smoothing: subpixel-antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: geometricprecision;
+            white-space: normal;
+        }
+        
+        li {
+            text-align: unset;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        img {
+            -webkit-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
+            -webkit-touch-callout: none;
+        }
+        
+        @font-face {
+            font-family: YACgEbc43jc-0;
+            src: url(fonts/a56c575d124526925170e2b56cd7a12c.woff2);
+            font-style: normal;
+            font-weight: 400;
+        }
+        
+        @font-face {
+            font-family: YACgEbc43jc-0;
+            src: url(fonts/91f9b9f824dc5fee4f5287f32a9906be.woff2);
+            font-style: normal;
+            font-weight: 700;
+        }
+        
+        @font-face {
+            font-family: YACgEbc43jc-0;
+            src: url(fonts/c875d226c1850f0b1279e6319d4223ea.woff2);
+            font-style: italic;
+            font-weight: 400;
+        }
+        
+        @font-face {
+            font-family: YACgEbc43jc-0;
+            src: url(fonts/a2e1ffc1d951e06c166c5f1c86b1c7ed.woff2);
+            font-style: italic;
+            font-weight: 700;
+        }
+        
+        @font-face {
+            font-family: YACgEbc43jc-0;
+            src: url(fonts/a56c575d124526925170e2b56cd7a12c.woff2);
+            font-style: normal;
+            font-weight: 100;
+        }
+        
+        @font-face {
+            font-family: YACgEbc43jc-0;
+            src: url(fonts/c875d226c1850f0b1279e6319d4223ea.woff2);
+            font-style: italic;
+            font-weight: 100;
+        }
+        
+        @font-face {
+            font-family: YACgEbc43jc-0;
+            src: url(fonts/a56c575d124526925170e2b56cd7a12c.woff2);
+            font-style: normal;
+            font-weight: 200;
+        }
+        
+        @font-face {
+            font-family: YACgEbc43jc-0;
+            src: url(fonts/c875d226c1850f0b1279e6319d4223ea.woff2);
+            font-style: italic;
+            font-weight: 200;
+        }
+        
+        @font-face {
+            font-family: YACgEbc43jc-0;
+            src: url(fonts/a56c575d124526925170e2b56cd7a12c.woff2);
+            font-style: normal;
+            font-weight: 300;
+        }
+        
+        @font-face {
+            font-family: YACgEbc43jc-0;
+            src: url(fonts/c875d226c1850f0b1279e6319d4223ea.woff2);
+            font-style: italic;
+            font-weight: 300;
+        }
+        
+        @font-face {
+            font-family: YACgEbc43jc-0;
+            src: url(fonts/a56c575d124526925170e2b56cd7a12c.woff2);
+            font-style: normal;
+            font-weight: 500;
+        }
+        
+        @font-face {
+            font-family: YACgEbc43jc-0;
+            src: url(fonts/c875d226c1850f0b1279e6319d4223ea.woff2);
+            font-style: italic;
+            font-weight: 500;
+        }
+        
+        @font-face {
+            font-family: YACgEbc43jc-0;
+            src: url(fonts/91f9b9f824dc5fee4f5287f32a9906be.woff2);
+            font-style: normal;
+            font-weight: 600;
+        }
+        
+        @font-face {
+            font-family: YACgEbc43jc-0;
+            src: url(fonts/a2e1ffc1d951e06c166c5f1c86b1c7ed.woff2);
+            font-style: italic;
+            font-weight: 600;
+        }
+        
+        @font-face {
+            font-family: YACgEbc43jc-0;
+            src: url(fonts/91f9b9f824dc5fee4f5287f32a9906be.woff2);
+            font-style: normal;
+            font-weight: 800;
+        }
+        
+        @font-face {
+            font-family: YACgEbc43jc-0;
+            src: url(fonts/a2e1ffc1d951e06c166c5f1c86b1c7ed.woff2);
+            font-style: italic;
+            font-weight: 800;
+        }
+        
+        @font-face {
+            font-family: YACgEbc43jc-0;
+            src: url(fonts/91f9b9f824dc5fee4f5287f32a9906be.woff2);
+            font-style: normal;
+            font-weight: 900;
+        }
+        
+        @font-face {
+            font-family: YACgEbc43jc-0;
+            src: url(fonts/a2e1ffc1d951e06c166c5f1c86b1c7ed.woff2);
+            font-style: italic;
+            font-weight: 900;
+        }
+        
+        @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(fonts/f8f199f09526f79e87644ed227e0f651.woff2);
+            font-style: normal;
+            font-weight: 400;
+        }
+        
+        @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(fonts/98c4d2c0223fc8474641c77f923528e9.woff2);
+            font-style: normal;
+            font-weight: 700;
+        }
+        
+        @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(fonts/d257a7100844bc3f98c9021168b6249e.woff2);
+            font-style: italic;
+            font-weight: 400;
+        }
+        
+        @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(fonts/1060345c54d396e76d73f1da7ee200bd.woff2);
+            font-style: italic;
+            font-weight: 700;
+        }
+        
+        @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(fonts/f8f199f09526f79e87644ed227e0f651.woff2);
+            font-style: normal;
+            font-weight: 100;
+        }
+        
+        @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(fonts/d257a7100844bc3f98c9021168b6249e.woff2);
+            font-style: italic;
+            font-weight: 100;
+        }
+        
+        @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(fonts/f8f199f09526f79e87644ed227e0f651.woff2);
+            font-style: normal;
+            font-weight: 200;
+        }
+        
+        @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(fonts/d257a7100844bc3f98c9021168b6249e.woff2);
+            font-style: italic;
+            font-weight: 200;
+        }
+        
+        @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(fonts/f8f199f09526f79e87644ed227e0f651.woff2);
+            font-style: normal;
+            font-weight: 300;
+        }
+        
+        @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(fonts/d257a7100844bc3f98c9021168b6249e.woff2);
+            font-style: italic;
+            font-weight: 300;
+        }
+        
+        @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(fonts/f8f199f09526f79e87644ed227e0f651.woff2);
+            font-style: normal;
+            font-weight: 500;
+        }
+        
+        @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(fonts/d257a7100844bc3f98c9021168b6249e.woff2);
+            font-style: italic;
+            font-weight: 500;
+        }
+        
+        @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(fonts/98c4d2c0223fc8474641c77f923528e9.woff2);
+            font-style: normal;
+            font-weight: 600;
+        }
+        
+        @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(fonts/1060345c54d396e76d73f1da7ee200bd.woff2);
+            font-style: italic;
+            font-weight: 600;
+        }
+        
+        @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(fonts/98c4d2c0223fc8474641c77f923528e9.woff2);
+            font-style: normal;
+            font-weight: 800;
+        }
+        
+        @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(fonts/1060345c54d396e76d73f1da7ee200bd.woff2);
+            font-style: italic;
+            font-weight: 800;
+        }
+        
+        @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(fonts/98c4d2c0223fc8474641c77f923528e9.woff2);
+            font-style: normal;
+            font-weight: 900;
+        }
+        
+        @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(fonts/1060345c54d396e76d73f1da7ee200bd.woff2);
+            font-style: italic;
+            font-weight: 900;
+        }
+        
+        @media (max-width: 375px) {
+            #YdzWSb2h9P9M6YzR {
+                grid-area: 2 / 2 / 4 / 4;
+                position: relative;
+            }
+            #gvwS1Ktoy561VPOW {
+                grid-area: 3 / 3 / 5 / 5;
+                position: relative;
+            }
+            #rCKfT43PBHMWdsJ2 {
+                grid-template-columns: 0 0 100% 0;
+                grid-template-rows: 0 0 100% 0;
+            }
+            #SozF5BxApLGpivUU {
+                grid-template-columns: 100rem;
+                grid-template-rows: minmax(56.22254758rem, max-content);
+            }
+            #SUuYF3ZhHdqEtD6l {
+                min-height: calc(20 * var(--1vh, 1vh));
+            }
+            #lw5wW8Ly01Vft18r {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #IhZrQpu1emQgWpFD {
+                grid-template-columns: 0 100%;
+                grid-template-rows: 0 100%;
+            }
+            #LyyYzDjy7I4KXx97 {
+                grid-area: 2 / 2 / 5 / 4;
+                position: relative;
+            }
+            #XC9SkwFTKCbqFxwP {
+                font-size: calc(1.95217423em - var(--ffsd));
+            }
+            #iXGILHlUTC2p91s6 {
+                --first-font-size: 1.95217423em;
+                --last-font-size: var(--first-font-size);
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            #enDZvQHpryQEc3Ae {
+                min-width: 35.67704755rem;
+            }
+            #aYKljcxOlevCP0KA {
+                grid-area: 3 / 3 / 4 / 5;
+                position: relative;
+            }
+            #U2yjudiWrWZv23Y9 {
+                grid-template-columns: 0 0 35.54371421rem 0;
+                grid-template-rows: 0 minmax(1.65844246rem, max-content) minmax(2.34260615rem, max-content) minmax(1.65844246rem, max-content);
+            }
+            #GynScDITOQMBkR0g {
+                grid-template-columns: 0 35.54371421rem;
+                grid-template-rows: 0 minmax(5.65949107rem, max-content);
+            }
+            #JO9yGgJ8m7FBWHiF {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #F6SQXndY2NUJuaAA {
+                grid-template-columns: 9.11921215rem 35.54371421rem 55.33707363rem;
+                grid-template-rows: minmax(39.73254329rem, max-content) minmax(5.65949107rem, max-content) minmax(10.83051322rem, max-content);
+            }
+            #fp3foqNwTj6IEPjy {
+                min-height: calc(20 * var(--1vh, 1vh));
+            }
+            #FJm6iG4A70fAdY6Z {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #rKgPUX1ofSQhrRpE {
+                grid-template-columns: 0 100%;
+                grid-template-rows: 0 100%;
+            }
+            #qHtocMJsoF2TDsZu {
+                grid-area: 7 / 3 / 12 / 4;
+                position: relative;
+            }
+            #sT2cxE7jhW1H9jgB {
+                grid-area: 15 / 2 / 20 / 5;
+                position: relative;
+            }
+            #G3C3BKwQNAmkuOSb {
+                grid-area: 3 / 7 / 8 / 8;
+                position: relative;
+            }
+            #YHCdRWl1CadfBazZ {
+                grid-area: 17 / 6 / 22 / 9;
+                position: relative;
+            }
+            #uA4tIATgbCxTLrnz {
+                grid-area: 4 / 11 / 9 / 12;
+                position: relative;
+            }
+            #qLrW7QnwVTlLWWvG {
+                grid-area: 16 / 10 / 25 / 13;
+                position: relative;
+            }
+            #eliLK73mlaslUQeP {
+                grid-area: 5 / 14 / 10 / 16;
+                position: relative;
+            }
+            #sI0fNUXTPzXdJpZX {
+                grid-area: 14 / 15 / 21 / 17;
+                position: relative;
+            }
+            #yskd4UqKG5NiLbym {
+                grid-area: 6 / 18 / 11 / 20;
+                position: relative;
+            }
+            #GYP7kLeKmbuDVFOK {
+                grid-area: 18 / 19 / 23 / 21;
+                position: relative;
+            }
+            #CSECobu6p8S8qzv6 {
+                grid-area: 2 / 23 / 13 / 25;
+                position: relative;
+            }
+            #ImH4ryISGAmRUlP1 {
+                grid-area: 19 / 22 / 24 / 24;
+                position: relative;
+            }
+            #MS6fkJWIvaOf8xJj {
+                grid-template-columns: 8.72435796rem 0.14225516rem 12.8924887rem 0 0.79012174rem 0.14225516rem 12.8924887rem 0 0.47584187rem 0.47584187rem 12.8924887rem 0.47584187rem 0.47584187rem 0.02797213rem 12.86451657rem 0.57494159rem 0.37674216rem 0.12707184rem 12.76541685rem 0.269327rem 0.5124451rem 0.16991165rem 12.72257705rem 0.34264132rem 8.86661313rem;
+                grid-template-rows: minmax(14.200704rem, max-content) minmax(0.09187107rem, max-content) 0 0 minmax(0.23412623rem, max-content) minmax(0.14225516rem, max-content) minmax(12.5161073rem, max-content) 0 0 minmax(0.23412623rem, max-content) minmax(0.14225516rem, max-content) 0 minmax(1.36854959rem, max-content) minmax(0.20235715rem, max-content) minmax(0.05144922rem, max-content) minmax(0.40471429rem, max-content) 0 minmax(0.14225516rem, max-content) minmax(12.43632519rem, max-content) minmax(0.20235715rem, max-content) minmax(0.25380636rem, max-content) 0 0 minmax(0.40471429rem, max-content) minmax(13.19457402rem, max-content);
+            }
+            #GBk7P2G4CJSgHzdE {
+                min-height: calc(20 * var(--1vh, 1vh));
+            }
+            #vfWjueNn4y7I08P0 {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #F5Jtjt3ZJ3eZa95M {
+                grid-template-columns: 0 100%;
+                grid-template-rows: 0 100%;
+            }
+            #IkJprnRV8OUaUyth {
+                grid-template-columns: 100rem;
+                grid-template-rows: minmax(56.22254758rem, max-content);
+            }
+            #yrfqmmEUKlC6IIC2 {
+                min-height: calc(20 * var(--1vh, 1vh));
+            }
+            #F3tIuSyvxzXlwMUO {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #Hz2Qkg4DLMMbC6QN {
+                grid-template-columns: 0 100%;
+                grid-template-rows: 0 100%;
+            }
+            #jm2XlR0W34IGPmP4 {
+                grid-area: 2 / 2 / 5 / 4;
+                position: relative;
+            }
+            #AJFxREYNGvveX60s {
+                font-size: calc(1.95217423em - var(--ffsd));
+            }
+            #qEOSA5FEOkDdA9Oj {
+                --first-font-size: 1.95217423em;
+                --last-font-size: var(--first-font-size);
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            #ZuD6FW91nwG1LI3u {
+                min-width: 32.38593967rem;
+            }
+            #aOfCY3OS3zHbEvtM {
+                grid-area: 3 / 3 / 4 / 5;
+                position: relative;
+            }
+            #BRWT75mUpoevar2g {
+                grid-template-columns: 0 0 32.25260634rem 0;
+                grid-template-rows: 0 minmax(1.04805589rem, max-content) minmax(2.34260615rem, max-content) minmax(1.04805589rem, max-content);
+            }
+            #ofJ2uYhKDXI6C3uK {
+                grid-template-columns: 0 32.25260634rem;
+                grid-template-rows: 0 minmax(4.43871792rem, max-content);
+            }
+            #Q6OAK3C7M64rPWrw {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #icWGrXeqZXO6OGHy {
+                grid-template-columns: 55.7296072rem 32.25260634rem 12.01778646rem;
+                grid-template-rows: minmax(42.01229975rem, max-content) minmax(4.43871792rem, max-content) minmax(9.77152992rem, max-content);
+            }
+            #P1NxFGFV4uhiNekZ {
+                min-height: calc(20 * var(--1vh, 1vh));
+            }
+        }
+        
+        @media (min-width: 375.05px) and (max-width: 480px) {
+            #YdzWSb2h9P9M6YzR {
+                grid-area: 2 / 2 / 4 / 4;
+                position: relative;
+            }
+            #gvwS1Ktoy561VPOW {
+                grid-area: 3 / 3 / 5 / 5;
+                position: relative;
+            }
+            #rCKfT43PBHMWdsJ2 {
+                grid-template-columns: 0 0 100% 0;
+                grid-template-rows: 0 0 100% 0;
+            }
+            #SozF5BxApLGpivUU {
+                grid-template-columns: 100rem;
+                grid-template-rows: minmax(56.22254758rem, max-content);
+            }
+            #SUuYF3ZhHdqEtD6l {
+                min-height: calc(20 * var(--1vh, 1vh));
+            }
+            #lw5wW8Ly01Vft18r {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #IhZrQpu1emQgWpFD {
+                grid-template-columns: 0 100%;
+                grid-template-rows: 0 100%;
+            }
+            #LyyYzDjy7I4KXx97 {
+                grid-area: 2 / 2 / 5 / 4;
+                position: relative;
+            }
+            #XC9SkwFTKCbqFxwP {
+                font-size: calc(1.95217423em - var(--ffsd));
+            }
+            #iXGILHlUTC2p91s6 {
+                --first-font-size: 1.95217423em;
+                --last-font-size: var(--first-font-size);
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            #enDZvQHpryQEc3Ae {
+                min-width: 35.64788088rem;
+            }
+            #aYKljcxOlevCP0KA {
+                grid-area: 3 / 3 / 4 / 5;
+                position: relative;
+            }
+            #U2yjudiWrWZv23Y9 {
+                grid-template-columns: 0 0 35.54371421rem 0;
+                grid-template-rows: 0 minmax(1.65844246rem, max-content) minmax(2.34260615rem, max-content) minmax(1.65844246rem, max-content);
+            }
+            #GynScDITOQMBkR0g {
+                grid-template-columns: 0 35.54371421rem;
+                grid-template-rows: 0 minmax(5.65949107rem, max-content);
+            }
+            #JO9yGgJ8m7FBWHiF {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #F6SQXndY2NUJuaAA {
+                grid-template-columns: 9.11921215rem 35.54371421rem 55.33707363rem;
+                grid-template-rows: minmax(39.73254329rem, max-content) minmax(5.65949107rem, max-content) minmax(10.83051322rem, max-content);
+            }
+            #fp3foqNwTj6IEPjy {
+                min-height: calc(20 * var(--1vh, 1vh));
+            }
+            #FJm6iG4A70fAdY6Z {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #rKgPUX1ofSQhrRpE {
+                grid-template-columns: 0 100%;
+                grid-template-rows: 0 100%;
+            }
+            #qHtocMJsoF2TDsZu {
+                grid-area: 7 / 3 / 12 / 4;
+                position: relative;
+            }
+            #sT2cxE7jhW1H9jgB {
+                grid-area: 15 / 2 / 20 / 5;
+                position: relative;
+            }
+            #G3C3BKwQNAmkuOSb {
+                grid-area: 3 / 7 / 8 / 8;
+                position: relative;
+            }
+            #YHCdRWl1CadfBazZ {
+                grid-area: 17 / 6 / 22 / 9;
+                position: relative;
+            }
+            #uA4tIATgbCxTLrnz {
+                grid-area: 4 / 11 / 9 / 12;
+                position: relative;
+            }
+            #qLrW7QnwVTlLWWvG {
+                grid-area: 16 / 10 / 25 / 13;
+                position: relative;
+            }
+            #eliLK73mlaslUQeP {
+                grid-area: 5 / 14 / 10 / 16;
+                position: relative;
+            }
+            #sI0fNUXTPzXdJpZX {
+                grid-area: 14 / 15 / 21 / 17;
+                position: relative;
+            }
+            #yskd4UqKG5NiLbym {
+                grid-area: 6 / 18 / 11 / 20;
+                position: relative;
+            }
+            #GYP7kLeKmbuDVFOK {
+                grid-area: 18 / 19 / 23 / 21;
+                position: relative;
+            }
+            #CSECobu6p8S8qzv6 {
+                grid-area: 2 / 23 / 13 / 25;
+                position: relative;
+            }
+            #ImH4ryISGAmRUlP1 {
+                grid-area: 19 / 22 / 24 / 24;
+                position: relative;
+            }
+            #MS6fkJWIvaOf8xJj {
+                grid-template-columns: 8.72435796rem 0.14225516rem 12.8924887rem 0 0.79012174rem 0.14225516rem 12.8924887rem 0 0.47584187rem 0.47584187rem 12.8924887rem 0.47584187rem 0.47584187rem 0.02797213rem 12.86451657rem 0.57494159rem 0.37674216rem 0.12707184rem 12.76541685rem 0.269327rem 0.5124451rem 0.16991165rem 12.72257705rem 0.34264132rem 8.86661313rem;
+                grid-template-rows: minmax(14.200704rem, max-content) minmax(0.09187107rem, max-content) 0 0 minmax(0.23412623rem, max-content) minmax(0.14225516rem, max-content) minmax(12.5161073rem, max-content) 0 0 minmax(0.23412623rem, max-content) minmax(0.14225516rem, max-content) 0 minmax(1.36854959rem, max-content) minmax(0.20235715rem, max-content) minmax(0.05144922rem, max-content) minmax(0.40471429rem, max-content) 0 minmax(0.14225516rem, max-content) minmax(12.43632519rem, max-content) minmax(0.20235715rem, max-content) minmax(0.25380636rem, max-content) 0 0 minmax(0.40471429rem, max-content) minmax(13.19457402rem, max-content);
+            }
+            #GBk7P2G4CJSgHzdE {
+                min-height: calc(20 * var(--1vh, 1vh));
+            }
+            #vfWjueNn4y7I08P0 {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #F5Jtjt3ZJ3eZa95M {
+                grid-template-columns: 0 100%;
+                grid-template-rows: 0 100%;
+            }
+            #IkJprnRV8OUaUyth {
+                grid-template-columns: 100rem;
+                grid-template-rows: minmax(56.22254758rem, max-content);
+            }
+            #yrfqmmEUKlC6IIC2 {
+                min-height: calc(20 * var(--1vh, 1vh));
+            }
+            #F3tIuSyvxzXlwMUO {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #Hz2Qkg4DLMMbC6QN {
+                grid-template-columns: 0 100%;
+                grid-template-rows: 0 100%;
+            }
+            #jm2XlR0W34IGPmP4 {
+                grid-area: 2 / 2 / 5 / 4;
+                position: relative;
+            }
+            #AJFxREYNGvveX60s {
+                font-size: calc(1.95217423em - var(--ffsd));
+            }
+            #qEOSA5FEOkDdA9Oj {
+                --first-font-size: 1.95217423em;
+                --last-font-size: var(--first-font-size);
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            #ZuD6FW91nwG1LI3u {
+                min-width: 32.35677301rem;
+            }
+            #aOfCY3OS3zHbEvtM {
+                grid-area: 3 / 3 / 4 / 5;
+                position: relative;
+            }
+            #BRWT75mUpoevar2g {
+                grid-template-columns: 0 0 32.25260634rem 0;
+                grid-template-rows: 0 minmax(1.04805589rem, max-content) minmax(2.34260615rem, max-content) minmax(1.04805589rem, max-content);
+            }
+            #ofJ2uYhKDXI6C3uK {
+                grid-template-columns: 0 32.25260634rem;
+                grid-template-rows: 0 minmax(4.43871792rem, max-content);
+            }
+            #Q6OAK3C7M64rPWrw {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #icWGrXeqZXO6OGHy {
+                grid-template-columns: 55.7296072rem 32.25260634rem 12.01778646rem;
+                grid-template-rows: minmax(42.01229975rem, max-content) minmax(4.43871792rem, max-content) minmax(9.77152992rem, max-content);
+            }
+            #P1NxFGFV4uhiNekZ {
+                min-height: calc(20 * var(--1vh, 1vh));
+            }
+        }
+        
+        @media (min-width: 480.05px) and (max-width: 768px) {
+            #YdzWSb2h9P9M6YzR {
+                grid-area: 2 / 2 / 4 / 4;
+                position: relative;
+            }
+            #gvwS1Ktoy561VPOW {
+                grid-area: 3 / 3 / 5 / 5;
+                position: relative;
+            }
+            #rCKfT43PBHMWdsJ2 {
+                grid-template-columns: 0 0 100% 0;
+                grid-template-rows: 0 0 100% 0;
+            }
+            #SozF5BxApLGpivUU {
+                grid-template-columns: 100rem;
+                grid-template-rows: minmax(56.22254758rem, max-content);
+            }
+            #SUuYF3ZhHdqEtD6l {
+                min-height: calc(20 * var(--1vh, 1vh));
+            }
+            #lw5wW8Ly01Vft18r {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #IhZrQpu1emQgWpFD {
+                grid-template-columns: 0 100%;
+                grid-template-rows: 0 100%;
+            }
+            #LyyYzDjy7I4KXx97 {
+                grid-area: 2 / 2 / 5 / 4;
+                position: relative;
+            }
+            #XC9SkwFTKCbqFxwP {
+                font-size: calc(1.95217423em - var(--ffsd));
+            }
+            #iXGILHlUTC2p91s6 {
+                --first-font-size: 1.95217423em;
+                --last-font-size: var(--first-font-size);
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            #enDZvQHpryQEc3Ae {
+                min-width: 35.60881838rem;
+            }
+            #aYKljcxOlevCP0KA {
+                grid-area: 3 / 3 / 4 / 5;
+                position: relative;
+            }
+            #U2yjudiWrWZv23Y9 {
+                grid-template-columns: 0 0 35.54371421rem 0;
+                grid-template-rows: 0 minmax(1.65844246rem, max-content) minmax(2.34260615rem, max-content) minmax(1.65844246rem, max-content);
+            }
+            #GynScDITOQMBkR0g {
+                grid-template-columns: 0 35.54371421rem;
+                grid-template-rows: 0 minmax(5.65949107rem, max-content);
+            }
+            #JO9yGgJ8m7FBWHiF {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #F6SQXndY2NUJuaAA {
+                grid-template-columns: 9.11921215rem 35.54371421rem 55.33707363rem;
+                grid-template-rows: minmax(39.73254329rem, max-content) minmax(5.65949107rem, max-content) minmax(10.83051322rem, max-content);
+            }
+            #fp3foqNwTj6IEPjy {
+                min-height: calc(20 * var(--1vh, 1vh));
+            }
+            #FJm6iG4A70fAdY6Z {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #rKgPUX1ofSQhrRpE {
+                grid-template-columns: 0 100%;
+                grid-template-rows: 0 100%;
+            }
+            #qHtocMJsoF2TDsZu {
+                grid-area: 7 / 3 / 12 / 4;
+                position: relative;
+            }
+            #sT2cxE7jhW1H9jgB {
+                grid-area: 15 / 2 / 20 / 5;
+                position: relative;
+            }
+            #G3C3BKwQNAmkuOSb {
+                grid-area: 3 / 7 / 8 / 8;
+                position: relative;
+            }
+            #YHCdRWl1CadfBazZ {
+                grid-area: 17 / 6 / 22 / 9;
+                position: relative;
+            }
+            #uA4tIATgbCxTLrnz {
+                grid-area: 4 / 11 / 9 / 12;
+                position: relative;
+            }
+            #qLrW7QnwVTlLWWvG {
+                grid-area: 16 / 10 / 25 / 13;
+                position: relative;
+            }
+            #eliLK73mlaslUQeP {
+                grid-area: 5 / 14 / 10 / 16;
+                position: relative;
+            }
+            #sI0fNUXTPzXdJpZX {
+                grid-area: 14 / 15 / 21 / 17;
+                position: relative;
+            }
+            #yskd4UqKG5NiLbym {
+                grid-area: 6 / 18 / 11 / 20;
+                position: relative;
+            }
+            #GYP7kLeKmbuDVFOK {
+                grid-area: 18 / 19 / 23 / 21;
+                position: relative;
+            }
+            #CSECobu6p8S8qzv6 {
+                grid-area: 2 / 23 / 13 / 25;
+                position: relative;
+            }
+            #ImH4ryISGAmRUlP1 {
+                grid-area: 19 / 22 / 24 / 24;
+                position: relative;
+            }
+            #MS6fkJWIvaOf8xJj {
+                grid-template-columns: 8.72435796rem 0.14225516rem 12.8924887rem 0 0.79012174rem 0.14225516rem 12.8924887rem 0 0.47584187rem 0.47584187rem 12.8924887rem 0.47584187rem 0.47584187rem 0.02797213rem 12.86451657rem 0.57494159rem 0.37674216rem 0.12707184rem 12.76541685rem 0.269327rem 0.5124451rem 0.16991165rem 12.72257705rem 0.34264132rem 8.86661313rem;
+                grid-template-rows: minmax(14.200704rem, max-content) minmax(0.09187107rem, max-content) 0 0 minmax(0.23412623rem, max-content) minmax(0.14225516rem, max-content) minmax(12.5161073rem, max-content) 0 0 minmax(0.23412623rem, max-content) minmax(0.14225516rem, max-content) 0 minmax(1.36854959rem, max-content) minmax(0.20235715rem, max-content) minmax(0.05144922rem, max-content) minmax(0.40471429rem, max-content) 0 minmax(0.14225516rem, max-content) minmax(12.43632519rem, max-content) minmax(0.20235715rem, max-content) minmax(0.25380636rem, max-content) 0 0 minmax(0.40471429rem, max-content) minmax(13.19457402rem, max-content);
+            }
+            #GBk7P2G4CJSgHzdE {
+                min-height: calc(20 * var(--1vh, 1vh));
+            }
+            #vfWjueNn4y7I08P0 {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #F5Jtjt3ZJ3eZa95M {
+                grid-template-columns: 0 100%;
+                grid-template-rows: 0 100%;
+            }
+            #IkJprnRV8OUaUyth {
+                grid-template-columns: 100rem;
+                grid-template-rows: minmax(56.22254758rem, max-content);
+            }
+            #yrfqmmEUKlC6IIC2 {
+                min-height: calc(20 * var(--1vh, 1vh));
+            }
+            #F3tIuSyvxzXlwMUO {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #Hz2Qkg4DLMMbC6QN {
+                grid-template-columns: 0 100%;
+                grid-template-rows: 0 100%;
+            }
+            #jm2XlR0W34IGPmP4 {
+                grid-area: 2 / 2 / 5 / 4;
+                position: relative;
+            }
+            #AJFxREYNGvveX60s {
+                font-size: calc(1.95217423em - var(--ffsd));
+            }
+            #qEOSA5FEOkDdA9Oj {
+                --first-font-size: 1.95217423em;
+                --last-font-size: var(--first-font-size);
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            #ZuD6FW91nwG1LI3u {
+                min-width: 32.31771051rem;
+            }
+            #aOfCY3OS3zHbEvtM {
+                grid-area: 3 / 3 / 4 / 5;
+                position: relative;
+            }
+            #BRWT75mUpoevar2g {
+                grid-template-columns: 0 0 32.25260634rem 0;
+                grid-template-rows: 0 minmax(1.04805589rem, max-content) minmax(2.34260615rem, max-content) minmax(1.04805589rem, max-content);
+            }
+            #ofJ2uYhKDXI6C3uK {
+                grid-template-columns: 0 32.25260634rem;
+                grid-template-rows: 0 minmax(4.43871792rem, max-content);
+            }
+            #Q6OAK3C7M64rPWrw {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #icWGrXeqZXO6OGHy {
+                grid-template-columns: 55.7296072rem 32.25260634rem 12.01778646rem;
+                grid-template-rows: minmax(42.01229975rem, max-content) minmax(4.43871792rem, max-content) minmax(9.77152992rem, max-content);
+            }
+            #P1NxFGFV4uhiNekZ {
+                min-height: calc(20 * var(--1vh, 1vh));
+            }
+        }
+        
+        @media (min-width: 768.05px) and (max-width: 1024px) {
+            #YdzWSb2h9P9M6YzR {
+                grid-area: 2 / 2 / 4 / 4;
+                position: relative;
+            }
+            #gvwS1Ktoy561VPOW {
+                grid-area: 3 / 3 / 5 / 5;
+                position: relative;
+            }
+            #rCKfT43PBHMWdsJ2 {
+                grid-template-columns: 0 0 100% 0;
+                grid-template-rows: 0 0 100% 0;
+            }
+            #SozF5BxApLGpivUU {
+                grid-template-columns: 100rem;
+                grid-template-rows: minmax(56.22254758rem, max-content);
+            }
+            #SUuYF3ZhHdqEtD6l {
+                min-height: calc(20 * var(--1vh, 1vh));
+            }
+            #lw5wW8Ly01Vft18r {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #IhZrQpu1emQgWpFD {
+                grid-template-columns: 0 100%;
+                grid-template-rows: 0 100%;
+            }
+            #LyyYzDjy7I4KXx97 {
+                grid-area: 2 / 2 / 5 / 4;
+                position: relative;
+            }
+            #XC9SkwFTKCbqFxwP {
+                font-size: calc(1.95217423em - var(--ffsd));
+            }
+            #iXGILHlUTC2p91s6 {
+                --first-font-size: 1.95217423em;
+                --last-font-size: var(--first-font-size);
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            #enDZvQHpryQEc3Ae {
+                min-width: 35.59254234rem;
+            }
+            #aYKljcxOlevCP0KA {
+                grid-area: 3 / 3 / 4 / 5;
+                position: relative;
+            }
+            #U2yjudiWrWZv23Y9 {
+                grid-template-columns: 0 0 35.54371421rem 0;
+                grid-template-rows: 0 minmax(1.65844246rem, max-content) minmax(2.34260615rem, max-content) minmax(1.65844246rem, max-content);
+            }
+            #GynScDITOQMBkR0g {
+                grid-template-columns: 0 35.54371421rem;
+                grid-template-rows: 0 minmax(5.65949107rem, max-content);
+            }
+            #JO9yGgJ8m7FBWHiF {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #F6SQXndY2NUJuaAA {
+                grid-template-columns: 9.11921215rem 35.54371421rem 55.33707363rem;
+                grid-template-rows: minmax(39.73254329rem, max-content) minmax(5.65949107rem, max-content) minmax(10.83051322rem, max-content);
+            }
+            #fp3foqNwTj6IEPjy {
+                min-height: calc(20 * var(--1vh, 1vh));
+            }
+            #FJm6iG4A70fAdY6Z {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #rKgPUX1ofSQhrRpE {
+                grid-template-columns: 0 100%;
+                grid-template-rows: 0 100%;
+            }
+            #qHtocMJsoF2TDsZu {
+                grid-area: 7 / 3 / 12 / 4;
+                position: relative;
+            }
+            #sT2cxE7jhW1H9jgB {
+                grid-area: 15 / 2 / 20 / 5;
+                position: relative;
+            }
+            #G3C3BKwQNAmkuOSb {
+                grid-area: 3 / 7 / 8 / 8;
+                position: relative;
+            }
+            #YHCdRWl1CadfBazZ {
+                grid-area: 17 / 6 / 22 / 9;
+                position: relative;
+            }
+            #uA4tIATgbCxTLrnz {
+                grid-area: 4 / 11 / 9 / 12;
+                position: relative;
+            }
+            #qLrW7QnwVTlLWWvG {
+                grid-area: 16 / 10 / 25 / 13;
+                position: relative;
+            }
+            #eliLK73mlaslUQeP {
+                grid-area: 5 / 14 / 10 / 16;
+                position: relative;
+            }
+            #sI0fNUXTPzXdJpZX {
+                grid-area: 14 / 15 / 21 / 17;
+                position: relative;
+            }
+            #yskd4UqKG5NiLbym {
+                grid-area: 6 / 18 / 11 / 20;
+                position: relative;
+            }
+            #GYP7kLeKmbuDVFOK {
+                grid-area: 18 / 19 / 23 / 21;
+                position: relative;
+            }
+            #CSECobu6p8S8qzv6 {
+                grid-area: 2 / 23 / 13 / 25;
+                position: relative;
+            }
+            #ImH4ryISGAmRUlP1 {
+                grid-area: 19 / 22 / 24 / 24;
+                position: relative;
+            }
+            #MS6fkJWIvaOf8xJj {
+                grid-template-columns: 8.72435796rem 0.14225516rem 12.8924887rem 0 0.79012174rem 0.14225516rem 12.8924887rem 0 0.47584187rem 0.47584187rem 12.8924887rem 0.47584187rem 0.47584187rem 0.02797213rem 12.86451657rem 0.57494159rem 0.37674216rem 0.12707184rem 12.76541685rem 0.269327rem 0.5124451rem 0.16991165rem 12.72257705rem 0.34264132rem 8.86661313rem;
+                grid-template-rows: minmax(14.200704rem, max-content) minmax(0.09187107rem, max-content) 0 0 minmax(0.23412623rem, max-content) minmax(0.14225516rem, max-content) minmax(12.5161073rem, max-content) 0 0 minmax(0.23412623rem, max-content) minmax(0.14225516rem, max-content) 0 minmax(1.36854959rem, max-content) minmax(0.20235715rem, max-content) minmax(0.05144922rem, max-content) minmax(0.40471429rem, max-content) 0 minmax(0.14225516rem, max-content) minmax(12.43632519rem, max-content) minmax(0.20235715rem, max-content) minmax(0.25380636rem, max-content) 0 0 minmax(0.40471429rem, max-content) minmax(13.19457402rem, max-content);
+            }
+            #GBk7P2G4CJSgHzdE {
+                min-height: calc(20 * var(--1vh, 1vh));
+            }
+            #vfWjueNn4y7I08P0 {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #F5Jtjt3ZJ3eZa95M {
+                grid-template-columns: 0 100%;
+                grid-template-rows: 0 100%;
+            }
+            #IkJprnRV8OUaUyth {
+                grid-template-columns: 100rem;
+                grid-template-rows: minmax(56.22254758rem, max-content);
+            }
+            #yrfqmmEUKlC6IIC2 {
+                min-height: calc(20 * var(--1vh, 1vh));
+            }
+            #F3tIuSyvxzXlwMUO {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #Hz2Qkg4DLMMbC6QN {
+                grid-template-columns: 0 100%;
+                grid-template-rows: 0 100%;
+            }
+            #jm2XlR0W34IGPmP4 {
+                grid-area: 2 / 2 / 5 / 4;
+                position: relative;
+            }
+            #AJFxREYNGvveX60s {
+                font-size: calc(1.95217423em - var(--ffsd));
+            }
+            #qEOSA5FEOkDdA9Oj {
+                --first-font-size: 1.95217423em;
+                --last-font-size: var(--first-font-size);
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            #ZuD6FW91nwG1LI3u {
+                min-width: 32.30143446rem;
+            }
+            #aOfCY3OS3zHbEvtM {
+                grid-area: 3 / 3 / 4 / 5;
+                position: relative;
+            }
+            #BRWT75mUpoevar2g {
+                grid-template-columns: 0 0 32.25260634rem 0;
+                grid-template-rows: 0 minmax(1.04805589rem, max-content) minmax(2.34260615rem, max-content) minmax(1.04805589rem, max-content);
+            }
+            #ofJ2uYhKDXI6C3uK {
+                grid-template-columns: 0 32.25260634rem;
+                grid-template-rows: 0 minmax(4.43871792rem, max-content);
+            }
+            #Q6OAK3C7M64rPWrw {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #icWGrXeqZXO6OGHy {
+                grid-template-columns: 55.7296072rem 32.25260634rem 12.01778646rem;
+                grid-template-rows: minmax(42.01229975rem, max-content) minmax(4.43871792rem, max-content) minmax(9.77152992rem, max-content);
+            }
+            #P1NxFGFV4uhiNekZ {
+                min-height: calc(20 * var(--1vh, 1vh));
+            }
+        }
+        
+        @media (min-width: 1024.05px) {
+            #YdzWSb2h9P9M6YzR {
+                grid-area: 2 / 2 / 4 / 4;
+                position: relative;
+            }
+            #gvwS1Ktoy561VPOW {
+                grid-area: 3 / 3 / 5 / 5;
+                position: relative;
+            }
+            #rCKfT43PBHMWdsJ2 {
+                grid-template-columns: 0 0 100% 0;
+                grid-template-rows: 0 0 100% 0;
+            }
+            #SozF5BxApLGpivUU {
+                grid-template-columns: 100rem;
+                grid-template-rows: minmax(56.22254758rem, max-content);
+            }
+            #SUuYF3ZhHdqEtD6l {
+                min-height: calc(20 * var(--1vh, 1vh));
+            }
+            #lw5wW8Ly01Vft18r {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #IhZrQpu1emQgWpFD {
+                grid-template-columns: 0 100%;
+                grid-template-rows: 0 100%;
+            }
+            #LyyYzDjy7I4KXx97 {
+                grid-area: 2 / 2 / 5 / 4;
+                position: relative;
+            }
+            #XC9SkwFTKCbqFxwP {
+                font-size: calc(1.95217423em - var(--ffsd));
+            }
+            #iXGILHlUTC2p91s6 {
+                --first-font-size: 1.95217423em;
+                --last-font-size: var(--first-font-size);
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            #enDZvQHpryQEc3Ae {
+                min-width: 35.58031743rem;
+            }
+            #aYKljcxOlevCP0KA {
+                grid-area: 3 / 3 / 4 / 5;
+                position: relative;
+            }
+            #U2yjudiWrWZv23Y9 {
+                grid-template-columns: 0 0 35.54371421rem 0;
+                grid-template-rows: 0 minmax(1.65844246rem, max-content) minmax(2.34260615rem, max-content) minmax(1.65844246rem, max-content);
+            }
+            #GynScDITOQMBkR0g {
+                grid-template-columns: 0 35.54371421rem;
+                grid-template-rows: 0 minmax(5.65949107rem, max-content);
+            }
+            #JO9yGgJ8m7FBWHiF {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #F6SQXndY2NUJuaAA {
+                grid-template-columns: 9.11921215rem 35.54371421rem 55.33707363rem;
+                grid-template-rows: minmax(39.73254329rem, max-content) minmax(5.65949107rem, max-content) minmax(10.83051322rem, max-content);
+            }
+            #fp3foqNwTj6IEPjy {
+                min-height: calc(20 * var(--1vh, 1vh));
+            }
+            #FJm6iG4A70fAdY6Z {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #rKgPUX1ofSQhrRpE {
+                grid-template-columns: 0 100%;
+                grid-template-rows: 0 100%;
+            }
+            #qHtocMJsoF2TDsZu {
+                grid-area: 7 / 3 / 12 / 4;
+                position: relative;
+            }
+            #sT2cxE7jhW1H9jgB {
+                grid-area: 15 / 2 / 20 / 5;
+                position: relative;
+            }
+            #G3C3BKwQNAmkuOSb {
+                grid-area: 3 / 7 / 8 / 8;
+                position: relative;
+            }
+            #YHCdRWl1CadfBazZ {
+                grid-area: 17 / 6 / 22 / 9;
+                position: relative;
+            }
+            #uA4tIATgbCxTLrnz {
+                grid-area: 4 / 11 / 9 / 12;
+                position: relative;
+            }
+            #qLrW7QnwVTlLWWvG {
+                grid-area: 16 / 10 / 25 / 13;
+                position: relative;
+            }
+            #eliLK73mlaslUQeP {
+                grid-area: 5 / 14 / 10 / 16;
+                position: relative;
+            }
+            #sI0fNUXTPzXdJpZX {
+                grid-area: 14 / 15 / 21 / 17;
+                position: relative;
+            }
+            #yskd4UqKG5NiLbym {
+                grid-area: 6 / 18 / 11 / 20;
+                position: relative;
+            }
+            #GYP7kLeKmbuDVFOK {
+                grid-area: 18 / 19 / 23 / 21;
+                position: relative;
+            }
+            #CSECobu6p8S8qzv6 {
+                grid-area: 2 / 23 / 13 / 25;
+                position: relative;
+            }
+            #ImH4ryISGAmRUlP1 {
+                grid-area: 19 / 22 / 24 / 24;
+                position: relative;
+            }
+            #MS6fkJWIvaOf8xJj {
+                grid-template-columns: 8.72435796rem 0.14225516rem 12.8924887rem 0 0.79012174rem 0.14225516rem 12.8924887rem 0 0.47584187rem 0.47584187rem 12.8924887rem 0.47584187rem 0.47584187rem 0.02797213rem 12.86451657rem 0.57494159rem 0.37674216rem 0.12707184rem 12.76541685rem 0.269327rem 0.5124451rem 0.16991165rem 12.72257705rem 0.34264132rem 8.86661313rem;
+                grid-template-rows: minmax(14.200704rem, max-content) minmax(0.09187107rem, max-content) 0 0 minmax(0.23412623rem, max-content) minmax(0.14225516rem, max-content) minmax(12.5161073rem, max-content) 0 0 minmax(0.23412623rem, max-content) minmax(0.14225516rem, max-content) 0 minmax(1.36854959rem, max-content) minmax(0.20235715rem, max-content) minmax(0.05144922rem, max-content) minmax(0.40471429rem, max-content) 0 minmax(0.14225516rem, max-content) minmax(12.43632519rem, max-content) minmax(0.20235715rem, max-content) minmax(0.25380636rem, max-content) 0 0 minmax(0.40471429rem, max-content) minmax(13.19457402rem, max-content);
+            }
+            #GBk7P2G4CJSgHzdE {
+                min-height: calc(20 * var(--1vh, 1vh));
+            }
+            #vfWjueNn4y7I08P0 {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #F5Jtjt3ZJ3eZa95M {
+                grid-template-columns: 0 100%;
+                grid-template-rows: 0 100%;
+            }
+            #IkJprnRV8OUaUyth {
+                grid-template-columns: 100rem;
+                grid-template-rows: minmax(56.22254758rem, max-content);
+            }
+            #yrfqmmEUKlC6IIC2 {
+                min-height: calc(20 * var(--1vh, 1vh));
+            }
+            #F3tIuSyvxzXlwMUO {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #Hz2Qkg4DLMMbC6QN {
+                grid-template-columns: 0 100%;
+                grid-template-rows: 0 100%;
+            }
+            #jm2XlR0W34IGPmP4 {
+                grid-area: 2 / 2 / 5 / 4;
+                position: relative;
+            }
+            #AJFxREYNGvveX60s {
+                font-size: calc(1.95217423em - var(--ffsd));
+            }
+            #qEOSA5FEOkDdA9Oj {
+                --first-font-size: 1.95217423em;
+                --last-font-size: var(--first-font-size);
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            #ZuD6FW91nwG1LI3u {
+                min-width: 32.28920956rem;
+            }
+            #aOfCY3OS3zHbEvtM {
+                grid-area: 3 / 3 / 4 / 5;
+                position: relative;
+            }
+            #BRWT75mUpoevar2g {
+                grid-template-columns: 0 0 32.25260634rem 0;
+                grid-template-rows: 0 minmax(1.04805589rem, max-content) minmax(2.34260615rem, max-content) minmax(1.04805589rem, max-content);
+            }
+            #ofJ2uYhKDXI6C3uK {
+                grid-template-columns: 0 32.25260634rem;
+                grid-template-rows: 0 minmax(4.43871792rem, max-content);
+            }
+            #Q6OAK3C7M64rPWrw {
+                grid-area: 2 / 2 / 3 / 3;
+                position: relative;
+            }
+            #icWGrXeqZXO6OGHy {
+                grid-template-columns: 55.7296072rem 32.25260634rem 12.01778646rem;
+                grid-template-rows: minmax(42.01229975rem, max-content) minmax(4.43871792rem, max-content) minmax(9.77152992rem, max-content);
+            }
+            #P1NxFGFV4uhiNekZ {
+                min-height: calc(20 * var(--1vh, 1vh));
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                background-color: rgba(226, 226, 226, 0.05);
+            }
+            50% {
+                background-color: rgba(226, 226, 226, 0.1);
+            }
+            100% {
+                background-color: rgba(226, 226, 226, 0.05);
+            }
+        }
+    </style>
+    <noscript>
+        <style>
+            @keyframes pulse {}
+            
+            .animated {
+                animation-play-state: running !important;
+            }
+        </style>
+    </noscript>
+    <script nonce='026a6d66-4acf-4c92-b96c-56f960392812'>
+        ! function() {
+            "use strict";
+
+            function t(t, n) {
+                let e;
+                return (...o) => {
+                    clearTimeout(e), e = setTimeout((() => {
+                        t(...o)
+                    }), n)
+                }
+            }
+            class n {
+                constructor() {
+                    this.callbacks = [], window.addEventListener("DOMContentLoaded", (() => this.onDOMContentLoaded()))
+                }
+                onDOMContentLoaded() {
+                    this.callbacks.sort(((t, n) => t.priority - n.priority)).forEach((({
+                        callback: t
+                    }) => t()))
+                }
+                runOnLoad(t) {
+                    "loading" === document.readyState ? this.callbacks.push(t) : t.callback()
+                }
+            }
+
+            function e(t, e = Number.MAX_VALUE) {
+                var o;
+                (window.canva_scriptExecutor = null !== (o = window.canva_scriptExecutor) && void 0 !== o ? o : new n).runOnLoad({
+                    callback: t,
+                    priority: e
+                })
+            }
+            class o {
+                constructor(t) {
+                    this.items = [], this.previousWidth = document.documentElement.clientWidth, this.previousHeight = window.innerHeight;
+                    const n = t((() => this.onWindowResize()), 100);
+                    window.addEventListener("resize", n)
+                }
+                onWindowResize() {
+                    const t = document.documentElement.clientWidth,
+                        n = window.innerHeight,
+                        e = this.previousWidth !== t,
+                        o = this.previousHeight !== n;
+                    this.items.forEach((t => {
+                        const n = () => {
+                            t.callback(), t.executed = !0
+                        };
+                        (!t.executed || e && t.options.runOnWidthChange || o && t.options.runOnHeightChange) && n()
+                    })), this.previousWidth = t, this.previousHeight = n
+                }
+                runOnResize(t, n) {
+                    this.items.push({
+                        callback: t,
+                        options: n,
+                        executed: n.runOnLoad
+                    }), this.items.sort(((t, n) => t.options.priority - n.options.priority)), n.runOnLoad && e(t, n.priority)
+                }
+            }
+
+            function i(n, e, i = t) {
+                var r;
+                (window.canva_debounceResize = null !== (r = window.canva_debounceResize) && void 0 !== r ? r : new o(i)).runOnResize(n, {
+                    runOnLoad: !1,
+                    runOnWidthChange: !0,
+                    runOnHeightChange: !1,
+                    priority: Number.MAX_VALUE,
+                    ...e
+                })
+            }
+            const r = "--minfs",
+                c = "--rzf",
+                a = "--rfso",
+                s = "--bfso";
+
+            function u(t, n, e = .001) {
+                return Math.abs(t - n) < e
+            }
+
+            function d(t, n) {
+                return window.getComputedStyle(t).getPropertyValue(n)
+            }
+
+            function l(t, n, e) {
+                t.style.setProperty(n, e)
+            }
+
+            function m(t, n) {
+                const e = document.createElement("div");
+                e.style.setProperty(t, n), document.body.append(e);
+                const o = d(e, t);
+                return e.remove(), o
+            }
+
+            function f() {
+                const t = function() {
+                        const t = parseFloat(m("font-size", "0.1px"));
+                        return t > 1 ? t : 0
+                    }(),
+                    n = function(t) {
+                        const n = 2 * Math.max(t, 1);
+                        return n / parseFloat(m("font-size", `${n}px`))
+                    }(t);
+                if (function(t) {
+                        if (0 === t) return;
+                        l(document.documentElement, r, `${t}px`), i((() => {
+                            const n = 100 * t,
+                                {
+                                    clientWidth: e
+                                } = document.documentElement;
+                            l(document.documentElement, c, n > e ? (e / n).toPrecision(4) : null)
+                        }), {
+                            runOnLoad: !0
+                        })
+                    }(t * Math.max(1, n)), u(n, 1)) return;
+                const e = u(parseFloat(d(document.documentElement, "font-size")), parseFloat(m("grid-template-columns", "1rem")));
+                l(document.documentElement, e ? a : s, n.toPrecision(4))
+            }
+
+            function h() {
+                document.querySelectorAll("img, image, video, svg").forEach((t => t.addEventListener("contextmenu", (t => t.preventDefault()))))
+            }
+            const p = t => {
+                const n = {
+                    type: "CLICKED_LINK",
+                    link: t.currentTarget.getAttribute("href")
+                };
+                navigator.sendBeacon("_api/analytics/events", JSON.stringify(n))
+            };
+
+            function g() {
+                [...document.querySelectorAll("a[href][data-interstitial-link]")].forEach((t => {
+                    t.addEventListener("click", p)
+                }))
+            }
+            const v = "--sbw",
+                w = "--inner1Vh";
+
+            function y(t, n, e) {
+                t.style.setProperty(n, e)
+            }
+
+            function E() {
+                y(document.documentElement, w, window.innerHeight / 100 + "px"),
+                    function() {
+                        const t = window.innerWidth - document.documentElement.clientWidth;
+                        y(document.documentElement, v, t >= 0 ? `${t}px` : null)
+                    }()
+            }
+            var b;
+            const O = "undefined" != typeof window ? null === (b = window.navigator) || void 0 === b ? void 0 : b.userAgent : void 0;
+            const L = !(!O || (A = O, !A.match(/AppleWebKit\//) || A.match(/Chrome\//) || A.match(/Chromium\//)));
+            var A;
+
+            function x() {
+                document.querySelectorAll("svg").forEach((t => t.style.background = "url('data:image/png;base64,')"))
+            }
+            let C;
+
+            function W() {
+                C || (C = Array.from(document.querySelectorAll("foreignObject")).filter((t => 0 === t.getBoundingClientRect().width)));
+                const t = function() {
+                    const t = document.createElement("div");
+                    t.style.fontSize = "100vw", document.body.append(t);
+                    const n = parseFloat(window.getComputedStyle(t).fontSize);
+                    return t.remove(), n / window.innerWidth
+                }();
+                Array.from(C).forEach((n => function(t) {
+                    return new Promise(((n, e) => {
+                        const o = t.querySelector("img");
+                        o && !o.complete ? (o.addEventListener("load", (() => n())), o.addEventListener("error", (() => e()))) : n()
+                    }))
+                }(n).finally((() => function(t, n) {
+                    const e = Array.from(t.children);
+                    e.forEach(((t, n) => {
+                        if (t.hasAttribute("data-foreign-object-container")) t.style.transformOrigin = "", t.style.transform = "";
+                        else {
+                            const o = document.createElement("div");
+                            o.setAttribute("data-foreign-object-container", ""), t.insertAdjacentElement("beforebegin", o), t.remove(), o.append(t), e[n] = o
+                        }
+                    }));
+                    const o = t.getScreenCTM();
+                    if (!o) return;
+                    const {
+                        a: i,
+                        b: r,
+                        c: c,
+                        d: a
+                    } = o.scale(n);
+                    e.forEach((t => {
+                        if (!t.hasAttribute("data-foreign-object-container")) return;
+                        const {
+                            style: n
+                        } = t;
+                        n.transformOrigin = "0px 0px", n.transform = `matrix(${i}, ${r}, ${c}, ${a}, 0, 0)`
+                    }))
+                }(n, t)))))
+            }[function() {
+                e(f)
+            }, function() {
+                i(E, {
+                    runOnLoad: !0,
+                    runOnHeightChange: !0,
+                    priority: 1
+                })
+            }, function() {
+                L && i(W, {
+                    runOnLoad: !0
+                })
+            }, function() {
+                L && e(x)
+            }, function() {
+                e(h)
+            }, function() {
+                e(g)
+            }].forEach((t => t()))
+        }();
+    </script>
+    <script nonce="026a6d66-4acf-4c92-b96c-56f960392812">
+        window.C_CAPTCHA_IMPLEMENTATION = 'RECAPTCHA';
+    </script>
+    <script nonce="026a6d66-4acf-4c92-b96c-56f960392812">
+        window.C_CAPTCHA_KEY = '6Ldk59waAAAAAMPqkICbJjfMivZLCGtTpa6Wn6zO';
+    </script>
 </head>
+
 <body>
     <div class="menu-ql">
         <a href="javascript:history.back()" style="text-decoration: none;color:#f48319"><img src="../Assets/quaylai.png" width="30px"</a></a>
@@ -37,15 +1565,68 @@
 <noscript>    <div style="top: 0px; left: 0px; right: 0px; bottom: 0px; position: fixed; z-index: 9999 !important; background-color: #fff;
 color: #f48319"><center><h1>Trình duyệt của bạn hiện đang bị chặn Javascript, vui lòng bật lại và  tải lại trình duyệt!</div></center></h1></noscript>
 <!--Nội dung trang web -->
-<br><br>
-<table border="0" width="100%" >  
-<tr> <th width="100%">
-<div class="noi_dung_chinh">
-<h3 style="color:#f48319; font-size: 20px; text-align: center;">Làm thế nào để chia sẻ Chinh phục THPT? Có bao nhiêu cách chia sẻ?</h3>
-<h4 style="color:#000; font-size: 13px;">Bạn đang tìm cách chia sẻ các bài kiểm tra kiến thức học tập? Bạn có nhiều người bạn muốn đến trang website Chinh phục THPT. Bạn đang bối rối? Không biết cách thực hiện thì dưới đây là cách giải quyết nhanh gọn lẹ từ chúng mình.</h4>
-<h3 style="color:#808080; font-size: 15px;">1.Chia sẻ qua liên kết(Link)</h3>
-<h4 style="color:#000; font-size: 13px;">Một trong các cách thông dụng và phổ biến hiện này đó có lẽ là chia sẻ qua link.Việc đơn giản là bạn cần là click vào ô "sao chép" bên dưới</h4>
-<center><button style="padding:10px 25%; background-color:#f48319; border: 0px; color: #fff; font-size: 20px" onclick="copy('https://taydoedu.github.io/')">Sao chép</button></center>
+    <div id="root">
+        <a id="page-1" aria-hidden="true" style="visibility:hidden;"></a>
+        <section id="SUuYF3ZhHdqEtD6l" style="position:relative;overflow:hidden;display:grid;align-items:center;grid-template-columns:auto 100rem auto;z-index:0;">
+            <div id="rCKfT43PBHMWdsJ2" style="grid-area:1 / 1 / 2 / 4;display:grid;position:absolute;min-height:100%;min-width:100%;">
+                <div id="YdzWSb2h9P9M6YzR" style="z-index:0;">
+                    <div id="WfkaIPO2b9oNHWtv" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
+                        <div id="xiliPsXBiWAgowho" style="width:100%;height:100%;opacity:1.0;">
+                            <div id="FsKmlRqSZgsD5WN0" style="background-color:#ffffff;opacity:1.0;transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="gvwS1Ktoy561VPOW" style="z-index:1;">
+                    <div id="FNK6nm6zgwdQLoHg" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
+                        <div id="l7ivFIAA7TsM8ylc" style="width:100%;height:100%;opacity:1.0;">
+                            <div id="Xx7gwBzdpqAOm3j2" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+<!—Trang 1 -->
+                                <div id="oNSbtV9x5eeOXlIZ" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;"><img src="../Assets/chiase1.jpg" loading="lazy" srcset="../Assets/chiase1.jpg 683w, ../Assets/chiase1.jpg 1366w" sizes="(max-width: 375px) 100vw, (min-width: 375.05px) and (max-width: 480px) 100vw, (min-width: 480.05px) and (max-width: 768px) 100vw, (min-width: 768.05px) and (max-width: 1024px) 100vw, (min-width: 1024.05px) 100vw" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="SozF5BxApLGpivUU" style="display:grid;position:relative;grid-area:1 / 2 / 2 / 3;"></div>
+        </section>
+        <a id="page-2" aria-hidden="true" style="visibility:hidden;"></a>
+        <section id="fp3foqNwTj6IEPjy" style="position:relative;overflow:hidden;display:grid;align-items:center;grid-template-columns:auto 100rem auto;z-index:0;margin-top:-1px;">
+            <div id="IhZrQpu1emQgWpFD" style="grid-area:1 / 1 / 2 / 4;display:grid;position:absolute;min-height:100%;min-width:100%;">
+                <div id="lw5wW8Ly01Vft18r" style="z-index:0;">
+                    <div id="f14N2aHeagJx82hu" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
+                        <div id="hX47ffxZcOZ1IYJd" style="width:100%;height:100%;opacity:1.0;">
+                            <div id="Oa0JXxWj1KrozHLK" style="background-color:#ffffff;opacity:1.0;transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+<!—Trang 2 -->
+                                <div id="QtSNdzlkrzJ4QrmO" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100.04882812% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;"><img src="../Assets/chiase2.jpg " loading="lazy" srcset="../Assets/chiase2.jpg 768w, ../Assets/chiase2.jpg 1728w" sizes="(max-width: 375px) 100vw, (min-width: 375.05px) and (max-width: 480px) 100vw, (min-width: 480.05px) and (max-width: 768px) 100vw, (min-width: 768.05px) and (max-width: 1024px) 100vw, (min-width: 1024.05px) 100vw" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="F6SQXndY2NUJuaAA" style="display:grid;position:relative;grid-area:1 / 2 / 2 / 3;">
+                <div id="JO9yGgJ8m7FBWHiF">
+                    <div id="GynScDITOQMBkR0g" style="display:grid;position:relative;grid-area:2 / 2 / 3 / 3;">
+                        <div id="U2yjudiWrWZv23Y9" style="display:grid;position:relative;grid-area:2 / 2 / 3 / 3;">
+                            <div id="LyyYzDjy7I4KXx97" style="z-index:2;">
+                                <div id="cRd2LzIKgSkdA4Dv" style="padding-top:15.92262147%;transform:rotate(0deg);">
+                                    <div id="HdDMBGnfsREJL1Jt" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                                        <svg id="fp74TQSbDHy4nuE7" viewBox="0 0 3715.5649 591.6153" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url(&#x27;data:image/png;base64,&#x27;);">
+                                            <g id="XXTzbicXvozu2BRP" style="transform:scale(1, 1);">
+                                                <path id="HAqwGZ4TNF0gLNvX" d="M3714.16493064,546.01533896 C3712.45493918,555.25534445 3708.61494285,567.16533285 3701.89494162,573.75534445 C3687.30494529,588.05533224 3658.4749282,589.62533957 3626.4249404,587.78534323 C3603.40492087,586.4653359 3587.40492087,589.84534079 3564.34492331,590.06534201 C3540.86494285,590.28534323 3530.18491965,590.38533407 3506.69492942,590.60533529 C2283.86195151,590.82533651 202.22000122,591.04533773 178.74000549,591.26533896 C155.61999512,591.48534018 132.48001099,591.97534567 109.37000275,591.13533407 C97.72000122,590.7153359 86.06999969,589.92534262 74.5,588.52533346 C65.01000214,587.37533957 55.47999954,585.9553414 46.35000229,583.06534201 C37.99000168,580.42534262 29.94000053,576.54533773 23.35000038,570.68533712 C16.37000084,564.47534567 11.87000084,556.19533163 9.1600008,547.33534628 C6.23000097,537.75534445 5.24000072,527.68533712 4.14000082,517.76533896 C2.86000085,506.2153359 1.70000076,494.65533835 0.67000079,483.08533865 C-0.35999918,359.05270266 1,314.9292831 0.23,98.95999908 C-0.55000001,87.41000366 0.89999998,74.69999695 1.08000004,63.11999893 C1.24000001,53.13000107 -1.51999986,34.81999969 3.68000007,26.18999863 C8.19999981,18.70000076 14.64000034,12.31999969 22.29000092,8.05000019 C34.79000092,1.07000017 49.02000046,-0.09000015 63.13000107,0.53999996 C70.55000305,0.53999996 77.95999908,0.55999994 85.38000488,0.58999997 C130.38000488,0.77999997 175.36999512,1.42999995 1399.98335008,1.23000002 C3498.80493003,1.13 3519.71494895,0.57999998 3540.63493186,0.17000002 C3562.18491965,-0.24999999 3583.73493796,0.17000002 3605.27494651,0.55000001 C3627.09492331,0.93000001 3648.87492209,0.79000002 3670.69492942,0.47 C3685.56492454,0.25 3704.89494162,2.17000008 3711.51493674,17.89999962 C3713.45493918,22.51000023 3713.93491965,27.54999924 3714.0749343,32.5 C3714.24491721,38.20999908 3714.21491843,43.93000031 3714.27491599,49.63999939 C3714.39494162,61.29000092 3711.66493064,93.77000427 3711.79493552,199.07677905 C3712.04493552,487.90533835 3715.14494162,490.54533773 3715.38493186,514.00534445 C3715.49491721,524.64534384 3716.11491233,535.49533468 3714.16493064,546.01533896 Z" style="fill:#f48319;opacity:1.0;"></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="aYKljcxOlevCP0KA" style="z-index:3;">
+                                <div id="enDZvQHpryQEc3Ae" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
+<!—  SAO CHÉP -->
+                                    <div id="iXGILHlUTC2p91s6" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
+                                        <p id="XC9SkwFTKCbqFxwP" style="color:#ffffff;font-family:YACgEbc43jc-0;line-height:1.1999985em;text-align:center;text-transform:none;letter-spacing:0em;"><span id="MpERVs4uut95rDwM" style="color:#ffffff;font-weight:700;" onclick="copy('https://taydoedu.github.io/')" > SAO CHÉP</span>
+                                            <br>
+                                        </p>
 <script>
 function copy(text) {
   document.body.insertAdjacentHTML("beforeend","<div id=\"copy\" contenteditable>"+text+"</div>")
@@ -53,107 +1634,400 @@ function copy(text) {
   document.execCommand("selectAll");
   document.execCommand("copy");
   document.getElementById("copy").remove();
+alert("Đã copy vào bộ nhớ tạm");
 }
 </script>
-<h3 style="color:#808080; font-size: 15px;">2.Chia sẻ qua các nền tảng mạng xã hội</h3>
-<h4 style="color:#000; font-size: 13px;">Việc chia sẻ qua mạng xã hội không chỉ được áp dụng gần đây mà nó đã được áp dụng từ lâu về trước nó vừa đơn giản và phù hợp với xu thế của hiện nay.
-Và Chinh phục THPT đã áp dụng được nó, dưới đây là các mạng xã hội thông dụng bạn có thể chia sẻ cho mọi người.</h4>
-<style>
-.chiase{text-align: center;}
-.chiase a{text-decoration: none; }
-.chiase img{padding: 10px }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <a id="page-3" aria-hidden="true" style="visibility:hidden;"></a>
+        <section id="GBk7P2G4CJSgHzdE" style="position:relative;overflow:hidden;display:grid;align-items:center;grid-template-columns:auto 100rem auto;z-index:0;margin-top:-1px;">
+            <div id="rKgPUX1ofSQhrRpE" style="grid-area:1 / 1 / 2 / 4;display:grid;position:absolute;min-height:100%;min-width:100%;">
+                <div id="FJm6iG4A70fAdY6Z" style="z-index:0;">
+                    <div id="pyEZBRVufv3ghZ6Z" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
+                        <div id="IZbn2GRPiK2FtWXv" style="width:100%;height:100%;opacity:1.0;">
+                            <div id="Dj02dntn9iVvhtSx" style="background-color:#ffffff;opacity:1.0;transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+<!—Trang 3 -->
+                                <div id="ErjuWQHqlT5F1NpF" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100.04882812% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;"><img src="../Assets/chiase3.jpg " loading="lazy" srcset="../Assets/chiase3.jpg 768w, ../Assets/chiase3.jpg 1728w" sizes="(max-width: 375px) 100vw, (min-width: 375.05px) and (max-width: 480px) 100vw, (min-width: 480.05px) and (max-width: 768px) 100vw, (min-width: 768.05px) and (max-width: 1024px) 100vw, (min-width: 1024.05px) 100vw" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="MS6fkJWIvaOf8xJj" style="display:grid;position:relative;grid-area:1 / 2 / 2 / 3;">
+                <div id="qHtocMJsoF2TDsZu" style="z-index:1;">
+                    <div id="CMAdhLMpGIWmDnbU" style="padding-top:100%;transform:rotate(0deg);">
+                        <div id="KznWvu8DHL3JWkL0" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                            <div id="PD7bu6JRnsy8ap4k" style="width:100%;height:100%;opacity:1.0;">
+                                <div id="VY2tduS0FTDS4Up9" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+<!— FACEBOOK -->
+                                    <div id="qavSQkLn1rkaZo5O" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;"> <a href="http://www.facebook.com/sharer.php?u=https://taydoedu.github.io/" target="_blank"><img src="../Assets/facebook.png" loading="lazy" srcset="../Assets/facebook.png     240w, ../Assets/facebook.png 360w" sizes="(max-width: 375px) 12.8924887vw, (min-width: 375.05px) and (max-width: 480px) 12.8924887vw, (min-width: 480.05px) and (max-width: 768px) 12.8924887vw, (min-width: 768.05px) and (max-width: 1024px) 12.8924887vw, (min-width: 1024.05px) 12.8924887vw" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="sT2cxE7jhW1H9jgB" style="z-index:7;">
+                    <div id="C1CavCrZLQ0k08Kw" style="padding-top:100%;transform:rotate(0deg);">
+                        <div id="xLI9NKomX3zRmM81" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                            <div id="NbNb8UBNQ1Sv7xqc" style="width:100%;height:100%;opacity:1.0;">
+                                <div id="JPxyh8NVoQmu0j9l" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+<!— BUFFER -->
+                                    <div id="MwE65ZdLxOh7vr4z" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;"> <a href="https://bufferapp.com/add?url=https://taydoedu.github.io/&amp;text=TayDoEdu" target="_blank" ><img src="../Assets/buffer.png" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="G3C3BKwQNAmkuOSb" style="z-index:2;">
+                    <div id="gopvL0Y9vmDu1FEs" style="padding-top:100%;transform:rotate(0deg);">
+                        <div id="kbWN9y3HK2KsVP4m" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                            <div id="etRq7EsNK47AGqlN" style="width:100%;height:100%;opacity:1.0;">
+                                <div id="if8g9Th5mDjDsMVx" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+<!— TUMBLR -->
 
-</style>
-    <div class="chiase">
- 
-    <!-- Facebook -->
-    <a href="http://www.facebook.com/sharer.php?u=https://taydoedu.github.io/" target="_blank">
-        <img src="../Assets/facebook.png" alt="Facebook" style="width:100px"/>
-    </a>
-    
-    
-    <!-- Tumblr-->
-    <a href="http://www.tumblr.com/share/link?url=https://taydoedu.github.io/&amp;title=TayDoEdu" target="_blank">
-        <img src="../Assets/tumblr.png" alt="Tumblr" style="width:100px"/>
-    </a>
-        <!-- Digg -->
-    <a href="http://www.digg.com/submit?url=https://taydoedu.github.io/" target="_blank">
-        <img src="../Assets/Digg.png" alt="Digg" style="width:100px"/>
-    </a>
-    
- 
-    <!-- Reddit -->
-    <a href="http://reddit.com/submit?url=https://taydoedu.github.io/&amp;title=TayDoEdu" target="_blank">
-        <img src="../Assets/reddit.png" alt="Reddit" style="width:100px"/>
-    </a>
-    <!-- LinkedIn -->
-    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://taydoedu.github.io/" target="_blank">
-        <img src="../Assets/linkedIn.png" alt="LinkedIn" style="width:100px"/>
-    </a>
-       <!-- Email -->
-    <a href="mailto:?subject=Subject&body=TayDoEdu%20-%20Chinh%20Phục%20THPT" target='_blank'>    <img src="../Assets/mail.png" alt="Email" style="width:100px"/>
-    </a>
-    <!-- Buffer -->
-    <a href="https://bufferapp.com/add?url=https://taydoedu.github.io/&amp;text=TayDoEdu" target="_blank" >
-        <img src="../Assets/buffer.png" alt="Buffer" style="width:100px"/>
-    </a>
-    
- 
-    <!-- StumbleUpon-->
-    <a href="http://www.stumbleupon.com/submit?url=https://taydoedu.github.io/&amp;title=TayDoEdu" target="_blank">
-        <img src="../Assets/stumbleupon.png" alt="StumbleUpon" style="width:100px"/>
-    </a>
-    
-    <!-- Twitter -->
-    <a href="https://twitter.com/share?url=https://taydoedu.github.io/&amp;text=TayDoEdu%20-%20Chinh%20phục%20THPT&amp;hashtags=taydoedu" target="_blank">
-        <img src="../Assets/twitter.png" alt="Twitter" style="width:100px"/>
-    </a>
-    <!-- Yummly -->
-    <a href="http://www.yummly.com/urb/verify?url=https://taydoedu.github.io/&amp;title=TayDoEdu Chinh phục THPT" target="_blank">
-        <img src="../Assets/yum.png" alt="Yummly" style="width:100px"/>
-    </a>
-    <!-- VK -->
-    <a href="http://vkontakte.ru/share.php?url=https://taydoedu.github.io/" target="_blank">
-        <img src="../Assets/vk.png" alt="VK" style="width:100px"/>
-    </a>
-    
-    <!-- 
-    <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
-        <img src="https://thanhvanlongcode.files.wordpress.com/2023/08/pinterest-logo.png" alt="Pinterest" style="width:100px"/>
-    </a> -->
-    <!-- Messenger 
-    <a href="https://www.facebook.com/dialog/send?link=https%3A%2F%2Ftaydoedu.github.io/">
-        <img src="https://thanhvanlongcode.files.wordpress.com/2023/08/facebook_messenger_logo_2018.svg_.png" alt="Messenger" style="width:100px"/>
-    </a>-->
-    <!-- SMS -->
-    <a href="sms:?body=https://taydoedu.github.io/">
-        <img src="../Assets/sms.png" alt="SMS" style="width:100px"/>
-    </a>
-    
-    
+                                    <div id="dYYq5iySqaGzcaAm" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;"> <a href="http://www.tumblr.com/share/link?url=https://taydoedu.github.io/&amp;title=TayDoEdu" target="_blank"><img src="../Assets/tumblr.png" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="YHCdRWl1CadfBazZ" style="z-index:8;">
+                    <div id="Hb7OhazotcFavSsm" style="padding-top:100%;transform:rotate(0deg);">
+                        <div id="LqNLmhIptUG4q533" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                            <div id="WwgfioF9KSAmWlho" style="width:100%;height:100%;opacity:1.0;">
+<!—  STUMBLEUPON -->
 
-</div>
-<h3 style="color:#808080; font-size: 15px;">3.Chia sẻ qua mã vạch, QR code</h3>
-<h4 style="color:#000; font-size: 13px;">Mã vạch và QR code cũng là một trong những phương thức chia sẻ. Bạn chỉ cần dùng một công cụ quét mã có sẵn trên điện thoại hay trình duyệt là có thể thực hiện.Bên dưới là mã vạch và mã QR của Chinh phục THPT</h4>
-<center>
-<img src="../Assets/maqr.png" style="width:200px">
-<img src="../Assets/mavach.png" style="width:200px">
-</center>
+                                <div id="dJBRLHhdw3ybXhQL" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+                                    <div id="GzpwKPPHF8dS3mxK" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;"> <a href="http://www.stumbleupon.com/submit?url=https://taydoedu.github.io/&amp;title=TayDoEdu" target="_blank"><img src="../Assets/stumbleupon.png" loading="lazy" srcset="../Assets/stumbleupon.png 240w, ../Assets/stumbleupon.png 360w" sizes="(max-width: 375px) 13.03474386vw, (min-width: 375.05px) and (max-width: 480px) 13.03474386vw, (min-width: 480.05px) and (max-width: 768px) 13.03474386vw, (min-width: 768.05px) and (max-width: 1024px) 13.03474386vw, (min-width: 1024.05px) 13.03474386vw" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="uA4tIATgbCxTLrnz" style="z-index:3;">
+                    <div id="M69RsFUtXQz1vTJj" style="padding-top:100%;transform:rotate(0deg);">
+                        <div id="ErF2kTEUpB2Wo6RX" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                            <div id="VYD2D16C3ykl7rWN" style="width:100%;height:100%;opacity:1.0;">
+                                <div id="T0WMDTc3CnYYl1lq" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+<!—  DIGG -->
+                                    <div id="aQsAdogaiiGHCEXQ" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;"> <a href="http://www.digg.com/submit?url=https://taydoedu.github.io/" target="_blank"><img src="../Assets/Digg.png" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="qLrW7QnwVTlLWWvG" style="z-index:9;">
+                    <div id="y40iJ72WEPqbINmk" style="padding-top:100%;transform:rotate(0deg);">
+                        <div id="Ho372u8ImDFOKJk2" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                            <div id="UOkOwy3F4orYQNpJ" style="width:100%;height:100%;opacity:1.0;">
+                                <div id="HxgnzONndRWOuhzf" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+<!—  TWITTER -->
 
-<h3 style="color:#808080; font-size: 15px;">4. Tải app dành cho thiết bị</h3>
-<h4 style="color:#000; font-size: 13px;">Số lượng người sử dụng ứng dụng ngày càng bùng nổ. Con số này vẫn chưa có dấu hiệu dừng lại trong thời đại cách mạng công nghiệp 4.0. Vì vậy TayDoEdu cho ra đời <!-- các -->ứng dụng di động dành cho <!-- các -->thiết bị để tạo thành một công cụ hỗ trợ đắc lực cho việc gắn kết người dùng. Ở đây bạn có thể cài phiên bản cho <!-- Window ,-->Android.</h4>
-<center>
-<a style="color: #fff; text-decoration: none;" href="../android.html" target='_blank'> <img src="../Assets/android.png" style="width:150px">
-<!--<a style="color: #fff; text-decoration: none;" href="../windows.html" target='_blank'> <img src="../Assets/windows.png" style="width:150px">
--->
-</center>
+                                    <div id="zOwTf68XKoL0NudM" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;"> <a href="https://twitter.com/share?url=https://taydoedu.github.io/&amp;text=TayDoEdu%20-%20Chinh%20phục%20THPT&amp;hashtags=taydoedu" target="_blank"><img src="../Assets/twitter.png" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="eliLK73mlaslUQeP" style="z-index:4;">
+                    <div id="AJyIoQcst4pXGeRh" style="padding-top:100%;transform:rotate(0deg);">
+                        <div id="veReecgaSibD6X3c" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                            <div id="zyWBZEH3jEWv4ujd" style="width:100%;height:100%;opacity:1.0;">
+                                <div id="TUG7XwaVEVxw5nEX" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+<!—  REDDIT-->
+                                    <div id="iZ0yI5wqH6CR3V7J" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;"> <a href="http://reddit.com/submit?url=https://taydoedu.github.io/&amp;title=TayDoEdu" target="_blank"><img src="../Assets/reddit.png" loading="lazy" srcset="../Assets/reddit.png 240w, ../Assets/reddit.png 360w" sizes="(max-width: 375px) 12.8924887vw, (min-width: 375.05px) and (max-width: 480px) 12.8924887vw, (min-width: 480.05px) and (max-width: 768px) 12.8924887vw, (min-width: 768.05px) and (max-width: 1024px) 12.8924887vw, (min-width: 1024.05px) 12.8924887vw" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="sI0fNUXTPzXdJpZX" style="z-index:10;">
+                    <div id="O7dIFvD8Pr0dwIDJ" style="padding-top:100%;transform:rotate(0deg);">
+                        <div id="f91lkPHHuI2JOQ9b" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                            <div id="hpyR5xlTE9s4FBrK" style="width:100%;height:100%;opacity:1.0;">
+                                <div id="tuWXNms3lwduijKs" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+<!—  YUM -->
+                                    <div id="PenTIRMXSAFTT67p" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;"> <a href="http://www.yummly.com/urb/verify?url=https://taydoedu.github.io/&amp;title=TayDoEdu Chinh phục THPT" target="_blank"><img src="../Assets/yum.png" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="yskd4UqKG5NiLbym" style="z-index:5;">
+                    <div id="Y05npOHBNwewiuwj" style="padding-top:100%;transform:rotate(0deg);">
+                        <div id="NNIVguNvap4JvR5k" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                            <div id="dClZ9weG8PqWYADe" style="width:100%;height:100%;opacity:1.0;">
+                                <div id="XPsiVXqdoMA78OXh" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+<!—  LINKEDLN -->   
+<div id="dJbNPvMxHZAxY5Yc" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;"> <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://taydoedu.github.io/" target="_blank"><img src="../Assets/linkedIn.png" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="GYP7kLeKmbuDVFOK" style="z-index:11;">
+                    <div id="gNEZcnzpRcuPQ33r" style="padding-top:100%;transform:rotate(0deg);">
+                        <div id="mYjIaKbIWPbBLJsm" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                            <div id="t7v0InC2fBpgWw4k" style="width:100%;height:100%;opacity:1.0;">
+                                <div id="wXNqTMCOCMiNcUPH" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+<!—  VK -->
+                                    <div id="c9upVnnIu6niwdMh" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;"> <a href="http://vkontakte.ru/share.php?url=https://taydoedu.github.io/" target="_blank"><img src="../Assets/vk.png" loading="lazy" srcset="../Assets/vk.png 320w, ../Assets/vk.png 480w" sizes="(max-width: 375px) 13.03474386vw, (min-width: 375.05px) and (max-width: 480px) 13.03474386vw, (min-width: 480.05px) and (max-width: 768px) 13.03474386vw, (min-width: 768.05px) and (max-width: 1024px) 13.03474386vw, (min-width: 1024.05px) 13.03474386vw" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="CSECobu6p8S8qzv6" style="z-index:6;">
+                    <div id="lXGMwdKXr4udCaZQ" style="padding-top:102.26190476%;transform:rotate(0deg);">
+                        <div id="arBohyHYeh9hZX0k" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                            <div id="xLoMTgZo6P0LQvf3" style="width:100%;height:100%;opacity:1.0;">
+                                <div id="TKrRbtUIHgEAWHku" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+<!—  MAIL -->
+                                    <div id="BsVzSa6RS4l84nVJ" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;"> <a href="mailto:?subject=Subject&body=TayDoEdu%20-%20Chinh%20Phục%20THPT" target='_blank'><img src="../Assets/mail.png" loading="lazy" srcset="../Assets/mail.png 168w, ../Assets/mail.png 336w" sizes="(max-width: 375px) 13.06521837vw, (min-width: 375.05px) and (max-width: 480px) 13.06521837vw, (min-width: 480.05px) and (max-width: 768px) 13.06521837vw, (min-width: 768.05px) and (max-width: 1024px) 13.06521837vw, (min-width: 1024.05px) 13.06521837vw" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="ImH4ryISGAmRUlP1" style="z-index:12;">
+                    <div id="aOpWj3bqrOIwx52s" style="padding-top:100%;transform:rotate(0deg);">
+                        <div id="udMkHeIFDNKpUbZD" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                            <div id="cpYVgmBZPTIKRW21" style="width:100%;height:100%;opacity:1.0;">
+                                <div id="Ksn253IerhcQuWH3" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+<!—  SMS -->
+                                    <div id="u5M8lNBBGOikeCXy" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;"> <a href="sms:?body=https://taydoedu.github.io/"><img src="../Assets/sms.png " loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <a id="page-4" aria-hidden="true" style="visibility:hidden;"></a>
+        <section id="yrfqmmEUKlC6IIC2" style="position:relative;overflow:hidden;display:grid;align-items:center;grid-template-columns:auto 100rem auto;z-index:0;margin-top:-1px;">
+            <div id="F5Jtjt3ZJ3eZa95M" style="grid-area:1 / 1 / 2 / 4;display:grid;position:absolute;min-height:100%;min-width:100%;">
+                <div id="vfWjueNn4y7I08P0" style="z-index:0;">
+                    <div id="qx9Jq7lrDnQ1CFpg" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
+                        <div id="Q0GkNyTzNGbpKQ8b" style="width:100%;height:100%;opacity:1.0;">
+                            <div id="yWGOhThEd5xjKjsi" style="background-color:#ffffff;opacity:1.0;transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+<!—  Trang 4 -->
+                                <div id="Ft84kZP3AmzWzgwJ" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;"><img src="../Assets/chiase4.jpg" loading="lazy" srcset="../Assets/chiase4.jpg 683w, ../Assets/chiase4.jpg 1366w" sizes="(max-width: 375px) 100vw, (min-width: 375.05px) and (max-width: 480px) 100vw, (min-width: 480.05px) and (max-width: 768px) 100vw, (min-width: 768.05px) and (max-width: 1024px) 100vw, (min-width: 1024.05px) 100vw" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="IkJprnRV8OUaUyth" style="display:grid;position:relative;grid-area:1 / 2 / 2 / 3;"></div>
+        </section>
+        <a id="page-5" aria-hidden="true" style="visibility:hidden;"></a>
+        <section id="P1NxFGFV4uhiNekZ" style="position:relative;overflow:hidden;display:grid;align-items:center;grid-template-columns:auto 100rem auto;z-index:0;margin-top:-1px;">
+            <div id="Hz2Qkg4DLMMbC6QN" style="grid-area:1 / 1 / 2 / 4;display:grid;position:absolute;min-height:100%;min-width:100%;">
+                <div id="F3tIuSyvxzXlwMUO" style="z-index:0;">
+                    <div id="FyNhWOJyvPI7G8YI" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
+                        <div id="csQB4uvHWO33xS5c" style="width:100%;height:100%;opacity:1.0;">
+                            <div id="fKaqbUgM3dzo3XkP" style="background-color:#ffffff;opacity:1.0;transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+<!—  Trang 5 -->
+                                <div id="af7scHBNM2wptofe" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100.04882813% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;"><img src="../Assets/chiase5.jpg" loading="lazy" srcset="../Assets/chiase5.jpg 768w, ../Assets/chiase5.jpg 1728w" sizes="(max-width: 375px) 100vw, (min-width: 375.05px) and (max-width: 480px) 100vw, (min-width: 480.05px) and (max-width: 768px) 100vw, (min-width: 768.05px) and (max-width: 1024px) 100vw, (min-width: 1024.05px) 100vw" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="icWGrXeqZXO6OGHy" style="display:grid;position:relative;grid-area:1 / 2 / 2 / 3;">
+                <div id="Q6OAK3C7M64rPWrw">
+                    <div id="ofJ2uYhKDXI6C3uK" style="display:grid;position:relative;grid-area:2 / 2 / 3 / 3;">
+                        <div id="BRWT75mUpoevar2g" style="display:grid;position:relative;grid-area:2 / 2 / 3 / 3;">
+                            <div id="jm2XlR0W34IGPmP4" style="z-index:2;">
+                                <div id="hOa5Ok3E7Qfh7kd3" style="padding-top:13.7623542%;transform:rotate(0deg);">
+                                    <div id="f1aCM8wzf2oMqfwy" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                                        <svg id="gKK4kNTiIpkmNl3b" viewBox="0 0 3371.5287 464.0017" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url(&#x27;data:image/png;base64,&#x27;);">
+                                            <g id="Mjf3ZIbmkTeeenMn" style="transform:scale(1, 1);">
+                                                <path id="SfA8UXm6C3UDQpzX" d="M3370.12871329,418.40172284 C3368.41872183,427.64172834 3364.57872549,439.55171674 3357.85872427,446.14172834 C3343.26872794,460.44171613 3314.43871085,462.01172345 3282.38872305,460.17172712 C3259.36870352,458.85171979 3243.36870352,462.23172467 3220.30870596,462.4517259 C3196.82872549,462.67172712 3186.1487023,462.77171796 3162.65871207,462.99171918 C2066.49349752,463.2117204 202.22000122,463.43172162 178.74000549,463.65172284 C155.61999512,463.87172406 132.48001099,464.36172956 109.37000275,463.52171796 C97.72000122,463.10171979 86.06999969,462.31172651 74.5,460.91171735 C65.01000214,459.76172345 55.47999954,458.34172529 46.35000229,455.4517259 C37.99000168,452.81172651 29.94000053,448.93172162 23.35000038,443.07172101 C16.37000084,436.86172956 11.87000084,428.58171552 9.1600008,419.72173017 C6.23000097,410.14172834 5.24000072,400.07172101 4.14000082,390.15172284 C2.86000085,378.60171979 1.70000076,367.04172223 0.67000079,355.47172254 C-0.35999918,271.41443617 1,242.28174926 0.23,98.95999908 C-0.55000001,87.41000366 0.89999998,74.69999695 1.08000004,63.11999893 C1.24000001,53.13000107 -1.51999986,34.81999969 3.68000007,26.18999863 C8.19999981,18.70000076 14.64000034,12.31999969 22.29000092,8.05000019 C34.79000092,1.07000017 49.02000046,-0.09000015 63.13000107,0.53999996 C70.55000305,0.53999996 77.95999908,0.55999994 85.38000488,0.58999997 C130.38000488,0.77999997 175.36999512,1.42999995 1275.40035775,1.23000002 C3154.76871268,1.13 3175.6787316,0.57999998 3196.59871451,0.17000002 C3218.1487023,-0.24999999 3239.69872061,0.17000002 3261.23872916,0.55000001 C3283.05870596,0.93000001 3304.83870474,0.79000002 3326.65871207,0.47 C3341.52870718,0.25 3360.85872427,2.17000008 3367.47871939,17.89999962 C3369.41872183,22.51000023 3369.8987023,27.54999924 3370.03871695,32.5 C3370.20869986,38.20999908 3370.17870108,43.93000031 3370.23869864,49.63999939 C3370.35872427,61.29000092 3367.62871329,93.77000427 3367.75871817,165.78961058 C3368.00871817,360.29172223 3371.10872427,362.93172162 3371.34871451,386.39172834 C3371.45869986,397.03172773 3372.07869498,407.88171857 3370.12871329,418.40172284 Z" style="fill:#f48319;opacity:1.0;"></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="aOfCY3OS3zHbEvtM" style="z-index:3;">
+                                <div id="ZuD6FW91nwG1LI3u" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
+<!—  TẢI APP -->
+                                    <div id="qEOSA5FEOkDdA9Oj" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
+                                        <p id="AJFxREYNGvveX60s" style="color:#ffffff;font-family:YACgEbc43jc-0;line-height:1.1999985em;text-align:center;text-transform:none;letter-spacing:0em;"><span id="MHYg3sF7TwdCkdKS" style="color:#ffffff;font-weight:700;"> <a style="color: #fff; text-decoration: none;" href="../android.html" target='_blank'>TẢI APP ANDROID</a></span>
+                                            <br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="js/939898b427480d700449229ff00dbb8a6f9f77442b532f697866e6914ab8843a.js" async="" nonce="026a6d66-4acf-4c92-b96c-56f960392812"></script>
+    </div>
+    <script nonce="026a6d66-4acf-4c92-b96c-56f960392812">
+        const lang = navigator.language ? navigator.language : 'en';
+        const loaded = new Promise((resolve) => {
+            if (document.readyState === 'loading') {
+                window.addEventListener('DOMContentLoaded', resolve);
+                return;
+            }
+            resolve();
+        })
+        Promise.all([fetch('_footer?lang=' + encodeURIComponent(lang)), loaded]).then(([response]) => {
+            if (response.status !== 200) {
+                return;
+            }
+            response.text().then(footerStr => {
+                const div = document.createElement('div');
+                div.innerHTML = footerStr;
+                for (const child of[...div.children]) {
+                    if (child.tagName.toLowerCase() !== 'script') {
+                        document.body.append(child);
+                    }
+                }
 
+                (() => {
+                    ! function(e) {
+                        "use strict";
+                        const t = document.getElementById("modal_backdrop"),
+                            n = document.getElementById("modal"),
+                            o = document.getElementById("captcha-form"),
+                            c = document.getElementById("report_button"),
+                            d = document.getElementById("form_report"),
+                            s = document.getElementById("form_cancel"),
+                            l = document.getElementById("form_submit_reason"),
+                            a = document.getElementById("form_go_back"),
+                            r = document.getElementById("form_submit_captcha"),
+                            m = document.getElementById("form_close"),
+                            i = document.getElementById("form_close_initial"),
+                            u = document.getElementById("report_reason_0"),
+                            p = document.getElementById("error_message"),
+                            _ = document.getElementById("error_message_captcha"),
+                            y = new Map;
+                        y.set(0, document.getElementById("form_step_terms")), y.set(1, document.getElementById("form_step_report_reason")), y.set(4, document.getElementById("form_step_report_other"));
+                        const E = document.getElementById("form_step_report_ip");
+                        E && y.set(5, E), y.set(2, document.getElementById("form_step_captcha")), y.set(3, document.getElementById("form_step_success"));
+                        const f = document.getElementById("report_reason_4"),
+                            g = document.getElementById("form_close_ip"),
+                            h = document.getElementById("form_go_back_ip"),
+                            I = document.getElementById("report_reason_other"),
+                            k = document.getElementById("form_close_other"),
+                            w = document.getElementById("form_go_back_other");
 
-</div>
+                        function v() {
+                            t.classList.remove("active"), n.classList.remove("active"), c.classList.remove("active"), c.focus()
+                        }
 
-
-</th>  
- </tr> 
-   </table>
+                        function B(e) {
+                            y.forEach(((t, n) => {
+                                n === e ? (t.style.display = "block", L(t)) : t.style.display = "none"
+                            }))
+                        }
+                        let b, C = !1;
+                        const T = "NETEASE" === window.C_CAPTCHA_IMPLEMENTATION ? () => b : () => {
+                            const e = o.elements.namedItem("g-recaptcha-response");
+                            return null == e ? void 0 : e.value
+                        };
+                        t.onclick = v, s.onclick = v, m.onclick = v, i.onclick = v, g && (g.onclick = v), k.onclick = v, c.onclick = function() {
+                            y.forEach(((e, t) => {
+                                e.style.display = 0 === t ? "block" : "none"
+                            })), t.classList.add("active"), n.classList.add("active"), c.classList.add("active"), u.checked = !0, setTimeout((() => {
+                                L(y.get(0))
+                            }), 350)
+                        }, d.onclick = d.dataset.reportUrl ? function() {
+                            const {
+                                origin: e,
+                                pathname: t
+                            } = window.location, n = e + t, o = d.dataset.reportUrl + encodeURIComponent(n);
+                            window.open(o)
+                        } : () => B(1), l.onclick = () => {
+                            null != E && f.checked ? B(5) : I.checked ? B(4) : (B(2), function() {
+                                if (C) return;
+                                const e = document.createElement("script");
+                                e.src = "NETEASE" === window.C_CAPTCHA_IMPLEMENTATION ? "https://cstaticdun.126.net/load.min.js" : "https://www.google.com/recaptcha/api.js", e.async = !0, e.defer = !0, document.head.appendChild(e), C = !0, e.onload = "NETEASE" === window.C_CAPTCHA_IMPLEMENTATION ? () => {
+                                    var e;
+                                    null === (e = window.initNECaptcha) || void 0 === e || e.call(window, {
+                                        captchaId: window.C_CAPTCHA_KEY,
+                                        element: "#netease-captcha",
+                                        protocol: "https",
+                                        width: "auto",
+                                        onVerify: (e, t) => {
+                                            b = t.validate
+                                        }
+                                    })
+                                } : () => {}
+                            }())
+                        }, a.onclick = () => B(1), h && (h.onclick = () => B(1)), w.onclick = () => B(1), o.addEventListener("submit", (function(e) {
+                            e.preventDefault(), p.style.display = "none", _.style.display = "none";
+                            const t = function() {
+                                    let e = "";
+                                    const t = document.getElementsByName("report_reason");
+                                    for (let n = 0; n < t.length; n++) {
+                                        const o = t[n];
+                                        o.checked && (e = o.value)
+                                    }
+                                    return e
+                                }(),
+                                n = T();
+                            if (!n) return void(_.style.display = "block");
+                            const o = {
+                                    reason: t,
+                                    challenge: n
+                                },
+                                c = window.location.origin + window.location.pathname + "/_api/report";
+                            r.classList.add("loading"), fetch(c, {
+                                method: "POST",
+                                body: JSON.stringify(o),
+                                headers: {
+                                    "Content-Type": "application/json; charset=utf-8"
+                                }
+                            }).then((e => {
+                                r.classList.remove("loading"), e.ok ? B(3) : p.style.display = "block"
+                            }))
+                        }));
+                        const A = new Map,
+                            L = e => {
+                                const t = A.get(e);
+                                null != t && document.removeEventListener("keydown", t);
+                                const n = e.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'),
+                                    o = e,
+                                    c = n[n.length - 1],
+                                    d = function(e) {
+                                        ("Tab" === e.key || 9 === e.keyCode) && (e.shiftKey ? document.activeElement === o && (c.focus(), e.preventDefault()) : document.activeElement === c && (o.focus(), e.preventDefault()))
+                                    };
+                                A.set(e, d), document.addEventListener("keydown", d), o.focus()
+                            };
+                        e.keepFocus = L, Object.defineProperty(e, "__esModule", {
+                            value: !0
+                        })
+                    }({});
+                })();
+                window.dispatchEvent(new Event('resize'));
+            });
+        });
+    </script>
 </body>
+
 </html>
