@@ -69,7 +69,7 @@ document.documentElement.scrollTop = 0;
 						</div>
 						<div id="timer-wrapper"> <span id="mkh8">Thời gian làm bài:</span> <span id="timer"></span> </div>
 					</center>
-					<table>
+				<table>
 						<th>
 							<tr>
 										<div id="form-header">
@@ -89,37 +89,23 @@ document.documentElement.scrollTop = 0;
 								<div class="the_div_phai">
 												<div class="form-row">
 											<label for="truong">Trường:</label>
-												<select id="truong">
-													<option>THPT Tây Đô</option>
-													<option>THPT Châu Thành A </option>
-													<option>THPT Cây Dương </option>
-													<option>THPT Hòa An </option>
-													<option>THPT Long Mỹ </option>
-													<option>THPT Vĩnh Tường</option>
-													<option>THPT Vị Thủy</option>
-													<option>PTDTNT tỉnh Hậu Giang</option>
-													<option>THPT Lương Thế Vinh</option>
-													<option>THPT Cái Tắc</option>
-													<option>THPT Lê Quý Đôn</option>
-													<option>THPT Lương Tâm</option>
-													<option>THPT Nguyễn Minh Quang</option>
-													<option>THPT Trường Long Tây</option>
-													<option>THPT Tân Long</option>
-													<option>THPT Tân Phú</option>
-													<option>THPT Tầm Vu</option>
-													<option>THPT Vị Thanh</option>
-													<option>THPT chuyên Vị Thanh</option>
-													<option>THPT Ngã Sáu</option>
-													<option>THPT Phú Hữu</option>
-													<option>THPT Chiêm Thành Tấn</option>
-													<option>THPT Lê Hồng Phong</option>
-												</select>
+											<input type="text" id="truong" placeholder="Nhập trường"> 
 											</div>
 											<div class="form-row">
 												<label for="tinh">Tỉnh/TP:</label>
-												<select id="tinh">
-													<option>Hậu Giang</option>
-												</select>
+												<select id="tinh"></select>
+  <script>
+    const tinhData = [
+	"Hậu Giang","TP. Hà Nội","TP. Hồ Chí Minh","TP. Hải Phòng","TP. Đà Nẵng","TP. Cần Thơ","An Giang","Bà Rịa – Vũng Tàu","Bắc Giang","Bắc Kạn","Bạc Liêu","Bắc Ninh","Bến Tre","Bình Định","Bình Dương","Bình Phước","Bình Thuận","Cà Mau","Cao Bằng","Đắk Lắk","Đắk Nông","Điện Biên","Đồng Nai","Đồng Tháp","Gia Lai","Hà Giang","Hà Nam","Hà Tĩnh","Hải Dương","Hòa Bình","Hưng Yên","Khánh Hòa","Kiên Giang","Kon Tum","Lai Châu","Lâm Đồng","Lạng Sơn","Lào Cai","Long An","Nam Định","Nghệ An","Ninh Bình","Ninh Thuận","Phú Thọ","Phú Yên","Quảng Bình","Quảng Nam","Quảng Ngãi","Quảng Ninh","Quảng Trị","Sóc Trăng","Sơn La","Tây Ninh","Thái Bình","Thái Nguyên","Thanh Hóa","Thừa Thiên Huế","Tiền Giang","Trà Vinh","Tuyên Quang","Vĩnh Long","Vĩnh Phúc","Yên Bái",
+    ];
+    const tinhSelect = document.getElementById("tinh");
+    tinhData.forEach(tinh => {
+      const option = document.createElement("option");
+      option.value = tinh;
+      option.text = tinh;
+      tinhSelect.appendChild(option);
+    });
+  </script>
 											</div>
 										</div>
 									</div>
@@ -127,7 +113,7 @@ document.documentElement.scrollTop = 0;
 				</div>
 				</tr>
 				</th>
-				<table>
+			</table>
 					<hr id="khoang-cach">
 					<div id="dntt" onclick="document.getElementById('dntt').style.display='none'">Đã nhập thông tin!</div>
 					<div id="vlndtt" onclick="document.getElementById('vlndtt').style.display='none'">Vui lòng nhập đủ thông tin!</div>
