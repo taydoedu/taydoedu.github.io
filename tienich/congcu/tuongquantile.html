@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CHINH PHỤC THPT</title>
+<link rel='shortcut icon' href='../../Assets/icon.png' />
+
+<!-- Thuộc tính phù hợp với từng thiết bị -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"
+<!-- Tên chủ sở hữu -->
+<meta name="author" content="Chinh phục THPT">
+<!-- Hagtag để tìm kiếm websites-->
+<meta name="keywords" content="học tập,chia sẻ kiến thức,học tốt thcs">
+<!-- Mô tả websites -->
+<meta name="description" content="Website học tập hoàn toàn miễn phí">
+<!-- Tải lại nội dung sau 5 phút
+<meta http-equiv="refresh" content="300">-->
+ <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+    <div class="menu-ql">
+        <a href="javascript:history.back()" style="text-decoration: none;color:#f48319"><img src="../../Assets/quaylai.png" width="30px"</a></a>
+        </div><!--Nội dung trang web -->
+        <style>
+            .menu-ql {
+                position: fixed;
+               top: 0%;
+                    left: 0%;
+                           z-index: 9999;
+              padding: 5px 5px 5px 7px;
+              width: 100%;
+              height: 40px;
+              background-color: #f48319;
+            }
+            
+            </style>
+<noscript>    <div style="top: 0px; left: 0px; right: 0px; bottom: 0px; position: fixed; z-index: 9999 !important; background-color: #fff;
+color: #f48319"><center><h1>Trình duyệt của bạn hiện đang bị chặn Javascript, vui lòng bật lại và  tải lại trình duyệt!</div></center></h1></noscript>
+<!--Nội dung trang web -->
+<br><br>
+<div class="noi_dung_chinh">
+<h1 style="color: #f48319">Tương quan tỉ lệ</h1>
+<style>
+#ndtt button {margin-left: 10px; margin-right: 10px; margin-top: 10px; border: 0px; padding: 0px; color: #f48319; background-color: #fff; font-size: 20px; font-weight: none;
+            }
+ 
+         #content2{display: none}
+        #content {margin-left: 20px; margin-right: 20px; margin-top: 10px; }
+
+        #content2{margin-left: 20px; margin-right: 20px; margin-top: 10px;}
+        #content table{color: #f48319}
+        #content2 table{color: #f48319}
+        
+        </style>
+     <center>
+ <div id="ndtt">
+       <h3 style="color:#f48319; font-size: 25px; padding: 0px">Tính tỉ lệ thuận/nghịch</h3>
+       
+      <button id="btn1">TỈ LỆ THUẬN</button>
+      <button id="btn2">TỈ LỆ NGHỊCH</button>
+      </div>
+      <hr style="border: 0.5px solid #f48319">
+          </center>
+        
+        <div id="content">
+           <table border="0" width="100%">
+           <tr>
+           <th colspan="6">Hãy đưa ra 3 giá trị* </th>
+            </tr>
+           <tr>
+           <td width="5%">&nbsp;&nbsp;X</td>
+            <td><input style="width: 100%" id="xtilethuan"></td>       
+          <td width="5%">&nbsp;&nbsp;x</td>
+           <td><input style="width: 100%" id="xxtilethuan"></td>
+              </tr>
+           <tr>
+           <td width="5%">&nbsp;&nbsp;Y</td>
+           <td><input style="width: 100%" id="ytilethuan"></td>
+           <td width="5%">&nbsp;&nbsp;y</td>
+            <td><input style="width: 100%" id="yytilethuan"></td>
+           
+           </tr>
+           
+           </table>
+           <br>
+           <span style="color: #f48319; font-size: 15px"><i>*Với y là giá trị chưa xác định</i></span>
+          
+           <br>
+           <span style="color: #f48319; font-size: 15px"><i>Làm tròn đến chữ số thập phân thứ <input style="width: 10%" id="lttilethuan"> trong kết quả</i></span>
+           <br><br> <center><button style="background-color: #fff; color: #f48319; border: 1px solid #000; padding: 10px; font-size: 15px; font-weight: bold" id="tttilethuan">Tính toán</button>
+          <button style="background-color: #fff; color: #f48319; border: 1px solid #000; padding: 10px; font-size: 15px; font-weight: bold" id="xndtilethuan">Xóa nội dung</button>
+          </center> 
+          <hr style="border: 0.5px solid #f48319">
+          <span style="color:#f48319; font-size: 20px; padding: 0px; font-weight: bold;">Kết quả: </span><span style="color:#f48319; font-size: 20px; padding: 0px;" id="kqtilethuan">0.00 </span></div>
+           <!--Tỉ lệ thuận-->
+      <script>
+// Get input elements
+const xInput = document.getElementById('xtilethuan');
+const xxInput = document.getElementById('xxtilethuan');
+const yInput = document.getElementById('ytilethuan');
+const yyInput = document.getElementById('yytilethuan');
+
+// Get other elements
+const resultElement = document.getElementById('kqtilethuan');
+const roundDecimalInput = document.getElementById('lttilethuan');
+const calculateButton = document.getElementById('tttilethuan');
+const clearButton = document.getElementById('xndtilethuan');
+
+// Calculate and update the result
+calculateButton.addEventListener('click', () => {
+  const xValue = parseFloat(xInput.value);
+  const xxValue = parseFloat(xxInput.value);
+  const yValue = parseFloat(yInput.value);
+
+  // Perform the proportional calculation
+  const yyValue = (yValue * xxValue) / xValue;
+  
+  // Round the result to the specified decimal place
+  const roundedResult = yyValue.toFixed(parseInt(roundDecimalInput.value));
+
+  // Update the result element
+  resultElement.textContent = roundedResult;
+});
+
+// Clear all input values
+clearButton.addEventListener('click', () => {
+  xInput.value = '';
+  xxInput.value = '';
+  yInput.value = '';
+  yyInput.value = '';
+});
+
+
+
+      </script>
+     
+        <div id="content2">
+         
+           <table border="0" width="100%">
+           <tr>
+           <th colspan="6">Hãy đưa ra 3 giá trị*</th>
+            </tr>
+           <tr>
+           <td width="5%">&nbsp;&nbsp;X</td>
+            <td><input style="width: 100%" id="xtilenghich"></td>       
+          <td width="5%">&nbsp;&nbsp;x</td>
+           <td><input style="width: 100%" id="xxtilenghich"></td>
+              </tr>
+           <tr>
+           <td width="5%">&nbsp;&nbsp;Y</td>
+           <td><input style="width: 100%" id="ytilenghich"></td>
+           <td width="5%">&nbsp;&nbsp;y</td>
+            <td><input style="width: 100%" id="yytilenghich"></td>
+           
+           </tr>
+           
+           </table>
+            <br>
+           <span style="color: #f48319; font-size: 15px"><i>*Với y là giá trị chưa xác định</i></span>
+          
+           <br>
+           <span style="color: #f48319; font-size: 15px"><i>Làm tròn đến chữ số thập phân thứ <input style="width: 10%" id="lttilenghich"> trong kết quả</i></span>
+          <br><br> <center><button style="background-color: #fff; color: #f48319; border: 1px solid #000; padding: 10px; font-size: 15px; font-weight: bold" id="tttilenghich">Tính toán</button>
+          <button style="background-color: #fff; color: #f48319; border: 1px solid #000; padding: 10px; font-size: 15px; font-weight: bold" id="xndtilenghich">Xóa nội dung</button>
+          </center> 
+          <hr style="border: 0.5px solid #f48319">
+          <span style="color:#f48319; font-size: 20px; padding: 0px; font-weight: bold;">Kết quả: </span><span style="color:#f48319; font-size: 20px; padding: 0px;" id="kqtilenghich">0.00 </span></div>
+     <!--Tỉ lệ nghịch-->
+      <script>
+
+// Lấy các phần tử input và button bằng id
+const xInputNghich = document.getElementById('xtilenghich');
+const xxInputNghich = document.getElementById('xxtilenghich');
+const yInputNghich = document.getElementById('ytilenghich');
+const yyInputNghich = document.getElementById('yytilenghich');
+const calculateButtonNghich = document.getElementById('tttilenghich');
+const clearButtonNghich = document.getElementById('xndtilenghich');
+const resultSpanNghich = document.getElementById('kqtilenghich');
+const decimalPlacesInputNghich = document.getElementById('lttilenghich');
+
+// Định nghĩa hàm tính toán giá trị còn lại
+function calculateValueNghich() {
+  const xNghich = parseFloat(xInputNghich.value);
+  const xxNghich = parseFloat(xxInputNghich.value);
+  const yNghich = parseFloat(yInputNghich.value);
+
+  if (!isNaN(xNghich) && !isNaN(xxNghich) && !isNaN(yNghich)) {
+    // Tính giá trị còn lại dựa trên tỉ lệ thuận
+    const yyNghich = (yNghich * xNghich) / xxNghich;
+
+    // Làm tròn giá trị đến số thập phân cần thiết
+    const decimalPlacesNghich = parseInt(decimalPlacesInputNghich.value);
+    const roundedValueNghich = yyNghich.toFixed(decimalPlacesNghich);
+
+    // Hiển thị kết quả
+    resultSpanNghich.textContent = roundedValueNghich;
+  }
+}
+
+// Định nghĩa hàm xóa nội dung
+function clearValuesNghich() {
+  xInputNghich.value = '';
+  xxInputNghich.value = '';
+  yInputNghich.value = '';
+  yyInputNghich.value = '';
+  resultSpanNghich.textContent = '0.00';
+}
+
+// Gán sự kiện click cho button tính toán và xóa nội dung
+calculateButtonNghich.addEventListener('click', calculateValueNghich);
+clearButtonNghich.addEventListener('click', clearValuesNghich);
+
+
+      </script>
+      
+        
+        
+          </div> <br><br><br><br><br>
+      
+        
+        
+        <script language="javascript">
+
+            document.getElementById("btn1").onclick = function () {
+                document.getElementById("content").style.display = 'block';
+                document.getElementById("content2").style.display = 'none';
+
+                            };
+
+            document.getElementById("btn2").onclick = function () {
+               document.getElementById("content").style.display = 'none';
+ document.getElementById("content2").style.display = 'block';
+                                                
+
+            };
+            
+        </script>
+        </div>
+</th>  
+ </tr> 
+   </table>
+</body>
+</html>
