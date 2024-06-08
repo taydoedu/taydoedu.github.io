@@ -41,7 +41,7 @@ color: #f48319"><center><h1>Trình duyệt của bạn hiện đang bị chặn 
 <style>
 .accordion {
   background-color: #CCC;
-  color: #444;
+  color: #000;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -51,11 +51,15 @@ color: #f48319"><center><h1>Trình duyệt của bạn hiện đang bị chặn 
   font-size: 20px;
   transition: 0.4s;
 }
+.accordion a{
+  color: #000;
+  font-size: 20px;
+}
 
-.active, .accordion:hover {
+.active, .accordion  :hover {
   background-color: #888; 
 }
-.accordion:after {
+.accordion .vip:after {
   content: '\002B';
   color: #777;
   font-weight: bold;
@@ -63,54 +67,46 @@ color: #f48319"><center><h1>Trình duyệt của bạn hiện đang bị chặn 
   margin-left: 0px;
 }
 
-.active:after {
+.active .vip:after {
   content: "\2212";
 }
 .panel {
-  padding: 0 0px;
+  padding: 9px 0px 0px 18px;
   max-height: 0;
-  background-color: white;
+  background-color: #DDD;
   overflow: hidden;
   width:100%;
   
     transition: max-height 0.2s ease-out;
 }
-    .dropdown-menu {
-        font-size: 20px;
-        width: 100%;
-        margin-left: 0px;
-        padding: 10px 0px 10px 0px ;
-        background-color: #eee;
-    }
-       .sub-menu {
-        font-size: 20px;
-        width: 100%;
-        margin-left: 0px;
-        padding: 10px 0px 10px 0px ;
-    }
-
-.dropdown-menu > div, icon-menu > div {
-  display: inline-block;
+.panel a{
+  font-size: 20px;
 }
+.panel a:hover{
+  font-size: 20px;
+  padding-left: 10px;
+}
+    
 
 </style>
 <div class="noi_dung_chinh">
-<div class="the_trai_phai">
-<div class="the_div_trai" style="margin-left: 0px; margin-top: 0px">
 <div class="accordion"><a style='text-decoration: none; color: #000; font-size: 20px;' href='kienthuc/toanhoc.html'>Công thức toán học</a></div>
-</div>
-<div class="the_div_phai" style="margin-left: 0px; margin-top: 0px">
 <div class="accordion">Công cụ toán học</div>
+<div class="panel"></div>
+<div class="accordion"> <a style='text-decoration: none; color: #000' href='congcu/tuongquantile.html'>* Tương quan tỉ lệ</a></div>
 <div class="panel">
- <div class="dropdown-menu">
-    <div><span class="icon-menu"> <a style='text-decoration: none; color: #000' href='congcu/tuongquantile.html'>* Tương quan tỉ lệ</a><br><br>
-<a style='text-decoration: none; color: #000' href='congcu/tinhphantram.html'>* Tính phần trăm</a><br><br>
-<a style='text-decoration: none; color: #000' href='congcu/dinhlypytagore.html'>* Định lý Pytagore</a></span><br>
-</div></div>
-  <div class="dropdown-menu">
-    <div><span class="icon-menu"> - Chu vi</span>
-        <div class="sub-menu">
-           <div> <a style='text-decoration: none; color: #000' href='congcu/chuvihinhtron.html'>* Hình tròn</a><br><br>
+  </div>
+  <div class="accordion">
+    <a style='text-decoration: none; color: #000' href='congcu/tinhphantram.html'>* Tính phần trăm</a></div>
+  <div class="panel">
+    </div>
+    <div class="accordion"> 
+      <a style='text-decoration: none; color: #000' href='congcu/dinhlypytagore.html'>* Định lý Pytagore</a></div>
+    <div class="panel">
+      </div>
+      <div class="accordion"><div class="vip">- Chu vi</a></div></div>
+      <div class="panel">
+        <a style='text-decoration: none; color: #000' href='congcu/chuvihinhtron.html'>* Hình tròn</a><br><br>
 <a style='text-decoration: none; color: #000' href='congcu/chuvitamgiac.html'>* Tam giác</a><br><br>
 <a style='text-decoration: none; color: #000' href='congcu/chuvihinhvuong.html'>* Hình vuông</a><br><br>
 <a style='text-decoration: none; color: #000' href='congcu/chuvichunhat.html'>* Hình chữ nhật</a><br><br>
@@ -120,13 +116,9 @@ color: #f48319"><center><h1>Trình duyệt của bạn hiện đang bị chặn 
 <a style='text-decoration: none; color: #000' href='congcu/chuvingugiac.html'>* Ngũ giác đều</a><br><br>
 <a style='text-decoration: none; color: #000' href='congcu/chuvilucgiac.html'>* Lục giác đều</a><br><br>
 <a style='text-decoration: none; color: #000' href='congcu/chuvidagiac.html'>* Đa giác đều</a>
-        </div></div>
-        
-</div></div>
-  <div class="dropdown-menu">
-    <div><span class="icon-menu"> - Diện tích</span>
-        <div class="sub-menu">
-           <div> <a style='text-decoration: none; color: #000' href='congcu/dientichhinhtron.html'>* Hình tròn</a><br><br>
+        </div>
+        <div class="accordion"><div class="vip">- Diện tích</a></div></div>
+      <div class="panel"><a style='text-decoration: none; color: #000' href='congcu/dientichhinhtron.html'>* Hình tròn</a><br><br>
 <a style='text-decoration: none; color: #000' href='congcu/dientichtamgiac.html'>* Tam giác</a><br><br>
 <a style='text-decoration: none; color: #000' href='congcu/dientichhinhvuong.html'>* Hình vuông</a><br><br>
 <a style='text-decoration: none; color: #000' href='congcu/dientichchunhat.html'>* Hình chữ nhật</a><br><br>
@@ -135,48 +127,35 @@ color: #f48319"><center><h1>Trình duyệt của bạn hiện đang bị chặn 
 <a style='text-decoration: none; color: #000' href='congcu/dientichhinhthang.html'>* Hình thang</a><br><br>
 <a style='text-decoration: none; color: #000' href='congcu/dientichngugiac.html'>* Ngũ giác đều</a><br><br>
 <a style='text-decoration: none; color: #000' href='congcu/dientichlucgiac.html'>* Lục giác đều</a><br><br>
-<a style='text-decoration: none; color: #000' href='congcu/dientichdagiac.html'>* Đa giác đều</a>
-<br><br>
+<a style='text-decoration: none; color: #000' href='congcu/dientichdagiac.html'>* Đa giác đều</a><br><br>
 <a style='text-decoration: none;color: #000' href='congcu/dientichhinhcau.html'>* Hình cầu</a><br><br>
 <a style='text-decoration: none;color: #000' href='congcu/dientichhinhchop.html'>* Hình chóp</a><br><br>
-<a style='text-decoration: none;color: #000' href='congcu/dientichhopchunhat.html'>*Hình hộp chữ nhật</a><br><br>
+<a style='text-decoration: none;color: #000' href='congcu/dientichhopchunhat.html'>* Hình hộp chữ nhật</a><br><br>
 <a style='text-decoration: none;color: #000' href='congcu/dientichlangtru.html'>* Hình lăng trụ</a><br><br>
 <a style='text-decoration: none;color: #000' href='congcu/dientichhinhnon.html'>* Hình nón</a><br><br>
 <a style='text-decoration: none;color: #000' href='congcu/dientichlangtrutron.html'>* Hình trụ tròn</a><br><br>
 <a style='text-decoration: none;color: #000' href='congcu/dientichlapphuong.html'>* Hình lập phương</a>
-        </div></div>
-
-</div>
-  <div class="dropdown-menu">
-    <div><span class="icon-menu"> - Lũy thừa</span>
-        <div class="sub-menu">
-           <div> <a style='text-decoration: none; color: #000' href='congcu/luythuabac2.html'>* Lũy thừa bậc 2</a><br><br>
-<a style='text-decoration: none; color: #000' href='congcu/luythuabac3.html'>* Lũy thừa bậc 3</a><br><br>
-<a style='text-decoration: none; color: #000' href='congcu/luythuabacn.html'>* Lũy thừa bậc n</a><br>
-        </div></div>        </div>
-  <div class="dropdown-menu">
-    <div><span class="icon-menu"> - Khai căn</span>
-        <div class="sub-menu">
-           <div> <a style='text-decoration: none; color: #000' href='congcu/khaicanbac2.html'>* Khai căn bậc 2</a><br><br>
-<a style='text-decoration: none; color: #000' href='congcu/khaicanbac3.html'>* Khai căn bậc 3</a><br><br>
-<a style='text-decoration: none; color: #000' href='congcu/khaicanbacn.html'>* Khai căn bậc n</a><br>
-        </div></div></div>
-          <div class="dropdown-menu">
-    <div><span class="icon-menu"> - Thể tích</span>
-        <div class="sub-menu">
-           <div> <a style='text-decoration: none; color: #000' href='congcu/thetichhinhcau.html'>* Hình cầu</a><br><br>
-<a style='text-decoration: none; color: #000' href='congcu/thetichhinhchop.html'>* Hình chóp</a><br><br>
-<a style='text-decoration: none; color: #000' href='congcu/thetichhopchunhat.html'>* Hình hộp chữ nhật</a><br><br>
-<a style='text-decoration: none; color: #000' href='congcu/thetichlangtru.html'>* Hình lăng trụ</a><br><br>
-<a style='text-decoration: none; color: #000' href='congcu/thetichhinhnon.html'>* Hình nón</a><br><br>
-<a style='text-decoration: none; color: #000' href='congcu/thetichlangtrutron.html'>* Hình trụ tròn</a><br><br>
-<a style='text-decoration: none; color: #000' href='congcu/thetichlapphuong.html'>* Hình lập phương</a>
-        
-        </div></div>
-        </div></div>
-        </div></div>
-
-
+        </div>
+        <div class="accordion"><div class="vip">- Lũy thừa</a></div></div>
+      <div class="panel"><a style='text-decoration: none; color: #000' href='congcu/luythuabac2.html'>* Lũy thừa bậc 2</a><br><br>
+        <a style='text-decoration: none; color: #000' href='congcu/luythuabac3.html'>* Lũy thừa bậc 3</a><br><br>
+        <a style='text-decoration: none; color: #000' href='congcu/luythuabacn.html'>* Lũy thừa bậc n</a><br>
+        </div>
+        <div class="accordion"><div class="vip">- Khai căn</a></div></div>
+        <div class="panel"><a style='text-decoration: none; color: #000' href='congcu/khaicanbac2.html'>* Khai căn bậc 2</a><br><br>
+          <a style='text-decoration: none; color: #000' href='congcu/khaicanbac3.html'>* Khai căn bậc 3</a><br><br>
+          <a style='text-decoration: none; color: #000' href='congcu/khaicanbacn.html'>* Khai căn bậc n</a><br>
+          </div>
+          <div class="accordion"><div class="vip">- Thể tích</a></div></div>
+          <div class="panel"><a style='text-decoration: none; color: #000' href='congcu/thetichhinhcau.html'>* Hình cầu</a><br><br>
+            <a style='text-decoration: none; color: #000' href='congcu/thetichhinhchop.html'>* Hình chóp</a><br><br>
+            <a style='text-decoration: none; color: #000' href='congcu/thetichhopchunhat.html'>* Hình hộp chữ nhật</a><br><br>
+            <a style='text-decoration: none; color: #000' href='congcu/thetichlangtru.html'>* Hình lăng trụ</a><br><br>
+            <a style='text-decoration: none; color: #000' href='congcu/thetichhinhnon.html'>* Hình nón</a><br><br>
+            <a style='text-decoration: none; color: #000' href='congcu/thetichlangtrutron.html'>* Hình trụ tròn</a><br><br>
+            <a style='text-decoration: none; color: #000' href='congcu/thetichlapphuong.html'>* Hình lập phương</a>
+            </div>
+ 
 
 <script>
 var acc = document.getElementsByClassName("accordion");
