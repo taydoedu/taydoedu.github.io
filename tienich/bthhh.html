@@ -66,21 +66,30 @@ color: #f48319"><center><h1>Trình duyệt của bạn hiện đang bị chặn 
   }
 
   .panel {
-      position: fixed;
+    position: fixed;
      bottom: 0%;
           left: 0%;
                  z-index: 1;
     padding: 10px 10px 0px 10px;
     max-height: 0;
-    background-color: white;
     overflow: hidden;
     width: 100vw;
     height: 100vh;
     background-color: #eee;
-    border-top: 2px solid #ddd;
       transition: max-height 0.2s ease-out;
-
+      border: none !important;
   }
+  @media (min-width: 640px) {
+    .panel {
+      padding: 0px 10px 0px 10px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width:500px;
+        height: 340px;
+      }
+    }
 
   </style>
 
